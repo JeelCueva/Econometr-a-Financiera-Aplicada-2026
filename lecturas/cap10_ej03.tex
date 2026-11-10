@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Factor de Cholesky $\bm P$ & diag. 1,199 y 4,596 & Matriz triangular con $\bm P\bm P'=\hat{\bm\Sigma}$; sus columnas son los choques ortogonales de una desviación estándar. \\
+\texttt{r<-r} en $h=0$ & 1,199 & Un choque propio de una desviación estándar al S\&P 500 lo mueve 1,2\,\% el mismo día. \\
+\texttt{dv<-r} en $h=0$ & $-4{,}99$ & Ese mismo choque baja el VIX 5\,\% en el día: es la correlación contemporánea atribuida al índice. \\
+\texttt{r<-dv} en $h=0$ & 0 & Con el orden $(r,\Delta v)$, el VIX no puede afectar al índice el mismo día: es un supuesto del orden, no un resultado. \\
+Respuestas en $h=1,2$ & p. ej. \texttt{dv<-r} 0,53 & Pequeñas correcciones al día siguiente; en $h=5$ ya son casi cero. \\
+Orden $(\Delta v,r)$ & \texttt{r<-dv} $=-0{,}88$ en $h=0$ & Al invertir el orden la correlación contemporánea se atribuye al VIX: el resultado depende del orden elegido. \\
+Respuesta acumulada del VIX & $-4{,}16$\,\% & Efecto total en 10 días de un choque positivo de una desviación estándar al índice. \\
+Bandas bootstrap 90\,\% & p. ej. [0,367; 0,696] en $h=1$ & Si el intervalo no contiene el 0, la respuesta es significativa; \texttt{r<-dv} incluye el 0 en $h=1,2$. \\
+\end{xltabular}}

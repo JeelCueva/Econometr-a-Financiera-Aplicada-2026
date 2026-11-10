@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+GARCH-$t$ de la cartera & $\alpha=0{,}113$; $\beta=0{,}728$; $\nu=6{,}12$ & Modelo estimado con 2014--2015 y sus reestimaciones anuales (la persistencia sube y $\nu$ baja con más datos). \\
+\texttt{excepciones}, \texttt{esperadas} & 13 a 21 frente a 7,5 (99\,\%) & Todos los métodos registran más excepciones de las esperadas al 99\,\%. \\
+\texttt{Kupiec LR}, \texttt{p} & EWMA 16,34 ($p=0{,}0001$) & La EWMA normal falla claramente al 99\,\%; el GARCH-$t$ reestimado es el único no rechazado ($p=0{,}07$). \\
+\texttt{Christoffersen LR}, \texttt{p} & HS 5,54 ($p=0{,}019$) al 97,5\,\% & La simulación histórica tiene excepciones agrupadas; los modelos condicionales no. \\
+\texttt{pérdida/ES en excepciones} & 0,93 a 1,19 & Promedio de pérdida sobre ES en los días de excepción; cerca de 1 indica ES bien calibrado. La EWMA normal lo subestima (1,17--1,19). \\
+Pronóstico para el 2-ene-2019 & vol. 2,87\,\%; VaR 7,42\,\%; ES 10,18\,\% & Riesgo esperado para el primer día de 2019, tras un diciembre muy volátil. \\
+\end{xltabular}}

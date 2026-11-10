@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Fila \texttt{log precio (c)}: ADF $t$ & $-1{,}91$ & Estadístico ADF con constante; no es más negativo que el valor crítico $-2{,}86$: no se rechaza la raíz unitaria. \\
+\texttt{p} (rezagos) & 29 / 28 & Rezagos de $\Delta y$ incluidos para limpiar la autocorrelación, elegidos por criterio de información. \\
+KPSS $\eta$ (c) & 16,75 & Muy por encima de 0,463: se rechaza la estacionariedad. Ambas pruebas apuntan a raíz unitaria. \\
+\texttt{l} & 37 & Rezagos de la ventana de Newey-West con que KPSS estima la varianza de largo plazo. \\
+Fila \texttt{log precio (ct)} & ADF $-3{,}18$; KPSS 2,62 & Con tendencia la conclusión no cambia: ADF no alcanza $-3{,}41$ y KPSS supera 0,146. \\
+Fila \texttt{rendimiento (c)} & ADF $-17{,}11$ & Muy por debajo de $-2{,}86$: se rechaza la raíz unitaria en el rendimiento. \\
+KPSS del rendimiento & 0,027 & Muy por debajo de 0,463: no se rechaza la estacionariedad. El rendimiento es $I(0)$. \\
+Conclusión & $I(1)$ & El log precio es integrado de orden 1: hay que diferenciarlo una vez para obtener una serie estacionaria. \\
+\end{xltabular}}

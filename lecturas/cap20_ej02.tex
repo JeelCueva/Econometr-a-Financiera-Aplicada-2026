@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Predictores & 8 & Se omiten de y tms porque son combinaciones lineales exactas de otros. \\
+MCO (todos) & $R^2_{OS}=-6{,}04$\,\% & Usar todos los predictores sin restricción sobreajusta y empeora mucho el pronóstico. \\
+Ridge & $-1{,}12$\,\%; CT 0,17\,\% & Encoger los coeficientes reduce el daño; con la restricción CT queda apenas positivo. \\
+Red elástica, lasso & $-2{,}33$; $-1{,}95$\,\% & Peores que ridge: seleccionar predictores con tan poca señal es inestable. \\
+\texttt{CW}, \texttt{p(CW)} & $p\ge0{,}37$ & Ningún modelo mejora significativamente a la media histórica. \\
+\texttt{lambda mediano} & 3,32 / 0,85 / 0,50 & Penalización elegida por validación temporal en cada reestimación. \\
+Predictores del lasso & media 2,56; ninguno en 14 de 62 & El lasso suele quedarse con dos o tres predictores, y en el 23\,\% de los años con ninguno. \\
+Fracción de selección & cape 0,77; vol12 0,06 & El CAPE es el más seleccionado; vol12 casi nunca. \\
+Desv. est. de los pronósticos & 0,08 / 1,01 / 0,44 / 0,52 & El MCO genera pronósticos muy variables (ruido); la contracción los suaviza, pero no lo suficiente. \\
+\end{xltabular}}

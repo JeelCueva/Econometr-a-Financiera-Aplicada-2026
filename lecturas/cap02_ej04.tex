@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Período, $T$ & 1871-02 a 2026-09; 1868 & Meses con cambio logarítmico del índice de Shiller. \\
+\texttt{banda} & 0,045 / 0,065 / 0,063 & $1{,}96/\sqrt T$ de cada tramo: umbral de significancia al 5\,\%. \\
+\texttt{rho(1)} completo & 0,274 & Autocorrelación de primer orden grande y muy significativa, a primera vista una predictibilidad notable. \\
+\texttt{rho(2..6)} & $-0{,}086$ a 0,093 & Casi todas dentro de la banda: la ``memoria'' se limita a un mes. \\
+\texttt{rho(1)} por tramo & 0,310 / 0,213 & Aparece en ambos tramos; es algo menor después de 1946. \\
+Valor teórico de Working & 0,2492 & Autocorrelación que produce promediar precios diarios dentro del mes aunque los precios diarios sean un paseo aleatorio. El $\hat\rho_1$ observado es de ese orden: la autocorrelación es un artefacto del promedio, no predictibilidad real. \\
+Ljung-Box ($m=1$) & $Q=140{,}6$; $p\approx2\times10^{-32}$ & Rechaza la ausencia de autocorrelación, pero lo que detecta es el efecto Working, no una oportunidad de inversión. \\
+\end{xltabular}}

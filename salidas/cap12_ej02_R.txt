@@ -1,0 +1,17 @@
+Etapa 1, GARCH(1,1) normal:
+  S&P    mu = 0.0531  omega = 0.0180  alpha = 0.1024  beta = 0.8865  log-ver = -6497.43
+  Brent  mu = 0.0350  omega = 0.0128  alpha = 0.0468  beta = 0.9524  log-ver = -10002.10
+
+Etapa 2, DCC(1,1): a = 0.0130 (ee 0.0027), b = 0.9844 (ee 0.0035); a + b = 0.9974; vida media = 266 días
+log-verosimilitud de correlación: DCC = 115.97; CCC = 40.19; LR = 151.56 (p = 1.23e-33, 2 g.l.)
+correlación constante (CCC) de los residuos estandarizados = 0.1311
+correlación DCC: mín. -0.268 (2008-08-12), máx. 0.518 (2010-05-11)
+promedio anual de la correlación DCC:
+  2000:  0.040
+  2003: -0.121
+  2006:  0.038
+  2008: -0.057
+  2009:  0.301
+  2012:  0.390
+  2015:  0.228
+  2018:  0.128

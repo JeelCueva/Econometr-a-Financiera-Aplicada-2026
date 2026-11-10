@@ -1,0 +1,21 @@
+Entrenamiento: 1927-09 a 1980-12 (640 meses); prueba: 1981-01 a 2018-11 (455 meses); hoja mínima = 24 meses
+
+MCO lineal con 8 predictores: ECM entrenamiento = 34.0287; ECM prueba = 20.2978; R2 prueba = -7.79 %
+
+profundidad   hojas   ECM entrenamiento   ECM prueba   R2 prueba (%)
+       0         1          35.5588        18.8304        0.00
+       1         2          34.0132        20.8252      -10.59
+       2         3          33.0158        20.7682      -10.29
+       3         4          32.5370        20.8898      -10.94
+       4         6          31.9900        20.9425      -11.22
+       5         8          31.4063        21.9806      -16.73
+       6        10          31.0504        23.1058      -22.70
+
+Árbol de profundidad 2:
+  si cape <= 2.1759:
+      hoja: media = 6.9504 (n = 24)
+  si cape > 2.1759:
+      si infl <= -3.4365:
+          hoja: media = -4.2582 (n = 28)
+      si infl > -3.4365:
+          hoja: media = 0.6288 (n = 588)

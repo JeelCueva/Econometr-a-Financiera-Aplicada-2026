@@ -1,0 +1,11 @@
+T = 845 cambios mensuales; banda 95 % = +/- 0.067
+ACF :  0.310 -0.096 -0.032  0.009  0.061 -0.036 
+PACF:  0.310 -0.212  0.081 -0.031  0.080 -0.101 
+
+AR(1)      ar1=0.3102                       AIC =   64.33  BIC =   78.55
+AR(2)      ar1=0.3760 ar2=-0.2120           AIC =   27.41  BIC =   46.37
+MA(1)      ma1=0.4454                       AIC =   23.27  BIC =   37.49
+MA(2)      ma1=0.4009 ma2=-0.0985           AIC =   17.45  BIC =   36.41
+ARMA(1,1)  ar1=-0.1952 ma1=0.6013           AIC =   18.13  BIC =   37.09
+
+MA(1) implicado por el efecto de Working (rho1 = 1/4): theta = 2 - sqrt(3) = 0.2679

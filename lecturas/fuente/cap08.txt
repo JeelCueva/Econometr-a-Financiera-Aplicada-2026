@@ -1,0 +1,57 @@
+== cap08_ej01
+ACF de $r$ (Brent) | $-0{,}026$ a 0,015 | Autocorrelaciones del rendimiento: casi nulas; la media no es predecible.
+ACF de $r^2$ (Brent) | 0,334 en el rezago 1 | Autocorrelaciones del rendimiento al cuadrado: grandes; la varianza sí es predecible (efecto ARCH).
+$Q(10)$ de $r$ / de $r^2$ (Brent) | 25,7 / 1718,6 | Ljung-Box con 10 rezagos: la autocorrelación de los cuadrados es casi 70 veces mayor que la de los rendimientos.
+LM de Engle: $R^2$ | 0,1199 | $R^2$ de la regresión de $r_t^2$ sobre 5 rezagos de $r_{t-j}^2$: los cuadrados pasados explican el 12\,\% de los presentes.
+LM de Engle: estadístico | 1092,9; $p\approx10^{-234}$ | $LM=T\cdot R^2\sim\chi^2_5$ bajo $H_0$ (sin ARCH): se rechaza de forma rotunda.
+ACF de $r$ (S\&P 500 mensual) | 0,274 en el rezago 1 | Autocorrelación debida al promedio mensual de Shiller (efecto Working, Capítulo~2), no a predictibilidad real.
+ACF de $r^2$ (S\&P 500 mensual) | 0,05 a 0,28 | Positivas en los cinco rezagos: hay agrupamiento de volatilidad también en datos mensuales.
+LM (S\&P 500) | $R^2=0{,}100$; LM 186,6; $p\approx10^{-38}$ | Se rechaza la ausencia de efectos ARCH.
+
+== cap08_ej02
+\texttt{T}, log-verosimilitud | 9121; $-20\,074{,}21$ | Valor máximo de la verosimilitud normal; sirve para comparar modelos.
+Varianza inicial (\textit{backcast}) | 0,5172 | Valor con que se inicia la recursión de $\sigma_t^2$ (promedio ponderado de los primeros cuadrados).
+\texttt{mu} | 0,0346 | Rendimiento medio diario (\%).
+\texttt{omega} | 0,0517 | Constante de la ecuación de varianza.
+\texttt{alpha} | 0,0902 | Reacción de la varianza al choque de ayer: un choque grande eleva la varianza de mañana.
+\texttt{beta} | 0,9074 | Peso de la varianza de ayer: la volatilidad es muy persistente.
+\texttt{ee\_hess}, \texttt{t\_hess} | p. ej. 0,0055; 16,5 | Errores estándar con la inversa del hessiano; suponen que las innovaciones son normales.
+\texttt{ee\_rob}, \texttt{t\_rob} | p. ej. 0,0094; 9,6 | Errores robustos de Bollerslev-Wooldridge; son mayores porque las innovaciones no son normales. Todos los parámetros de varianza siguen siendo significativos.
+Persistencia $\alpha+\beta$ | 0,99766 | Muy cerca de 1: los choques a la volatilidad se disipan lentamente.
+Vida media | 296,2 días | Tiempo para que se disipe la mitad de un choque de volatilidad: más de un año.
+Varianza incondicional | 22,113 (muestral 7,312) | $\omega/(1-\alpha-\beta)$; muy superior a la muestral porque la persistencia está tan cerca de 1 que la fórmula es inestable.
+Cuarto momento | 1,0116 | Mayor que 1: según el modelo, la curtosis de los rendimientos no existe.
+Volatilidad anualizada mín./máx. | 14,8\,\% / 395,0\,\% | Rango de la volatilidad condicional: tranquila a mediados de 2014, extrema en abril de 2020.
+
+== cap08_ej03
+\texttt{nu} | 5,23 (ee 0,28) | Grados de libertad de la $t$: colas mucho más pesadas que la normal (que equivale a $\nu=\infty$).
+Demás coeficientes | \texttt{alpha} 0,083; \texttt{beta} 0,912 | Similares a los del modelo normal; \texttt{mu} ahora es significativa ($t=2{,}83$).
+log-ver normal / $t$ | $-20\,074$ / $-19\,753$ | La $t$ mejora la verosimilitud en 322 puntos con un solo parámetro adicional.
+AIC, BIC | 39\,515 y 39\,551 ($t$) | Menores en el modelo $t$: se prefiere con ambos criterios.
+Persistencia, vida media | 0,99554; 155 días | Algo menor que en el modelo normal.
+Curtosis de la $t$ estandarizada | 7,88 | $3+6/(\nu-4)$: curtosis implicada por las innovaciones del modelo.
+Rendimientos: asim., curt. | $-1{,}49$; 55,97 | Momentos de los rendimientos brutos.
+Residuos $z_t$: asim., curt. | $-0{,}20$; 5,48 | Tras dividir por la volatilidad estimada la curtosis cae de 56 a 5,5: la mayor parte de las colas pesadas se debe a la volatilidad cambiante.
+JB de los residuos | 2388 | Todavía se rechaza la normalidad de $z_t$: por eso conviene la $t$.
+$Q(10)$ de $z_t^2$ | 14,93 ($p=0{,}135$) | Ya no hay autocorrelación en los cuadrados: el GARCH capturó la dinámica de la varianza.
+$Q(10)$ de $z_t$ | 22,64 ($p=0{,}012$) | Queda una leve autocorrelación en la media, sin importancia práctica.
+Proporción $\lvert z\rvert>4$ | 0,00362 / 0,00006 / 0,00335 | La observada coincide con la que predice la $t$ estimada y es 60 veces la normal.
+
+== cap08_ej04
+$r_T$, $\sigma^2_T$ | $-0{,}336$\,\%; 24,78 | Último rendimiento y varianza condicional del 3-nov-2026: la volatilidad estaba muy alta.
+$\sigma^2_{T+1}$ | 22,678 | Varianza pronosticada para mañana con $\omega+\alpha\varepsilon_T^2+\beta\sigma_T^2$; se muestra la cuenta completa.
+Varianza incondicional | 13,286 (57,9\,\% anual) | Nivel al que tiende el pronóstico a largo plazo.
+$E[\sigma^2]$ a $h$ días | 22,68 a 16,34 | Pronóstico de la varianza diaria para cada horizonte; desciende hacia la incondicional.
+Vol. diaria / anualizada | 4,76\,\% / 75,6\,\% ($h=1$) | Raíz del pronóstico, y la misma multiplicada por $\sqrt{252}$.
+Varianza acumulada a 21 días | 468; vol. 21,63\,\% | Suma de los pronósticos diarios: volatilidad del rendimiento de un mes. La regla de la raíz (21,82\,\%) casi coincide.
+Varianza acumulada a 252 días | 4771; vol. 69,07\,\% | Volatilidad del rendimiento a un año; la regla de la raíz (75,60\,\%) la sobrestima porque ignora que la varianza volverá a su nivel normal.
+
+== cap08_ej05
+Muestras | 6370 / 2751 días | Días de estimación (hasta 2015) y de evaluación (2016--2026).
+$\omega$, $\alpha$, $\beta$ | 0,0265; 0,0697; 0,9300 | Parámetros fijos usados para pronosticar.
+\texttt{ECM} | 7947 / 7967 / 8476 | Error cuadrático medio del pronóstico de $r_t^2$; es muy sensible a los días extremos.
+\texttt{QLIKE} | 2,724 / 2,745 / 3,077 | Pérdida robusta al ruido de $r_t^2$ como proxy de la varianza; menor es mejor. El GARCH gana.
+MZ: \texttt{a}, \texttt{b} | 2,53; 0,736 (GARCH) | Regresión de Mincer-Zarnowitz $r_t^2=a+b\hat\sigma_t^2$: un pronóstico insesgado tendría $a=0$ y $b=1$. El GARCH sobrerreacciona un poco ($b<1$).
+MZ: \texttt{R2} | 0,066 / 0,063 / 0,003 | Proporción de $r_t^2$ explicada; es baja porque $r_t^2$ es un proxy muy ruidoso.
+DM GARCH frente a EWMA | $\bar d=0{,}022$; $t=3{,}70$ | Diferencia de QLIKE positiva y significativa: el GARCH supera a la EWMA.
+DM GARCH frente a ventana | $\bar d=0{,}353$; $t=3{,}73$ | El GARCH supera claramente a la varianza móvil de 250 días.

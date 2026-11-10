@@ -1,0 +1,65 @@
+% =====================================================================
+%  Prefacio — Econometría Financiera Aplicada (Jeel Cueva)
+% =====================================================================
+\chapter*{Prefacio}
+\addcontentsline{toc}{chapter}{Prefacio}
+\markboth{Prefacio}{Prefacio}
+
+Este libro nació de una necesidad concreta: un texto de econometría financiera en español que llevara al
+lector desde las nociones básicas de precios y rendimientos hasta los modelos que hoy se usan en la gestión
+de riesgos, la valoración de activos y el pronóstico, sin renunciar al rigor de las demostraciones ni al
+trabajo con datos reales. Cada resultado teórico se demuestra paso a paso y cada técnica se aplica a series
+reales del Perú y del mundo: el índice de la Bolsa de Valores de Lima y el tipo de cambio del Banco Central
+de Reserva del Perú, acciones peruanas que cotizan en Nueva York, el petróleo, el S\&P 500, las carteras de
+Fama y French y la curva de rendimientos de los Estados Unidos, entre otras.
+
+El libro tiene veintiún capítulos y tres apéndices. Los primeros capítulos tratan los rendimientos, sus
+hechos estilizados y la regresión en finanzas; les siguen los modelos de series de tiempo, la volatilidad
+condicional, los modelos multivariados, el valor en riesgo, los modelos de factores, las tasas de interés,
+los estudios de eventos, los cambios de régimen, las cópulas, los datos de panel y el aprendizaje
+automático. El último capítulo integra todo en un proyecto completo. Cada capítulo incluye ejercicios
+resueltos y ejercicios propuestos.
+
+Todos los ejercicios resueltos siguen la misma estructura: el enunciado, el planteamiento y los pasos de
+la solución, la salida real del programa en R, una tabla \emph{Cómo leer la salida} que interpreta cada
+indicador que aparece en ella y una conclusión. La tabla está pensada para que el lector no solo obtenga
+un número, sino que sepa qué significa, cuándo es grande o pequeño y qué decisión permite tomar.
+
+Para que el libro no se hiciera excesivamente extenso, los programas no se imprimen. El código completo en
+R y en Python de cada ejercicio, la salida que produce en ambos lenguajes y todas las bases de datos están
+en el repositorio del libro en GitHub:
+\begin{center}
+\begin{tabular}{@{}c@{\qquad}l@{}}
+\raisebox{-0.5\height}{\qrcode[height=2.6cm]{\sitioweb}} &
+\begin{minipage}{0.62\linewidth}\raggedright
+\href{\sitioweb}{\nolinkurl{\sitioweb}}\\[6pt]
+\small Escanee el código con el teléfono o haga clic en la dirección. Antes de la salida de cada ejercicio
+hay enlaces directos a sus programas en el repositorio.
+\end{minipage}
+\end{tabular}
+\end{center}
+El repositorio está organizado como el proyecto del libro. La carpeta \texttt{codigo} contiene un programa
+por ejercicio en R (\texttt{codigo/R}) y en Python (\texttt{codigo/Python}); por ejemplo, los del
+Ejercicio~1.1 son \texttt{cap01\_ej01.R} y \texttt{cap01\_ej01.py}. La carpeta \texttt{salidas} contiene la
+salida de cada programa en ambos lenguajes, y la carpeta \texttt{datos} reúne los archivos CSV con un
+archivo \texttt{FUENTES.txt} que documenta sus fuentes y fechas de descarga. Todo el material puede
+descargarse en un solo archivo con el botón \emph{Code} $\rightarrow$ \emph{Download ZIP} de GitHub.
+Las cifras del libro son exactamente las que producen esos programas, de
+modo que el lector puede reproducir cualquier resultado y modificar los programas para aplicarlos a sus
+propios datos.
+
+Los datos son reales y públicos. Las series peruanas provienen de BCRPData y de Yahoo Finance; las
+internacionales, de bases académicas y oficiales que se citan en cada capítulo. Al trabajar con ellas
+aparecieron errores en las propias fuentes, como un dato erróneo del índice bursátil o un dividendo
+registrado dos veces, que el libro no oculta: se detectan, se explican y se corrigen, porque reconocerlos
+es parte del oficio del econometrista.
+
+El libro está pensado tanto para cursos universitarios de pregrado avanzado y maestría como para el
+estudio personal. Se supone que el lector conoce la estadística y el álgebra lineal de un primer curso;
+los resultados que se usan sin demostrar en el texto principal se reúnen en los Apéndices~A y~B.
+
+Agradeceré a los lectores que me hagan llegar sus comentarios y los errores que encuentren, para
+corregirlos en futuras ediciones.
+
+\bigskip
+\noindent Lima, noviembre de 2026\hfill Jeel Cueva

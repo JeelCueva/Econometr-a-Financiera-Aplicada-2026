@@ -1,0 +1,74 @@
+== cap01_ej01
+Observaciones | 2981 | Días de negociación en Nueva York entre el 31-dic-2014 y el 6-nov-2026 con precio de cierre de Credicorp.
+Eventos detectados | 17 | Días en que el cociente $c_t=P^a_t/P_t$ salta más de $10^{-4}$: son las fechas ex-dividendo que registra Yahoo Finance.
+\texttt{P\_ant} | p. ej. 132,32 | Precio de cierre del día anterior a la fecha ex-dividendo, $P_{t-1}$; es la base sobre la que se mide el dividendo.
+\texttt{f} (factor) | p. ej. 0,9335 | Factor de ajuste $f_t=1-d_t$: todos los precios ajustados anteriores a esa fecha se multiplican por él. Cuanto más lejos de 1, mayor el dividendo.
+\texttt{D} (dividendo) | p. ej. 8,803 | Dividendo por acción en dólares recuperado con $D_t=(1-f_t)P_{t-1}$. Coincide con el anunciado por la empresa (Tabla~\ref{tab:divbap}).
+\texttt{d\_pct} | 0,24 a 6,65 | Rendimiento por dividendo del día, $100\,D_t/P_{t-1}$: porcentaje del precio que se paga como dividendo. Los mayores (5--6,6\,\%) ocurren desde 2020.
+Dos registros en abril de 2020 | 8,803 y 8,803 | El mismo dividendo aparece dos días seguidos: es un error de Yahoo, pues la empresa pagó uno solo.
+Máximo $\lvert$error$\rvert$ en la Prop. 1.3 | $3\times10^{-16}$ | Diferencia entre los dos lados de \eqref{eq:difajuste}. Es del tamaño del redondeo de la computadora: la proposición se cumple exactamente.
+Máx $\lvert R^a-R\rvert$ fuera de eventos | $1{,}41\times10^{-6}$ | Fuera de las fechas ex-dividendo ambos rendimientos coinciden; la diferencia mínima se debe a que el precio ajustado se guardó con 4 decimales.
+Rendimiento acumulado con $P$ | 117,21\,\% | Ganancia solo por variación del precio: 1 dólar se convirtió en 2,17. No incluye dividendos.
+Rendimiento acumulado con $P^a$ de Yahoo | 271,75\,\% | Ganancia con dividendos reinvertidos según Yahoo; está inflada por el dividendo duplicado de 2020.
+Rendimiento acumulado con $P^a$ corregido | 247,02\,\% | Ganancia total correcta con dividendos reinvertidos: 1 dólar se convirtió en 3,47.
+Tasa anual compuesta con $P$ | 6,77\,\% | Rendimiento anual constante equivalente solo por precio en los 11,85 años.
+Tasa anual compuesta con $P^a$ corregido | 11,07\,\% | Rendimiento anual total; la diferencia de 4,3 puntos con la fila anterior es el aporte anual de los dividendos.
+
+== cap01_ej02
+Dato atípico de la BVL | 22\,521,03 | Valor del 21-jun-2024 en la serie del BCRP, entre 29\,857,57 y 30\,058,66: un error de registro que se elimina.
+Días con índice repetido | 54 | Rendimientos exactamente iguales a cero: el BCRP repite el valor del día anterior en feriados peruanos hasta 2020.
+$T$ | 3011 / 2980 | Número de rendimientos diarios de la BVL y del S\&P 500. Difieren porque cada mercado tiene su propio calendario.
+$r\le R$ en todas las fechas | TRUE | Se cumple en todos los días la desigualdad $\ln(1+R)\le R$: el rendimiento logarítmico nunca supera al simple.
+Mayor diferencia $R-r$ (BVL) | 0,00584 | 0,58 puntos porcentuales el 12-mar-2020 ($R=-10{,}42$\,\%, $r=-11{,}01$\,\%): la brecha crece con el tamaño del movimiento.
+Mayor diferencia $R-r$ (S\&P 500) | 0,00781 | 0,78 puntos el 16-mar-2020, el peor día del índice en la muestra ($R=-11{,}98$\,\%).
+Períodos mensuales / anuales | 143 / 12 | Meses y años (2015--2026) en que se agregan los rendimientos diarios.
+Máx $\lvert$suma log $-$ log prod$\rvert$ | $\approx2\times10^{-15}$ | Diferencia entre sumar logaritmos y multiplicar rendimientos brutos: es redondeo, así que ambas agregaciones son idénticas (Props.~\ref{prop:multi} y~\ref{prop:aditiva}).
+Rendimientos anuales BVL | $-33{,}43$ a 58,06\,\% | Ganancia de cada año en soles; muy variables: caída en 2015, alzas fuertes en 2016 y 2025. 2026 llega solo hasta noviembre.
+Rendimientos anuales S\&P 500 | $-19{,}44$ a 28,88\,\% | Ganancia de cada año en dólares (solo precio, sin dividendos).
+\texttt{media} diaria | 0,00044 / 0,00043 | Rendimiento logarítmico promedio por día: unos 0,044\,\%, equivalente a cerca de 11\,\% al año en ambos índices.
+\texttt{desv\_est} diaria | 0,01131 / 0,01114 | Volatilidad diaria de 1,1\,\%: un día ``típico'' el índice se mueve alrededor de 1\,\% hacia arriba o hacia abajo.
+\texttt{minimo} / \texttt{maximo} | $-0{,}110$ a 0,091 | Peor y mejor día en logaritmos; los extremos se concentran en marzo de 2020.
+
+== cap01_ej03
+\texttt{r\_usd} | $-40{,}23$ a 51,05 | Rendimiento logarítmico anual (\%) de la acción en dólares, con dividendos: lo que gana un inversionista en dólares.
+\texttt{dlnS\_bcrp} | $-11{,}32$ a 13,44 | Variación logarítmica anual (\%) del tipo de cambio del BCRP. Positiva: el sol se depreció y el inversionista en soles gana más.
+\texttt{r\_sol\_bcrp} | suma de las dos | Rendimiento anual en soles, igual a \texttt{r\_usd} $+$ \texttt{dlnS\_bcrp} (Prop.~\ref{prop:moneda}).
+\texttt{dlnS\_yahoo}, \texttt{r\_sol\_yahoo} | p. ej. 10,71 en 2015 | Lo mismo con \texttt{PEN=X} de Yahoo; permite ver si la fuente del tipo de cambio altera el resultado.
+Fila 2026* | 25,84 / 2,94 | Año incompleto: del 31-dic-2025 al 30-oct-2026.
+Máx $\lvert R_{sol}-(R_{usd}+R_S+R_{usd}R_S)\rvert$ | $2{,}2\times10^{-16}$ | La fórmula simple de la Prop.~\ref{prop:moneda} se cumple exactamente (diferencia de redondeo).
+Diferencia entre fuentes: media | 0,042 pp | En promedio, las dos fuentes dan casi la misma variación anual del tipo de cambio.
+Diferencia entre fuentes: máx. abs. | 2,731 pp | En un año (2015) las fuentes difieren en 2,7 puntos: para un año concreto la fuente sí importa.
+Suma en dólares | 229,70 | Rendimiento logarítmico acumulado dic-2014 a oct-2026 en dólares.
+Suma del tipo de cambio | 14,95 | Depreciación acumulada del sol en el período (en logaritmos).
+Suma en soles | 244,65 | Rendimiento logarítmico acumulado en soles: la suma de las dos anteriores.
+Rendimiento simple en soles | 1054,77\,\% | 1 sol invertido se convirtió en 11,55 soles; en dólares, 1 dólar se convirtió en 9,94 (894,45\,\%).
+
+== cap01_ej04
+Meses | 143 | Rendimientos mensuales de ene-2015 a nov-2026; el último mes es parcial.
+Error mínimo | $1{,}94\times10^{-5}$ | El menor error del período es positivo, como exige la Prop.~\ref{prop:logport}; TRUE confirma que ningún mes es negativo.
+Error medio | 21,71 pb | En promedio, $\sum_iw_ir_{i,t}$ subestima el rendimiento logarítmico del portafolio en 0,22 puntos porcentuales al mes.
+Error máximo | 129,20 pb (2020-11) | El mayor error ocurre cuando las tres acciones se movieron de forma muy distinta.
+Media de disp/2 | 21,73 pb | La mitad de la varianza transversal promedio casi coincide con el error medio, como predice la aproximación de segundo orden.
+Correlación (error, disp/2) | 0,9996 | El error es prácticamente una función de la dispersión entre las tres acciones.
+$a$ de la regresión | $8{,}0\times10^{-6}$ | Constante casi nula: sin dispersión no hay error.
+$b$ de la regresión | 0,4976 | Pendiente casi igual al $\tfrac12$ teórico: el error es la mitad de la varianza transversal.
+Suma de errores | 31,04 | En 143 meses los errores suman 31 puntos logarítmicos: la aproximación no sirve para el largo plazo.
+Rebalanceo mensual | 6,4527 | Valor final de 1 dólar invertido manteniendo pesos de 1/3 cada mes.
+Comprar y mantener | 5,3858 | Valor final de 1 dólar sin rebalancear (pesos iniciales de 1/3).
+Valor final por acción | 3,47 / 9,46 / 3,22 | Lo que se convirtió 1 dólar invertido en cada acción por separado (\texttt{BAP}, \texttt{SCCO}, \texttt{BVN}).
+Pesos finales sin rebalanceo | 0,21 / 0,59 / 0,20 | Sin rebalancear, Southern Copper pasa a pesar el 59\,\% del portafolio: el riesgo se concentra.
+
+== cap01_ej05
+$T$ | 11 | Años completos (2015--2025) con que se calculan las medias anuales.
+\texttt{A\_pct} | 28,89 / 15,71 / 12,59 | Media aritmética de los rendimientos simples anuales (\%) de \texttt{BVN}, \texttt{EPU} y el S\&P 500: el rendimiento de un año ``típico''.
+\texttt{G\_pct} | 10,88 / 11,02 / 11,54 | Media geométrica (\%): rendimiento anual constante que reproduce la riqueza final. Es lo que efectivamente ganó quien mantuvo la inversión.
+\texttt{A\_s2\_pct} | 2,72 / 10,00 / 11,52 | Aproximación $A-s^2/2$ de la media geométrica: excelente para el S\&P 500, mala para \texttt{BVN}.
+\texttt{A\_G\_pb} | 1800,75 / 469,76 / 105,06 | Diferencia $A-G$ en puntos básicos: cuánto exagera la media aritmética el rendimiento logrado. Crece con la volatilidad.
+\texttt{s2\_2\_pb} | 2616,48 / 571,66 / 107,37 | Mitad de la varianza anual en pb; si fuera igual a $A-G$, la aproximación sería exacta.
+\texttt{sd\_diaria} | 3,03 / 1,45 / 1,13 | Volatilidad diaria (\%) de los rendimientos logarítmicos.
+\texttt{raiz252} | 48,14 / 22,95 / 17,95 | Volatilidad diaria anualizada con la regla de la raíz del tiempo, $\sigma_d\sqrt{252}$.
+\texttt{raiz\_dias} | 48,09 / 22,93 / 17,93 | La misma anualización con el número promedio de días observados: casi idéntica, así que usar 252 no cambia nada.
+\texttt{sd\_anual\_obs} | 57,30 / 30,17 / 14,74 | Desviación estándar de los 11 rendimientos anuales; si difiere mucho de la anualizada, los rendimientos no son independientes o la muestra es corta.
+Días NYSE por año | 250--253 | Días de negociación en Nueva York: 252 es una buena aproximación.
+Días BVL (BCRP) por año | 245--261 | Hasta 2020 el BCRP incluye feriados con valor repetido (260--261); desde 2021, 245--251 días efectivos.
+Promedio | 251,5 / 254,7 | Días promedio por año en cada serie.

@@ -1,0 +1,51 @@
+== cap14_ej01
+$T$ | 819 meses | Excesos de rendimiento mensuales de 1949 a 2017, en \%.
+\texttt{media} | 0,344 a 1,155 | Exceso de rendimiento promedio mensual de cada cartera; crece de crecimiento (V1) a valor (V5) y es mayor en las pequeñas (S1).
+CAPM: \texttt{alfa}, \texttt{t(alfa)} | $-0{,}547$ ($t=-3{,}17$) a 0,470 ($t=3{,}75$) | Rendimiento no explicado por el mercado; 6 de 9 son significativas al 5\,\%.
+CAPM: \texttt{beta} | 0,85 a 1,38 | Las betas no explican el patrón: S1V1 tiene la mayor beta y el menor rendimiento.
+CAPM: \texttt{R2} | 0,59 a 0,89 | El mercado explica la mayor parte de la variación, menos en las pequeñas.
+FF3: \texttt{alfa} | $-0{,}533$ a 0,136 | Las alfas se reducen en la mayoría; la gran excepción es S1V1 (pequeñas de crecimiento), que sigue siendo muy negativa.
+\texttt{b\_SMB} | $-0{,}25$ a 1,40 | Sensibilidad al factor tamaño: alta en las pequeñas, negativa en las grandes.
+\texttt{b\_HML} | $-0{,}41$ a 0,84 | Sensibilidad al factor valor: crece de V1 a V5 en cada fila de tamaño.
+FF3: \texttt{R2} | 0,82 a 0,95 | Los tres factores explican mucho más que el mercado solo.
+Promedio de $\lvert$alfa$\rvert$ | 0,256 / 0,129 | El modelo de tres factores reduce el error de valoración medio a la mitad.
+S1V5 $-$ S1V1 | 0,811 / 1,017 / 0,653 | Diferencia de medias y de alfas entre valor y crecimiento pequeñas: el CAPM no la explica (incluso la agranda); FF3 explica una parte, no toda.
+
+== cap14_ej02
+\texttt{GRS} | 2,67 a 13,65 | Estadístico de Gibbons-Ross-Shanken: contrasta que todas las alfas son cero a la vez; se distribuye $F$.
+\texttt{gl} | (9, 809) etc. | Grados de libertad: número de carteras y $T-N-K$.
+\texttt{valor p} | todos $<0{,}002$ | Se rechazan los tres modelos con los tres conjuntos de carteras.
+$\lvert$alfa$\rvert$ medio | 0,115 a 0,425 | Tamaño económico de los errores: Carhart es el mejor con tamaño-momentum (0,135 frente a 0,425 de FF3).
+\texttt{SR2 factores} | 0,023 / 0,052 / 0,109 | Razón de Sharpe al cuadrado (mensual) alcanzable con los factores de cada modelo; añadir HML y Mom la duplica cada vez.
+Tamaño y momentum | GRS baja de 12,7 a 7,9 | El factor momentum es indispensable para estas carteras.
+Industrias | CAPM 2,67; FF3 5,18 | Con industrias el CAPM es el que menos se rechaza: añadir factores no siempre ayuda fuera de las carteras con que se construyeron.
+
+== cap14_ej03
+Carteras, $T$ | 30; 819 | Corte transversal con 30 carteras de prueba.
+FF3: \texttt{R2} transversal | 0,156 | Las betas de los tres factores explican solo el 16\,\% de las diferencias de rendimiento medio entre las 30 carteras.
+$\lambda'\Omega^{-1}\lambda$ | 0,033 / 0,071 | Término de la corrección de Shanken; pequeño, por eso los errores corregidos apenas cambian.
+\texttt{constante} | 1,353 ($t=6{,}82$) | Rendimiento de una cartera con betas cero; debería ser 0. Significativa: el modelo deja mucho sin explicar.
+\texttt{lambda} MktRF (FF3) | $-0{,}665$ ($t=-2{,}67$) | Prima de mercado estimada negativa, frente a una media del factor de 0,645: inconsistente con la teoría.
+\texttt{ee FM} / \texttt{ee Shanken} | p. ej. 0,246 / 0,249 | Errores de Fama-MacBeth y corregidos por estimar las betas; la corrección los aumenta poco.
+Carhart: \texttt{R2} transversal | 0,713 | Con momentum el modelo explica el 71\,\% de las diferencias entre carteras.
+\texttt{lambda} Mom | 0,787 ($t=5{,}58$) | Prima por momentum significativa y cercana a la media del factor (0,698): el mercado ``paga'' por esta exposición.
+\texttt{lambda} HML (Carhart) | 0,269 ($t=2{,}60$) | Prima de valor significativa, algo menor que la media del factor (0,348).
+\texttt{media del factor} | 0,645 / 0,159 / 0,348 / 0,698 | Si el factor es un rendimiento negociable, su prima debería igualar su media: compárese con \texttt{lambda}.
+
+== cap14_ej04
+SR factores (CAPM) | 0,152 (0,528 anual) | Máxima razón de Sharpe con solo el mercado.
+SR factores + 9 carteras | 0,334 (1,156 anual) | Máxima razón de Sharpe combinando factores y carteras: las carteras añaden mucho.
+SR$^2$ todos $-$ SR$^2$ factores | 0,088249 | Mejora de la razón de Sharpe al cuadrado al añadir las carteras.
+$\alpha'\Sigma^{-1}\alpha$ | 0,088249 | Forma cuadrática de las alfas: idéntica a la fila anterior, lo que verifica la Proposición~\ref{prop:grssharpe}. La GRS mide cuánto mejora el Sharpe.
+FF3 / Carhart: mejora | 0,067 / 0,058 | Con mejores factores, las carteras añaden menos: los modelos se acercan a la eficiencia, sin alcanzarla.
+SR de cada factor | Mkt 0,152; SMB 0,056; HML 0,129; Mom 0,179 | Razón de Sharpe mensual individual; momentum tiene la mayor y SMB la menor.
+
+== cap14_ej05
+CP1 | 73,46\,\% | El primer componente explica casi tres cuartos de la varianza de las 30 carteras.
+CP2, CP3 | 6,29\,\%; 4,01\,\% | Los dos siguientes explican mucho menos; con tres se llega al 83,76\,\%.
+CP4, CP5 | 2,87\,\%; 2,03\,\% | Aportes marginales: la estructura de covarianzas tiene pocos factores relevantes.
+Correlación CP1-Mkt | 0,962 | El primer componente es el mercado.
+Correlación CP2-SMB | $-0{,}801$ | El segundo es (con signo contrario) el factor tamaño.
+Correlación CP3-Mom / CP3-HML | 0,855 / $-0{,}562$ | El tercero combina momentum y valor (con signo opuesto).
+$R^2$ de cada componente | 0,989; 0,836; 0,916 | Los cuatro factores explican casi por completo los tres componentes: los factores de Fama-French y Carhart capturan las fuentes estadísticas de covarianza.
+$R^2$ medio de las 30 carteras | 0,817 / 0,794 | Tres componentes explican la varianza de las carteras un poco mejor que tres factores, como debe ser por construcción.

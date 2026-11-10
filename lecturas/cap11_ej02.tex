@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$p$ por BIC, $k$ & 3; $k=2$ & Rezagos del VAR en niveles y, por tanto, de las diferencias en el VECM. \\
+Autovalores & 0,0631; 0,0050 & Correlaciones canónicas al cuadrado; uno grande y otro casi cero sugieren un vector de cointegración. \\
+Traza $r\le0$ & 33,05 (VC 15,49) & Se rechaza que no haya cointegración. \\
+Traza $r\le1$ & 2,35 (VC 3,84) & No se rechaza que haya como máximo un vector: $r=1$. \\
+Máximo autovalor & 30,70 / 2,35 & Prueba alternativa con la misma conclusión. \\
+$\bm\beta$ normalizado & $(1;\ -1{,}112)$ & Relación de largo plazo $B_t-1{,}112\,W_t$ estacionaria. \\
+$\alpha_{\text{Brent}}$ & 0,034 ($t=0{,}40$) & El Brent no reacciona al desequilibrio: es el precio ``líder''. \\
+$\alpha_{\text{WTI}}$ & 0,166 ($t=2{,}03$) & El WTI corrige el desequilibrio: se ajusta hacia el Brent cada mes. \\
+Persistencia $1+\beta'\alpha$ & 0,849 & Parte del desequilibrio que persiste al mes siguiente. \\
+Vida media & 4,2 meses & Coherente con la de Engle-Granger. \\
+LR $\beta=(1,-1)$ & 22,39; $p\approx2\times10^{-6}$ & Se rechaza que los precios se muevan uno a uno en el largo plazo en toda la muestra. \\
+\end{xltabular}}

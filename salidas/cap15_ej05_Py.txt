@@ -1,0 +1,14 @@
+AR(1) por MCO: r_t = a + b r_{t-1} + e_t;  n = 530
+  a = 0.10569 (ee 0.04752);  b = 0.98016 (ee 0.00822);  s = 0.60426
+Parámetros de Vasicek (Delta = 1/12 año):
+  kappa = 0.2405 por año;  theta = 5.3275 %;  sigma = 2.1142 % por raíz de año
+  vida media = ln 2 / kappa = 2.883 años;  desv. est. estacionaria = sigma/sqrt(2 kappa) = 3.0487 %
+  media muestral = 4.8202 %;  desv. est. muestral = 3.1934 %;  P(r < 0) bajo Vasicek = 0.0403
+
+Efecto nivel (CKLS): ln e_t^2 = c + 2 gamma ln r_{t-1} + u_t
+  2 gamma = 1.2787 (ee 0.1260)  ->  gamma = 0.6394;  t(gamma = 0) = 10.15;  t(gamma = 0,5) = 2.21
+
+Desv. est. de e_t por terciles de r_{t-1}:
+  bajo    r medio =  1.597  desv.est.(e) = 0.2734  n = 178
+  medio   r medio =  4.391  desv.est.(e) = 0.3302  n = 175
+  alto    r medio =  8.481  desv.est.(e) = 0.9532  n = 177

@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T}, banda & 845; $\pm0{,}067$ & Cambios mensuales de la tasa; la banda $1{,}96/\sqrt T$ indica qué autocorrelaciones son significativas. \\
+\texttt{ACF} & 0,310 en el rezago 1 & Solo el primer rezago sale claramente de la banda (y el segundo apenas): patrón típico de un MA(1) o MA(2). \\
+\texttt{PACF} & 0,310; $-0{,}212$; \ldots & Decae alternando signos: también compatible con un MA. Un AR(1) puro tendría PACF nula desde el rezago 2. \\
+\texttt{ar1}, \texttt{ar2}, \texttt{ma1}, \texttt{ma2} & p. ej. MA(1): 0,445 & Coeficientes estimados por máxima verosimilitud de cada modelo. \\
+\texttt{AIC} & 17,45 a 64,33 & Criterio de Akaike: menor es mejor. Prefiere el MA(2) (17,45), muy cerca del ARMA(1,1). \\
+\texttt{BIC} & 36,41 a 78,55 & Criterio bayesiano, penaliza más los parámetros; también elige el MA(2), con el MA(1) muy próximo (37,49). \\
+AR(1) & AIC 64,33 & Es claramente el peor: la dinámica no es autorregresiva. \\
+$\theta$ implicado por Working & 0,2679 & MA(1) que generaría un promedio mensual de datos diarios ($\rho_1=1/4$); el estimado (0,445) es mayor, así que hay algo más que el efecto del promedio. \\
+\end{xltabular}}

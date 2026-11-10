@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{mu} & 0,04 a 0,14 & Rendimiento medio diario (\%) estimado. \\
+\texttt{omega}, \texttt{alfa}, \texttt{beta} & p. ej. S\&P 0,060; 0,213; 0,719 & Parámetros GARCH estimados con solo dos años: algunos son extremos (AMZN $\alpha=0$; GOOG $\beta=0{,}62$). \\
+\texttt{nu} & 3,33 a 7,80 & Grados de libertad de la $t$: colas pesadas en todas las series. \\
+\texttt{alfa+beta}, \texttt{vida media} & 0,76 a 0,99; 2,5 a 75,6 días & Persistencia muy distinta entre series: con 503 datos la estimación es imprecisa. \\
+\texttt{QLIKE} & p. ej. S\&P 0,249 / 0,352 / 0,605 & Pérdida promedio (menor es mejor): el GARCH-$t$ gana en AAPL, FB y S\&P; la EWMA en AMZN y GOOG. \\
+\texttt{ECM} & p. ej. FB 288,1 / 294,1 / 289,0 & Pérdida cuadrática: dominada por pocos días extremos, menos informativa. \\
+\texttt{DM QLIKE (GARCH - EWMA)} & $-1{,}40$ a 0,34 & Diferencia de pérdidas estandarizada: ninguna supera 1,96 en valor absoluto, así que GARCH y EWMA no se distinguen estadísticamente. \\
+Varianza constante & QLIKE más alto en todas & Ignorar la dinámica de la volatilidad es claramente peor. \\
+\end{xltabular}}

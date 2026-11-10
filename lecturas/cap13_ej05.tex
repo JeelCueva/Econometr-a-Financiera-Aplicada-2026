@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Parámetros GARCH-$t$ & $\alpha=0{,}083$; $\beta=0{,}912$; $\nu=5{,}23$ & Modelo estimado con toda la muestra (Capítulo~8). \\
+Volatilidad de mañana (2019-12-31) & 1,52\,\% (24,1\,\% anual) & Volatilidad condicional en un período de calma. \\
+VaR 99\,\% a 1 día, ES & 3,89\,\%; 5,12\,\% & Riesgo de un día con la $t$. \\
+Regla de la raíz & 12,31\,\% & $\sqrt{10}\times$ VaR de un día; supone volatilidad constante e independencia. \\
+Varianza GARCH acumulada (normal) & 11,17\,\% & VaR con la varianza de 10 días del GARCH y cuantil normal; en calma la varianza esperada sube, pero la normal ignora las colas. \\
+Simulación filtrada, VaR y ES & 12,64\,\%; 15,81\,\% & 100\,000 trayectorias de 10 días con el GARCH y residuos de la $t$: es el cálculo más completo; supera a la regla de la raíz porque la volatilidad tiende a subir desde un nivel bajo. \\
+Volatilidad de mañana (2026-11-03) & 4,76\,\% (75,6\,\% anual) & Volatilidad condicional en un período muy agitado. \\
+VaR a 10 días (2026-11-03) & raíz 38,94; filtrada 39,58\,\% & Con volatilidad alta la regla de la raíz y la simulación casi coinciden: la reversión de la volatilidad compensa las colas. \\
+ES filtrado (2026-11-03) & 49,60\,\% & En el 1\,\% de peores escenarios de 10 días se pierde en promedio la mitad del valor. \\
+\end{xltabular}}

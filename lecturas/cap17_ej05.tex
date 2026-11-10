@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Pr filtrada / predicha del régimen volátil & 0,038 / 0,050 & En nov-2018 el mercado estaba casi con certeza en el régimen tranquilo. \\
+Media y desv. est. pronosticadas & 0,887\,\%; 4,363\,\% & Momentos de la mezcla para diciembre de 2018. \\
+VaR 95\,\% mezcla / normal & 5,78 / 8,10\,\% & Con régimen tranquilo, el VaR de la mezcla es mucho menor que el de la normal incondicional. \\
+VaR 99\,\% mezcla / normal & 10,80 / 11,73\,\% & Al 99\,\% la mezcla se acerca a la normal, porque la cola incluye la posibilidad de pasar al régimen volátil. \\
+\texttt{excepciones}, \texttt{esperadas} & p. ej. 11 frente a 11,1 al 99\,\% & Meses con pérdida mayor que el VaR frente a los esperados. \\
+\texttt{LR\_uc}, \texttt{p\_uc} & 0,00 ($p=0{,}98$) al 99\,\% & Kupiec: la mezcla tiene la cobertura correcta al 99\,\%; la normal no ($p=0{,}004$). \\
+\texttt{LR\_ind}, \texttt{p\_ind} & normal 27,32 al 95\,\% & Christoffersen: las excepciones de la normal se agrupan; las de la mezcla, no. \\
+VaR 99\,\% mín./máx./mediana & 8,37 / 25,36 / 9,35\,\% & El VaR de la mezcla varía con la probabilidad del régimen: se triplica en las crisis. \\
+\end{xltabular}}

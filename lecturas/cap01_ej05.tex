@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 11 & Años completos (2015--2025) con que se calculan las medias anuales. \\
+\texttt{A\_pct} & 28,89 / 15,71 / 12,59 & Media aritmética de los rendimientos simples anuales (\%) de \texttt{BVN}, \texttt{EPU} y el S\&P 500: el rendimiento de un año ``típico''. \\
+\texttt{G\_pct} & 10,88 / 11,02 / 11,54 & Media geométrica (\%): rendimiento anual constante que reproduce la riqueza final. Es lo que efectivamente ganó quien mantuvo la inversión. \\
+\texttt{A\_s2\_pct} & 2,72 / 10,00 / 11,52 & Aproximación $A-s^2/2$ de la media geométrica: excelente para el S\&P 500, mala para \texttt{BVN}. \\
+\texttt{A\_G\_pb} & 1800,75 / 469,76 / 105,06 & Diferencia $A-G$ en puntos básicos: cuánto exagera la media aritmética el rendimiento logrado. Crece con la volatilidad. \\
+\texttt{s2\_2\_pb} & 2616,48 / 571,66 / 107,37 & Mitad de la varianza anual en pb; si fuera igual a $A-G$, la aproximación sería exacta. \\
+\texttt{sd\_diaria} & 3,03 / 1,45 / 1,13 & Volatilidad diaria (\%) de los rendimientos logarítmicos. \\
+\texttt{raiz252} & 48,14 / 22,95 / 17,95 & Volatilidad diaria anualizada con la regla de la raíz del tiempo, $\sigma_d\sqrt{252}$. \\
+\texttt{raiz\_dias} & 48,09 / 22,93 / 17,93 & La misma anualización con el número promedio de días observados: casi idéntica, así que usar 252 no cambia nada. \\
+\texttt{sd\_anual\_obs} & 57,30 / 30,17 / 14,74 & Desviación estándar de los 11 rendimientos anuales; si difiere mucho de la anualizada, los rendimientos no son independientes o la muestra es corta. \\
+Días NYSE por año & 250--253 & Días de negociación en Nueva York: 252 es una buena aproximación. \\
+Días BVL (BCRP) por año & 245--261 & Hasta 2020 el BCRP incluye feriados con valor repetido (260--261); desde 2021, 245--251 días efectivos. \\
+Promedio & 251,5 / 254,7 & Días promedio por año en cada serie. \\
+\end{xltabular}}

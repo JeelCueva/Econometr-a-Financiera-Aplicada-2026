@@ -1,0 +1,6 @@
+T = 929 meses (1946-01-01 a 2023-05-01)
+b = 0.00611 (t = 2.35)   phi = 0.99759   corr(u, v) = -0.983   sigma_uv/sigma_v^2 = -0.9541
+Sesgo de Kendall de phi = -0.00430
+Sesgo de Stambaugh de b = 0.00410
+b corregido = 0.00201
+Proporción del coeficiente atribuible al sesgo = 67.1 %

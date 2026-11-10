@@ -1,0 +1,15 @@
+Volatilidad EWMA pronosticada para el día siguiente a 2018-12-31: S&P 500 = 1.7640 %; Nasdaq = 2.1023 %
+Cópulas de los residuos: gaussiana rho = 0.9193; t rho = 0.9213, nu = 5.195; Clayton theta = 3.7780; Gumbel theta = 3.6899
+
+Cartera 50 % S&P 500 y 50 % Nasdaq; 20000 simulaciones; márgenes = cuantiles empíricos de los residuos
+tau simulado   VaR 99 %   ES 99 %    VaR 99,9 %   cópula
+      0.7534     5.1263    6.6292       8.8678   gaussiana
+      0.7601     5.1670    6.6592       8.8766   t
+      0.6676     5.2281    6.7663       9.2181   Clayton
+      0.7165     5.0093    6.3528       8.2888   Gumbel
+      0.0207     3.6766    4.6265       5.7626   independencia
+      1.0000     5.2715    6.8117       9.6611   comonotonía
+                 5.2883    6.9639       9.9572   histórica filtrada (pares observados de residuos, n = 5030)
+
+Cota comonótona exacta del ES histórico (promedio de las 51 mayores pérdidas de cada índice) = 7.0957
+ES histórico de la cartera = 6.9639; beneficio de diversificación = 0.1318 puntos

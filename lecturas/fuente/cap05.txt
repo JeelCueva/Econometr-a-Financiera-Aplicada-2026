@@ -1,0 +1,44 @@
+== cap05_ej01
+Fila \texttt{log precio (c)}: ADF $t$ | $-1{,}91$ | Estadístico ADF con constante; no es más negativo que el valor crítico $-2{,}86$: no se rechaza la raíz unitaria.
+\texttt{p} (rezagos) | 29 / 28 | Rezagos de $\Delta y$ incluidos para limpiar la autocorrelación, elegidos por criterio de información.
+KPSS $\eta$ (c) | 16,75 | Muy por encima de 0,463: se rechaza la estacionariedad. Ambas pruebas apuntan a raíz unitaria.
+\texttt{l} | 37 | Rezagos de la ventana de Newey-West con que KPSS estima la varianza de largo plazo.
+Fila \texttt{log precio (ct)} | ADF $-3{,}18$; KPSS 2,62 | Con tendencia la conclusión no cambia: ADF no alcanza $-3{,}41$ y KPSS supera 0,146.
+Fila \texttt{rendimiento (c)} | ADF $-17{,}11$ | Muy por debajo de $-2{,}86$: se rechaza la raíz unitaria en el rendimiento.
+KPSS del rendimiento | 0,027 | Muy por debajo de 0,463: no se rechaza la estacionariedad. El rendimiento es $I(0)$.
+Conclusión | $I(1)$ | El log precio es integrado de orden 1: hay que diferenciarlo una vez para obtener una serie estacionaria.
+
+== cap05_ej02
+\texttt{T} | 9278 días | Observaciones diarias del log VIX, ene-1990 a set-2026.
+ADF $t$ | $-6{,}54$ (11 rezagos) | Muy por debajo de $-2{,}86$: se rechaza la raíz unitaria; el VIX es estacionario.
+KPSS $\eta$ | 0,568 | Algo mayor que 0,463: rechaza la estacionariedad al 5\,\%. El conflicto es típico de series estacionarias pero muy persistentes.
+\texttt{phi} | 0,9799 | Coeficiente AR(1) diario: cerca de 1, la serie vuelve a su media pero muy lentamente.
+Media de largo plazo | 2,903 (VIX 18,23) | Nivel al que tiende el log VIX, $c/(1-\phi)$; equivale a un VIX ``normal'' de 18.
+Vida media | 34,2 días | Tiempo para que se disipe la mitad de un choque: unos siete semanas de negociación.
+
+== cap05_ej03
+\texttt{T} | 1830 meses | Observaciones mensuales de la tasa a 10 años, 1871 a 2023.
+Rezagos por AIC | 22 | Número de diferencias rezagadas en la regresión ADF que minimiza el criterio de Akaike.
+\texttt{gamma} | $-0{,}00288$ | Coeficiente de $y_{t-1}$; bajo raíz unitaria es 0. Es negativo pero muy pequeño.
+\texttt{ee} de gamma | 0,00169 | Error estándar de $\hat\gamma$.
+\texttt{delta\_1}, \texttt{delta\_2} | 0,409; $-0{,}254$ | Coeficientes de las diferencias rezagadas: capturan la dinámica de corto plazo, no se interpretan para la prueba.
+\texttt{constante} | 0,0119 | Término constante de la regresión ADF.
+$t$ de gamma | $-1{,}70$ | Estadístico ADF; no supera ni el valor crítico del 10\,\% ($-2{,}57$): no se rechaza la raíz unitaria (no se usan los valores de la $t$ normal).
+En diferencias | $t=-10{,}37$ | Se rechaza con claridad la raíz unitaria en las diferencias.
+KPSS niveles / diferencias | 1,164 / 0,075 | Rechaza estacionariedad en niveles y no en diferencias: la tasa es $I(1)$ en esta muestra.
+
+== cap05_ej04
+\texttt{T} | 621 meses | Datos mensuales de ene-1975 a set-2026.
+ADF \texttt{lo}, \texttt{ls} en niveles | $-0{,}86$; $-0{,}09$ | No se rechaza la raíz unitaria en los logaritmos del oro ni del S\&P 500.
+ADF en diferencias | $-7{,}39$; $-9{,}92$ | Se rechaza en las diferencias: ambas series son $I(1)$.
+Niveles: \texttt{b} | 0,5301 | Si el S\&P 500 sube 1\,\%, el oro ``sube'' 0,53\,\% en promedio, según la regresión en niveles.
+Niveles: \texttt{t} | 32,85 | Altísimo, pero no es válido: con series $I(1)$ no cointegradas el estadístico $t$ diverge.
+Niveles: \texttt{R2} | 0,6355 | Aparenta una relación fuerte, producto de que ambas series tienen tendencia.
+\texttt{DW} | 0,0096 | Durbin-Watson casi cero: residuos extremadamente autocorrelacionados. Si $R^2>DW$, sospeche regresión espuria (Granger-Newbold).
+ADF de los residuos | $-2{,}10$ | No alcanza el valor crítico de Engle-Granger (cerca de $-3{,}34$): los residuos tienen raíz unitaria y no hay cointegración.
+Diferencias: \texttt{b}, \texttt{t}, \texttt{R2} | 0,015; 0,30; 0,00015 | En rendimientos la relación desaparece: el oro y las acciones no se mueven juntos mes a mes.
+
+== cap05_ej05
+ADF con tendencia | $-2{,}92$ (21 rezagos) | No alcanza $-3{,}41$: sin considerar quiebres, no se rechaza la raíz unitaria en $\ln(D/P)$.
+Zivot-Andrews: $t$ mínimo | $-4{,}35$ | Menor estadístico ADF al permitir un cambio de nivel en cualquier fecha; no supera $-4{,}80$: tampoco se rechaza la raíz unitaria.
+Fecha del quiebre | 1990-11 | Mes en que el cambio de nivel más reduce el estadístico: coincide con la caída permanente de la razón dividendo/precio en los años noventa (recompras de acciones, menor pago de dividendos).

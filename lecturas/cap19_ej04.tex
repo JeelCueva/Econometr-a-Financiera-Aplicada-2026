@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$N$, $T$, $n$ & 30; 807; 24\,210 & Panel de carteras mensuales. \\
+$x$: media, desv. est. & 11,85; 19,42 & Rendimiento acumulado de los meses $t-12$ a $t-2$ (\%), la señal de momentum. \\
+Correlación entre carteras (residuos, $x$) & 0,708; 0,700 & Muy alta: en un mismo mes todas las carteras reciben choques comunes. \\
+Autocorrelación (residuos, $x$) & 0,101; 0,921 & La señal es muy persistente; los residuos, poco. \\
+Pendiente agrupada & $-0{,}00027$ & Casi cero: en el panel completo el rendimiento pasado no predice el futuro. \\
+\texttt{ee(pendiente)} por método & 0,0012 a 0,0104 & Varía casi 9 veces según el método. \\
+Cociente con el clásico & 0,65 a 5,75 & Agrupar por mes multiplica el error estándar por 5,75: la correlación transversal es el problema dominante, no la autocorrelación. \\
+Agrupados por cartera & 0,646 & Incluso menor que el clásico: agrupar por la dimensión equivocada no protege. \\
+Fama-MacBeth: pendiente media & 0,0266 ($t=6{,}18$) & Estimador que promedia regresiones mensuales de corte transversal: pendiente positiva y significativa. \\
+Fama-MacBeth con Newey-West & $t=6{,}48$ & Corregir la autocorrelación de las pendientes casi no cambia nada (autocorrelación 0,099). \\
+\end{xltabular}}

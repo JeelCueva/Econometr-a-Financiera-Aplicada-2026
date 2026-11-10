@@ -1,0 +1,2 @@
+Normal estándar: VaR99 = 2.3263, ES99 = 2.6652
+$t$ de Student con $\nu=4$, varianza 1: VaR99 = 2.6495, ES99 = 3.6915

@@ -1,0 +1,137 @@
+% =====================================================================
+%  Preámbulo común — Econometría Financiera Aplicada
+%  Estilo sobrio: texto en negro; color solo en código, salidas y gráficas
+% =====================================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{libertinus}           % Libertinus Serif (texto)
+\usepackage[varqu,scaled=0.93]{zi4} % Inconsolata para código
+\usepackage{microtype}
+\usepackage[a4paper,top=3cm,bottom=3cm,inner=3cm,outer=2.6cm,headheight=14pt]{geometry}
+\usepackage{setspace}\setstretch{1.1}
+% ---------- Títulos sobrios en negro ----------
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries\raggedright}{\large\scshape\mdseries\chaptertitlename\ \thechapter}{8pt}{\Huge}[\vspace{6pt}\titlerule]
+\titlespacing*{\chapter}{0pt}{20pt}{36pt}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.8em}{}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{libertinust1math}   % matemáticas Libertinus (incluye símbolos AMS)
+\usepackage{bm}
+\usepackage{booktabs,array,tabularx,multirow}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{needspace}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+\usepackage{pgfplots}\pgfplotsset{compat=1.16}
+\usetikzlibrary{arrows.meta,fadings}
+\usepackage{qrcode}
+\tikzfading[name=nube, inner color=transparent!0, outer color=transparent!100]
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+% Enlaces en azul: índice, referencias a ecuaciones, teoremas, figuras, tablas, ejercicios y direcciones web
+\definecolor{azulEnlace}{RGB}{0,70,170}
+\hypersetup{colorlinks=true,linkcolor=azulEnlace,citecolor=azulEnlace,urlcolor=azulEnlace,filecolor=azulEnlace,
+  linktoc=all}
+
+% ---------- Encabezados (negro, discretos) ----------
+\pagestyle{fancy}\fancyhf{}
+\newcommand{\autorpie}{\footnotesize\scshape Jeel Cueva}          % nombre del autor en cada página
+\newcommand{\obrapie}{\footnotesize\itshape Econometría Financiera Aplicada}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\small\thepage}
+\fancyfoot[L]{\autorpie}
+\fancyfoot[R]{\obrapie}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[L]{\autorpie}\fancyfoot[C]{\small\thepage}\fancyfoot[R]{\obrapie}%
+  \renewcommand{\headrulewidth}{0pt}}
+
+% ---------- Entornos teóricos (amsthm clásico, sin color) ----------
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}[teorema]{Corolario}
+\theoremstyle{definition}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\theoremstyle{remark}
+\newtheorem{observacion}[teorema]{Observación}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% ---------- Ejercicios (sin fondos; solo filetes grises finos) ----------
+\newcounter{ejres}[chapter]
+\renewcommand{\theejres}{\thechapter.\arabic{ejres}}
+\newenvironment{ejresuelto}[1]{\par\needspace{6\baselineskip}\bigskip
+  \refstepcounter{ejres}\noindent{\color{gray!70}\rule{\linewidth}{0.4pt}}\par\smallskip
+  \noindent\textbf{Ejercicio resuelto \theejres.}\ \textit{#1}\par\smallskip}%
+  {\par\noindent{\color{gray!70}\rule{\linewidth}{0.4pt}}\par\bigskip}
+\newcommand{\paso}[1]{\par\needspace{3\baselineskip}\smallskip\noindent\textbf{#1}\quad}
+\newenvironment{conclusion}{\par\smallskip\noindent\textbf{Conclusión.}\ }{\par}
+\newcommand{\enunciado}{\noindent\textsc{Enunciado.}\ }
+\newcommand{\solucion}{\par\smallskip\noindent\textsc{Solución.}\ }
+
+% Marcador de contenido que se completa con los datos descargados (se elimina en la versión final)
+\newenvironment{pendiente}{\par\medskip\noindent\begin{tabular}{@{}|p{0.95\linewidth}@{}}\small\itshape
+  [Pendiente de los datos]\ }{\end{tabular}\par\medskip}
+
+% ---------- Código y salidas (único lugar con color, además de gráficas) ----------
+\usepackage{listings}
+\definecolor{cR}{RGB}{39,93,173}      % R
+\definecolor{cPy}{RGB}{48,105,152}    % Python
+\definecolor{cCom}{RGB}{96,125,96}
+\definecolor{cStr}{RGB}{163,72,52}
+\definecolor{cKey}{RGB}{122,40,120}
+\lstset{basicstyle=\ttfamily\footnotesize,columns=fullflexible,keepspaces=true,
+  breaklines=true,showstringspaces=false,tabsize=2,
+  commentstyle=\color{cCom},stringstyle=\color{cStr},keywordstyle=\color{cKey}\bfseries,
+  literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1
+           {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+           {ü}{{\"u}}1 {²}{{\textsuperscript{2}}}1 {³}{{\textsuperscript{3}}}1 {°}{{\textdegree}}1 {×}{{$\times$}}1 {≈}{{$\approx$}}1 {→}{{$\to$}}1 {–}{{--}}1 {—}{{---}}1 {±}{{$\pm$}}1}
+\lstdefinestyle{codR}{language=R,frame=leftline,framerule=1.2pt,rulecolor=\color{cR},xleftmargin=8pt,
+  framexleftmargin=6pt,title={\small\sffamily\color{cR}R}}
+\lstdefinestyle{codPy}{language=Python,frame=leftline,framerule=1.2pt,rulecolor=\color{cPy},
+  xleftmargin=8pt,framexleftmargin=6pt,title={\small\sffamily\color{cPy}Python}}
+\lstdefinestyle{salida}{language={},backgroundcolor=\color{gray!8},frame=none,xleftmargin=8pt,
+  framexleftmargin=6pt,title={\small\sffamily\color{gray}Salida}}
+\lstnewenvironment{codigoR}{\lstset{style=codR}}{}
+\lstnewenvironment{codigoPy}{\lstset{style=codPy}}{}
+\lstnewenvironment{salida}{\lstset{style=salida}}{}
+
+% ---------- Gráficas: paleta sobria y consistente ----------
+\definecolor{g1}{RGB}{31,60,110}    % azul oscuro
+\definecolor{g2}{RGB}{166,62,46}    % rojo ladrillo
+\definecolor{g3}{RGB}{104,120,56}   % verde oliva
+\definecolor{g4}{RGB}{120,120,120}  % gris
+\pgfplotsset{libro/.style={axis lines=left,every axis plot/.append style={thick},
+  tick label style={font=\footnotesize},label style={font=\small},
+  legend style={font=\footnotesize,draw=none,fill=none},legend cell align=left,
+  /pgf/number format/.cd,use comma,1000 sep={\,}}}
+
+% ---------- Notación ----------
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\soles}{S/\,}
+
+% ---------- Código y salidas leídos de los archivos ejecutados ----------
+\newcommand{\archivoR}[1]{\lstinputlisting[style=codR]{codigo/R/#1}}
+\newcommand{\archivoPy}[1]{\lstinputlisting[style=codPy]{codigo/Python/#1}}
+\newcommand{\salidaR}[1]{\lstinputlisting[style=salida,title={\small\sffamily\color{gray}Salida en R}]{salidas/#1}}
+\newcommand{\salidaPy}[1]{\lstinputlisting[style=salida,title={\small\sffamily\color{gray}Salida en Python}]{salidas/#1}}
+\newcommand{\RvsPy}{\par\smallskip\noindent\textbf{Nota sobre el código.}\ }
+% Sitio web del libro: programas en R y Python, salidas y datos de cada ejercicio
+\newcommand{\sitioweb}{https://github.com/JeelCueva/Econometr-a-Financiera-Aplicada-2026}
+\newcommand{\codigoweb}[1]{\par\smallskip\noindent{\small\sffamily Programas de este ejercicio en el repositorio
+  del libro: \href{\sitioweb/blob/HEAD/codigo/R/#1.R}{\texttt{\detokenize{#1}.R}} (R) y
+  \href{\sitioweb/blob/HEAD/codigo/Python/#1.py}{\texttt{\detokenize{#1}.py}} (Python); datos en la carpeta
+  \href{\sitioweb/tree/HEAD/datos}{\texttt{datos}}.}\par\smallskip}
+% Tabla "Cómo leer la salida" de cada ejercicio (archivos en lecturas/)
+\usepackage{xltabular}
+\newcommand{\lectura}[1]{\IfFileExists{lecturas/#1.tex}{\input{lecturas/#1}}{}}
+\setlength{\emergencystretch}{1.5em}

@@ -1,0 +1,53 @@
+== cap02_ej01
+Período | 1987-05-21 a 2026-11-03 | Fechas del primer y último rendimiento diario del Brent usados.
+\texttt{T} | 9121 | Número de rendimientos logarítmicos diarios.
+\texttt{media} | 0,00019 | Rendimiento promedio diario de 0,019\,\%: casi cero frente a la volatilidad, como es típico en datos diarios.
+\texttt{desv\_est} | 0,0270 | Volatilidad diaria de 2,7\,\%, más del doble que la de un índice bursátil amplio.
+\texttt{asimetria} | $-1{,}49$ | Negativa: las caídas extremas son más grandes que las subidas extremas. Bajo normalidad sería 0.
+\texttt{curtosis} | 55,97 | Muy por encima de 3 (normal): colas extremadamente pesadas; hay muchos más días extremos que los que predice la normal.
+\texttt{JB} | $1{,}07\times10^{6}$ | Estadístico de Jarque-Bera; bajo normalidad se distribuye $\chi^2_2$, cuyo valor crítico al 5\,\% es 5,99.
+\texttt{p\_valor} | 0 | Probabilidad de observar un JB tan grande si los rendimientos fueran normales: se rechaza la normalidad sin ninguna duda.
+Cinco mayores $\lvert r\rvert$ | $-0{,}644$ (21-abr-2020) | Días más extremos; cuatro de cinco son de marzo-abril de 2020 (colapso de la demanda por la pandemia) y uno de la Guerra del Golfo (1991).
+Sin abril de 2020: \texttt{asimetria} | $-0{,}46$ | Al quitar dos días la asimetría cae a un tercio: este momento depende de muy pocas observaciones.
+Sin abril de 2020: \texttt{curtosis} | 17,79 | Baja de 56 a 18, pero sigue lejos de 3: las colas pesadas no se deben solo a 2020.
+Sin abril de 2020: \texttt{JB}, \texttt{p\_valor} | 83\,438; 0 | La normalidad se sigue rechazando con claridad.
+$P(\lvert z\rvert>4)$ observada | 0,005591 | El 0,56\,\% de los días el rendimiento se aleja más de 4 desviaciones estándar de la media.
+$P(\lvert z\rvert>4)$ normal | $6{,}3\times10^{-5}$ | Lo que predice la normal: los días extremos son unas 88 veces más frecuentes de lo que ella indica.
+
+== cap02_ej02
+Banda de Bartlett | $\pm0{,}0205$ | $1{,}96/\sqrt T$: si una autocorrelación cae fuera de esta banda es significativa al 5\,\% (bajo independencia).
+Columna \texttt{r} | $-0{,}028$ a 0,021 | Autocorrelaciones de los rendimientos: todas muy pequeñas; el rendimiento de hoy casi no ayuda a predecir el de mañana.
+Columna \texttt{r2} | 0,33 en el rezago 1 | Autocorrelaciones de $r_t^2$: grandes y positivas; un día de mucho movimiento tiende a seguir a otro (agrupamiento de volatilidad).
+Columna \texttt{abs\_r} | 0,18 a 0,26 | Autocorrelaciones de $\lvert r_t\rvert$: altas y muy persistentes en los 10 rezagos; la volatilidad es predecible.
+Ljung-Box \texttt{r}, $m=10$ | $Q=25{,}74$; $p=0{,}004$ | Rechaza la ausencia de autocorrelación, pero los coeficientes son tan pequeños que no permiten una predicción útil.
+Ljung-Box \texttt{r}, $m=20$ | $Q=72{,}59$; $p\approx7\times10^{-8}$ | Mismo resultado; además, la prueba supone homocedasticidad, que aquí no se cumple, y por eso tiende a rechazar de más.
+Ljung-Box \texttt{r2} | $Q=1721$ y 2487; $p=0$ | Rechazo abrumador: los cuadrados están fuertemente autocorrelacionados.
+Ljung-Box \texttt{abs\_r} | $Q=4171$ y 6855; $p=0$ | Rechazo aún más fuerte: el valor absoluto es la medida más clara de la persistencia de la volatilidad.
+
+== cap02_ej03
+\texttt{h} | 1, 5, 21, 63, 126 | Horizonte de agregación en días de negociación (día, semana, mes, trimestre y semestre).
+\texttt{n} | 9121 a 72 | Número de bloques sin traslape: al agregar se pierden observaciones y las estimaciones se vuelven menos precisas.
+\texttt{desv\_est} | 0,027 a 0,224 | Volatilidad del rendimiento de $h$ días; crece con el horizonte.
+\texttt{asimetria} | $-1{,}49$ a 0,01 | Tiende a cero al agregar, aunque no de forma monótona (en $h=21$ la domina abril de 2020).
+\texttt{curtosis} | 55,97 a 3,84 | Disminuye hacia 3 con el horizonte: los rendimientos agregados se parecen más a la normal (teorema central del límite).
+\texttt{p\_JB} | 0,000 a 0,344 | Solo en el horizonte semestral no se rechaza la normalidad al 5\,\%; también influye que $n=72$ da poca potencia.
+desv($h=21$)/desv($h=1$) | 4,736 | Cociente observado entre la volatilidad mensual y la diaria.
+$\sqrt{21}$ | 4,583 | Cociente que predice la regla de la raíz del tiempo; el observado es algo mayor, lo que sugiere una ligera autocorrelación positiva o el peso de 2020.
+
+== cap02_ej04
+Período, $T$ | 1871-02 a 2026-09; 1868 | Meses con cambio logarítmico del índice de Shiller.
+\texttt{banda} | 0,045 / 0,065 / 0,063 | $1{,}96/\sqrt T$ de cada tramo: umbral de significancia al 5\,\%.
+\texttt{rho(1)} completo | 0,274 | Autocorrelación de primer orden grande y muy significativa, a primera vista una predictibilidad notable.
+\texttt{rho(2..6)} | $-0{,}086$ a 0,093 | Casi todas dentro de la banda: la ``memoria'' se limita a un mes.
+\texttt{rho(1)} por tramo | 0,310 / 0,213 | Aparece en ambos tramos; es algo menor después de 1946.
+Valor teórico de Working | 0,2492 | Autocorrelación que produce promediar precios diarios dentro del mes aunque los precios diarios sean un paseo aleatorio. El $\hat\rho_1$ observado es de ese orden: la autocorrelación es un artefacto del promedio, no predictibilidad real.
+Ljung-Box ($m=1$) | $Q=140{,}6$; $p\approx2\times10^{-32}$ | Rechaza la ausencia de autocorrelación, pero lo que detecta es el efecto Working, no una oportunidad de inversión.
+
+== cap02_ej05
+\texttt{k} | 50 a 400 | Número de observaciones extremas de cada cola usadas en el estimador de Hill.
+\texttt{pct\_muestra} | 0,55 a 4,39 | Porcentaje de la muestra que representan esas $k$ observaciones.
+\texttt{alfa\_perdidas} | 2,52 a 2,76 | Índice de cola de las pérdidas: $\Pr(-r>x)\approx Cx^{-\alpha}$. Cuanto menor, más pesada la cola.
+\texttt{alfa\_ganancias} | 2,56 a 3,30 | Índice de cola de las ganancias: algo mayor (cola un poco más liviana) salvo con $k=400$.
+\texttt{ee\_perdidas}, \texttt{ee\_ganancias} | 0,13 a 0,42 | Errores estándar $\hat\alpha/\sqrt k$: con $k$ pequeño la estimación es imprecisa; con $k$ grande es más precisa pero puede tener sesgo.
+$\alpha>2$ | en todos los casos | Existe la varianza (el momento de orden $m$ existe si $m<\alpha$).
+$\alpha<4$ | en todos los casos | La curtosis (momento de orden 4) probablemente no existe: por eso la curtosis muestral es enorme e inestable.

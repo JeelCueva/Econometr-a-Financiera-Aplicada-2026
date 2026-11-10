@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{alfa\_anual\_pct} & $-1{,}93$ a 3,32 & Alfa anualizada en porcentaje de cada industria: rendimiento anual no explicado por el mercado. \\
+\texttt{t\_alfa} & $-2{,}24$ a 2,87 & Estadístico $t$ de $H_0:\alpha=0$; $\lvert t\rvert>1{,}96$ indica alfa significativa al 5\,\%. \\
+\texttt{beta} & 0,54 a 1,25 & Sensibilidad al mercado: menor que 1 en industrias defensivas (\texttt{Utils}, \texttt{NoDur}), mayor que 1 en cíclicas (\texttt{BusEq}, \texttt{Durbl}). \\
+\texttt{ee\_beta} & 0,015 a 0,032 & Errores estándar pequeños: las betas se estiman con mucha precisión con 819 meses. \\
+\texttt{t\_beta1} & $-18{,}39$ a 9,76 & Estadístico de $H_0:\beta=1$; solo \texttt{Shops} (con $-1{,}57$) no es distinta del mercado. \\
+\texttt{R2} & 0,37 a 0,88 & Proporción de la varianza explicada por el mercado; más alta en manufactura, más baja en servicios públicos. \\
+Industrias con $\lvert t(\text{alfa})\rvert>1{,}96$ & 4 de 12 & Con 12 pruebas al 5\,\% se esperaría menos de 1 rechazo por azar; 4 sugieren que el CAPM falla. \\
+Patrón alfa-beta & negativo & Las alfas positivas están en las industrias de beta baja y las negativas en las de beta alta: la recta del mercado es más plana que lo que predice el CAPM. \\
+\end{xltabular}}

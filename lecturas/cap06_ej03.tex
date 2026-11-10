@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Parámetros 1990--2015 & $\mu=2{,}92$; $\phi=0{,}986$; $\theta=-0{,}090$ & Modelo estimado solo con datos anteriores a 2016; se mantiene fijo al pronosticar. \\
+Orígenes & 2728 & Días de 2016--2026 desde los que se pronostica. \\
+\texttt{RMSE ARMA} & 0,079 / 0,154 / 0,242 & Raíz del error cuadrático medio de pronóstico (en log VIX) a 1, 5 y 22 días; crece con el horizonte. \\
+\texttt{RMSE paseo} & 0,079 / 0,158 / 0,263 & Error del pronóstico ``mañana igual que hoy''. \\
+\texttt{RMSE media} & 0,330 & Error de pronosticar siempre la media histórica: mucho peor a todos los horizontes. \\
+\texttt{ARMA/paseo} & 0,991 / 0,974 / 0,918 & Menor que 1: el ARMA gana. La ganancia es mínima a 1 día y llega a 8\,\% a 22 días, porque la reversión a la media importa más a horizontes largos. \\
+\texttt{DM (paseo - ARMA)} & 2,62 / 5,02 / 3,80 & Estadístico de Diebold-Mariano; mayor que 1,96: la mejora del ARMA es significativa en los tres horizontes. \\
+\end{xltabular}}

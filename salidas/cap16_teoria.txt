@@ -1,0 +1,1 @@
+Con varianza 1,5^2 y valor crítico 1,96, la probabilidad de rechazo bajo H0 es 0.1913

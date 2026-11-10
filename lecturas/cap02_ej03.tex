@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{h} & 1, 5, 21, 63, 126 & Horizonte de agregación en días de negociación (día, semana, mes, trimestre y semestre). \\
+\texttt{n} & 9121 a 72 & Número de bloques sin traslape: al agregar se pierden observaciones y las estimaciones se vuelven menos precisas. \\
+\texttt{desv\_est} & 0,027 a 0,224 & Volatilidad del rendimiento de $h$ días; crece con el horizonte. \\
+\texttt{asimetria} & $-1{,}49$ a 0,01 & Tiende a cero al agregar, aunque no de forma monótona (en $h=21$ la domina abril de 2020). \\
+\texttt{curtosis} & 55,97 a 3,84 & Disminuye hacia 3 con el horizonte: los rendimientos agregados se parecen más a la normal (teorema central del límite). \\
+\texttt{p\_JB} & 0,000 a 0,344 & Solo en el horizonte semestral no se rechaza la normalidad al 5\,\%; también influye que $n=72$ da poca potencia. \\
+desv($h=21$)/desv($h=1$) & 4,736 & Cociente observado entre la volatilidad mensual y la diaria. \\
+$\sqrt{21}$ & 4,583 & Cociente que predice la regla de la raíz del tiempo; el observado es algo mayor, lo que sugiere una ligera autocorrelación positiva o el peso de 2020. \\
+\end{xltabular}}

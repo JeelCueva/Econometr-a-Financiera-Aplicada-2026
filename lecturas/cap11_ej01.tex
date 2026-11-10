@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 474 meses & Promedios mensuales de precios de may-1987 a oct-2026. \\
+ADF en niveles & $-1{,}37$ y $-1{,}54$ & No superan $-2{,}86$: los logaritmos de ambos precios tienen raíz unitaria. \\
+ADF en diferencias & $-12{,}28$ y $-12{,}25$ & Se rechaza la raíz unitaria: ambos son I(1), requisito para hablar de cointegración. \\
+Brent sobre WTI: \texttt{a}, \texttt{b} & $-0{,}353$; 1,094 & Relación de largo plazo estimada: un 1\,\% más en el WTI se asocia con 1,09\,\% más en el Brent. \\
+ADF de residuos & $-5{,}34$ y $-5{,}41$ & Más negativos que el valor crítico de Engle-Granger del 1\,\% ($-3{,}92$): los residuos son estacionarios y hay cointegración. \\
+\texttt{gamma} & $-0{,}147$ & Coeficiente de la regresión ADF de los residuos: cada mes se corrige el 15\,\% del desequilibrio. \\
+Valores críticos de MacKinnon & $-3{,}92$ / $-3{,}35$ / $-3{,}05$ & Se usan en lugar de los ADF usuales porque los residuos provienen de una regresión estimada. \\
+Residuo: desv. est. & 0,0552 & Desviación típica del diferencial respecto de su relación de largo plazo: 5,5\,\%. \\
+Mínimo / máximo & $-0{,}154$ (2008-09); 0,213 (2020-04) & Mayores desequilibrios: la crisis de 2008 y el colapso del WTI en abril de 2020. \\
+Vida media del desequilibrio & 4,4 meses & Tiempo para que se cierre la mitad de una brecha entre ambos precios. \\
+\end{xltabular}}

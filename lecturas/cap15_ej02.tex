@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$(m,k)$ & (1,3) a (12,120) & Plazo de la tasa corta $m$ y de la larga $k$ (meses). \\
+\texttt{n} & 423 a 529 & Observaciones de cada regresión (se pierden meses al final porque hacen falta tasas futuras). \\
+\texttt{b} & 0,20 a 1,54 & Pendiente: cuánto del diferencial actual se traduce en cambios futuros de la tasa corta. La HE predice 1. \\
+\texttt{ee(b)} & 0,14 a 0,40 & Errores de Newey-West que corrigen el traslape de los pronósticos. \\
+\texttt{t(b=1)} & $-4{,}95$ a 2,10 & Se rechaza la HE a horizontes cortos; con $(12,60)$ no se rechaza, y con $(12,120)$ el coeficiente supera a 1. \\
+\texttt{R2} & 0,007 a 0,519 & El diferencial predice poco a corto plazo y mucho a 10 años (0,52). \\
+(b) \texttt{b} tasa larga & $-1{,}35$ & Regresión de Campbell-Shiller: la HE predice $+1$; el signo negativo significa que cuando la curva tiene pendiente alta, la tasa larga \emph{baja} en lugar de subir. \\
+$t(b=1)$, $t(b=0)$ & $-3{,}79$; $-2{,}18$ & Se rechaza la HE con claridad; el resultado clásico de Campbell y Shiller (1991). \\
+\texttt{R2} (b) & 0,019 & Poder explicativo bajo pero el signo es el informativo. \\
+\end{xltabular}}

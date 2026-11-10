@@ -1,0 +1,22 @@
+EGARCH(1,1)-t:
+         coef  ee_rob   t_rob
+mu     0.0367  0.0103    3.58
+omega -0.0021  0.0027   -0.78
+alpha  0.1285  0.0143    8.96
+gamma -0.1541  0.0134  -11.49
+beta   0.9824  0.0034  289.78
+nu     7.2855  0.7691    9.47
+pendiente de g(z): z > 0: alpha + gamma = -0.0256; z < 0: gamma - alpha = -0.2826
+vida media (en logaritmos) = 39.1 días
+
+Modelo     k    log-ver        AIC        BIC
+GARCH      5   -6834.48   13678.96   13711.57
+GJR        6   -6748.27   13508.54   13547.68
+EGARCH     6   -6732.24   13476.49   13515.63
+
+Curva de impacto con sigma2_{t-1} = varianza muestral (1.4492); choque de +-2 desviaciones (2.408 %):
+  GARCH   sigma2(-) = 1.8899  sigma2(+) = 1.8899  cociente = 1.00
+  GJR     sigma2(-) = 2.3676  sigma2(+) = 1.3156  cociente = 1.80
+  EGARCH  sigma2(-) = 2.2820  sigma2(+) = 1.2321  cociente = 1.85
+
+comprobación con arch (EGARCH-t): [ 3.6700e-02 -2.1000e-03  1.2850e-01 -1.5410e-01  9.8240e-01  7.2855e+00], log-ver = -6732.24

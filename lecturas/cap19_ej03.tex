@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+MCO agrupado: $\rho$ & 0,914 & Persistencia de la inversión sobrestimada porque el rezago captura el efecto fijo. \\
+Efectos fijos: $\rho$ & 0,700 & Subestimada por el sesgo de Nickell (el rezago está correlacionado con el error transformado). \\
+Anderson-Hsiao: $\rho$ & 0,498 (ee 0,288) & Estimador consistente por variables instrumentales, pero muy impreciso. \\
+Correlación instrumento-regresor & $-0{,}066$ & Instrumento débil: explica la imprecisión de Anderson-Hsiao. \\
+Sesgo de Nickell aproximado & $-0{,}094$ & $-(1+\rho)/(T-1)$ con $T=19$. \\
+Simulación EF: media, sesgo & 0,591; $-0{,}109$ & Con $\rho=0{,}7$ verdadero, efectos fijos estima 0,59 en promedio: el sesgo es real y algo mayor que la fórmula. \\
+Simulación EF: desv. est. & 0,062 & El sesgo (0,11) es mayor que el error de muestreo: el problema es grave. \\
+Anderson-Hsiao: mediana, sesgo & 0,711; 0,011 & Prácticamente insesgado. \\
+Rango intercuartílico & 0,243 & Pero cuatro veces más disperso que efectos fijos: se cambia sesgo por varianza. \\
+\end{xltabular}}

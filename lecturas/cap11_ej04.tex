@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 153 años & Datos anuales reales de enero, 1871--2023. \\
+ADF de \texttt{log P}, \texttt{log D}, \texttt{log E} & $-0{,}31$; $-0{,}43$; 0,70 & Precio, dividendos y utilidades reales son I(1). \\
+ADF de \texttt{log(D/P)} & $-1{,}41$ & No se rechaza la raíz unitaria: contradice el modelo de valor presente con descuento constante. \\
+ADF de \texttt{log(E/P)} & $-4{,}66$ & La razón utilidad/precio sí es estacionaria. \\
+Precio y D: traza & 21,21 / 0,05 & Hay un vector de cointegración entre precio y dividendos. \\
+$\beta$ (P, D) & $(1;\ -1{,}72)$ & Pero el precio crece 1,72 veces más que los dividendos, no uno a uno. \\
+$\alpha_P$, $\alpha_D$ & $-0{,}049$ ($t=-0{,}96$); 0,115 ($t=4{,}39$) & Son los dividendos los que se ajustan al precio, no al revés: el precio anticipa los dividendos futuros. \\
+LR $\beta=(1,-1)$ (D) & 17,51 ($p<0{,}0001$) & Se rechaza la proporcionalidad. \\
+Precio y E: traza, $\beta$ & 33,32; $(1;\ -1{,}285)$ & Cointegración más clara y coeficiente más cercano a 1. \\
+$\alpha_E$ & 0,301 ($t=5{,}66$) & Las utilidades se ajustan al precio. \\
+LR $\beta=(1,-1)$ (E) & 10,91 ($p=0{,}001$) & También se rechaza, aunque con menos fuerza. \\
+Razón D/P & 5,86\,\% (1871); 1,70\,\% (2023) & Caída de largo plazo que explica la falta de estacionariedad. \\
+Razón de pago D/E & 70,2\,\% / 48,9\,\% & Las empresas reparten hoy una fracción mucho menor de sus utilidades (y recompran acciones). \\
+\end{xltabular}}

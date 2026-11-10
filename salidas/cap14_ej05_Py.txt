@@ -1,0 +1,16 @@
+Proporción de la varianza total explicada:
+  CP1:  73.46 %  (acumulada  73.46 %)
+  CP2:   6.29 %  (acumulada  79.75 %)
+  CP3:   4.01 %  (acumulada  83.76 %)
+  CP4:   2.87 %  (acumulada  86.64 %)
+  CP5:   2.03 %  (acumulada  88.66 %)
+
+Correlación de los tres primeros componentes con los factores:
+          Mkt     SMB     HML     Mom
+CP1    0.962   0.462  -0.128  -0.206
+CP2    0.217  -0.801   0.056   0.010
+CP3    0.107   0.094  -0.562   0.855
+
+R2 de cada componente explicado por los cuatro factores: 0.989 0.836 0.916
+
+R2 medio de las 30 carteras: con 3 componentes = 0.817; con Mkt, SMB y HML = 0.794

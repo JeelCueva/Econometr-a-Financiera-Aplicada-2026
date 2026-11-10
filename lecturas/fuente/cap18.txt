@@ -1,0 +1,55 @@
+== cap18_ej01
+\texttt{n} | 5030 | Días con rendimiento de ambos índices, 1999--2018.
+Media, desv. est. | S\&P 0,014 y 1,20; Nasdaq 0,022 y 1,59 | El Nasdaq rinde algo más y es un tercio más volátil.
+Asimetría, curtosis | $-0{,}20$ y 11,17; $-0{,}02$ y 8,43 | Colas pesadas en ambos (curtosis muy superior a 3).
+Pearson | 0,887 | Correlación lineal: sensible a valores extremos y a las márgenes.
+$\tau$ de Kendall | 0,735 | Probabilidad de concordancia menos la de discordancia entre pares de días: el 87\,\% de los pares se mueven en la misma dirección. No depende de las márgenes.
+$\rho$ de Spearman | 0,892 | Correlación de los rangos; igual a la de Pearson de las pseudo-observaciones (comprobado).
+$\sin(\pi\tau/2)$ | 0,9145 | Correlación de la cópula gaussiana que reproduciría el $\tau$ observado.
+$\hat\lambda_L(q)$ inferior | 0,742 / 0,620 / 0,457 | Probabilidad de que el Nasdaq esté en su peor $q$\,\% dado que el S\&P lo está.
+$\hat\lambda_U(q)$ superior | 0,720 / 0,700 / 0,596 | Lo mismo para las ganancias extremas.
+Gaussiana | 0,712 / 0,664 / 0,574 | Lo que predice la cópula gaussiana; al 1\,\% subestima la cola superior y sobrestima la inferior.
+Peores 5 días | todos de 2008 | En los peores días del S\&P 500 el Nasdaq también estuvo entre sus peores (pseudo-observación menor que 0,007): la dependencia es fuerte en las caídas extremas.
+
+== cap18_ej02
+$\tau$ empírico | 0,735 | Referencia para comparar el $\tau$ implícito de cada cópula.
+Gaussiana: $\rho$ | 0,901 | Parámetro de correlación; sin dependencia en las colas ($\lambda=0$).
+$t$: $\rho$, $\nu$ | 0,912; 3,62 | Grados de libertad bajos: dependencia fuerte y simétrica en ambas colas ($\lambda=0{,}666$).
+Clayton: $\theta$ | 3,376 | Dependencia solo en la cola inferior ($\lambda_{\text{inf}}=0{,}81$).
+Gumbel: $\theta$ | 3,519 | Dependencia solo en la cola superior ($\lambda_{\text{sup}}=0{,}78$).
+\texttt{log-verosim.} | 3448 a 4540 | La $t$ tiene la mayor verosimilitud por un amplio margen.
+\texttt{AIC} | $-9075$ ($t$) | Menor es mejor: la $t$ es la cópula preferida.
+\texttt{tau} implícito | 0,628 a 0,731 | La $t$ es la que mejor reproduce el $\tau$ empírico; Clayton lo subestima.
+Inversión del $\tau$ | Clayton 5,54 frente a 3,38 | Estimadores por momentos; la gran diferencia en Clayton indica que esa cópula está mal especificada.
+LR $t$ frente a gaussiana | 699,90 | Rechazo rotundo de la gaussiana (en la frontera, la distribución es una mezcla de $\chi^2$).
+Perfil de $\nu$ | máximo cerca de 3--5 | La log-verosimilitud cae al aumentar $\nu$: los datos piden colas pesadas.
+
+== cap18_ej03
+Curtosis de residuos EWMA | 6,01 / 4,55 | Al dividir por la volatilidad EWMA la curtosis cae a la mitad: gran parte de las colas pesadas viene de la volatilidad cambiante.
+Desv. est. de residuos | 1,05 / 1,04 | Cercanas a 1: la estandarización funciona.
+Pearson, $\tau$ de residuos | 0,921; 0,745 | La dependencia entre residuos es aún mayor que entre rendimientos.
+$\hat\lambda$ al 1\,\% | inf. 0,457 $\to$ 0,656 | Tras filtrar la volatilidad, la dependencia en la cola inferior extrema aumenta: no es un artefacto de la volatilidad común.
+Cópulas de residuos: log-verosim. | $t$: 4822 | Todas mejoran; la $t$ sigue siendo la mejor.
+$t$ de residuos: $\nu$ | 5,20 | Las colas de la cópula son algo menos pesadas que con rendimientos brutos (3,62), pero siguen lejos de la gaussiana.
+
+== cap18_ej04
+Volatilidad EWMA pronosticada | 1,76 / 2,10\,\% | Volatilidad diaria esperada para el 2 de enero de 2019, tras el agitado diciembre de 2018.
+\texttt{tau simulado} | 0,67 a 0,76 | Dependencia de los escenarios simulados con cada cópula.
+\texttt{VaR 99 \%} | 5,01 a 5,23\,\% | Pérdida de la cartera que solo se supera el 1\,\% de los días; similar con todas las cópulas.
+\texttt{ES 99 \%} | 6,35 a 6,77\,\% | Pérdida promedio en el peor 1\,\%; Clayton (cola inferior) da el mayor.
+\texttt{VaR 99,9 \%} | 8,29 a 9,22\,\% | En el extremo las cópulas difieren más: Gumbel subestima el riesgo de caída.
+Independencia | VaR 3,68\,\% | Suponer independencia subestimaría el riesgo en un tercio.
+Comonotonía | VaR 5,27\,\% | Dependencia perfecta: cota superior del riesgo.
+Histórica filtrada | ES 6,96\,\% | Usar los pares observados de residuos da el riesgo más alto, cercano a la comonotonía.
+Cota comonótona del ES | 7,10 | ES si los dos índices tuvieran sus peores días juntos.
+Beneficio de diversificación | 0,13 puntos | Combinar dos índices tan dependientes casi no reduce el riesgo extremo.
+
+== cap18_ej05
+Días de crisis / resto | 504 / 4526 | Crisis financiera de jul-2007 a jun-2009 frente al resto.
+Pearson, $\tau$ | 0,953 y 0,799 / 0,917 y 0,740 | La dependencia aumenta en la crisis con ambas medidas.
+$\hat\lambda$ al 5\,\% | 0,833 y 0,794 / 0,685 y 0,681 | La dependencia en las colas sube mucho en la crisis, sobre todo en la cola inferior.
+$t$: $\nu$ crisis / resto | 4,33 / 5,37 | Colas de la cópula más pesadas en la crisis.
+$\lambda$ de la $t$ | 0,727 / 0,619 | La probabilidad de caídas extremas conjuntas es mayor en la crisis.
+$\tau$ móvil: mín. | 0,585 (2000-08) | Menor dependencia en la burbuja tecnológica, cuando el Nasdaq se movía por su cuenta.
+$\tau$ móvil: máx. | 0,832 (2009-09) | Máxima dependencia al final de la crisis financiera.
+Mediana | 0,751 | Valor típico de la dependencia en ventanas de un año.

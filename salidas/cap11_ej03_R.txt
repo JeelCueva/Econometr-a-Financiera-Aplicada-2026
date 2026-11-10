@@ -1,0 +1,8 @@
+Diferencial s = 100 (log WTI - log Brent), en % del precio del Brent
+Período               T    media  desv.est.  ADF s (p)        traza r=0  beta_WTI   LR beta=(1,-1)  valor p
+1987-05 a 2010-12   284     5.72      4.22   -2.66 (6)          46.53    -1.0481        25.28       0.0000
+2011-01 a 2026-10   190    -7.99      5.44   -3.87 (0)          22.88    -1.1135         6.12       0.0133
+muestra completa    474     0.22      8.23   -1.74 (6)          33.05    -1.1119        22.39       0.0000
+
+mínimo del diferencial: -27.72 % (2011-09); máximo: 16.20 % (1999-03)
+promedio 2011-2013: -14.56 %; promedio 2014-2026: -6.45 %

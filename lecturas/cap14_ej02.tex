@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{GRS} & 2,67 a 13,65 & Estadístico de Gibbons-Ross-Shanken: contrasta que todas las alfas son cero a la vez; se distribuye $F$. \\
+\texttt{gl} & (9, 809) etc. & Grados de libertad: número de carteras y $T-N-K$. \\
+\texttt{valor p} & todos $<0{,}002$ & Se rechazan los tres modelos con los tres conjuntos de carteras. \\
+$\lvert$alfa$\rvert$ medio & 0,115 a 0,425 & Tamaño económico de los errores: Carhart es el mejor con tamaño-momentum (0,135 frente a 0,425 de FF3). \\
+\texttt{SR2 factores} & 0,023 / 0,052 / 0,109 & Razón de Sharpe al cuadrado (mensual) alcanzable con los factores de cada modelo; añadir HML y Mom la duplica cada vez. \\
+Tamaño y momentum & GRS baja de 12,7 a 7,9 & El factor momentum es indispensable para estas carteras. \\
+Industrias & CAPM 2,67; FF3 5,18 & Con industrias el CAPM es el que menos se rechaza: añadir factores no siempre ayuda fuera de las carteras con que se construyeron. \\
+\end{xltabular}}

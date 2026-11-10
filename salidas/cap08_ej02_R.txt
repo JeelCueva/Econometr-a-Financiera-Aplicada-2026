@@ -1,0 +1,10 @@
+T = 9121; log-verosimilitud = -20074.2135; varianza inicial (backcast) = 0.5172
+        coef ee_hess t_hess ee_rob  t_rob
+mu    0.0346  0.0195   1.77 0.0202   1.72
+omega 0.0517  0.0085   6.05 0.0128   4.04
+alpha 0.0902  0.0055  16.48 0.0094   9.64
+beta  0.9074  0.0053 172.29 0.0087 104.79
+persistencia alpha + beta = 0.99766; vida media = 296.2 días
+varianza incondicional = 22.113 (muestral 7.312); volatilidad anual = 74.6 %
+condición de cuarto momento: (a+b)^2 + 2a^2 = 1.0116
+volatilidad anualizada desde 1988-05-18: mínima 14.8 % (2014-06-05), máxima 395.0 % (2020-04-23)

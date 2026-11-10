@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 9121 & Rendimientos diarios del Brent. \\
+ACF 1--5 & $-0{,}026$ a 0,015 & Autocorrelaciones muy pequeñas; la razón de varianzas las resume. \\
+\texttt{q} & 2, 5, 10, 20 & Horizonte en días con que se compara la varianza del rendimiento acumulado. \\
+\texttt{VR} & 0,947 a 0,997 & $\widehat{VR}(q)$: varianza de $q$ días dividida entre $q$ veces la diaria. Igual a 1 bajo paseo aleatorio; menor que 1 indica una leve reversión. \\
+\texttt{z} & $-1{,}61$ a $-0{,}10$ & Estadístico bajo homocedasticidad; ninguno supera 1,96 en valor absoluto. \\
+\texttt{z*} & $-0{,}50$ a $-0{,}04$ & Estadístico robusto a heterocedasticidad (el apropiado aquí): aún más lejos de rechazar. \\
+Conclusión & no se rechaza & El precio del Brent es compatible con un paseo aleatorio RW3 con ambos estadísticos. \\
+\end{xltabular}}

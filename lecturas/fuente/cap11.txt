@@ -1,0 +1,58 @@
+== cap11_ej01
+$T$ | 474 meses | Promedios mensuales de precios de may-1987 a oct-2026.
+ADF en niveles | $-1{,}37$ y $-1{,}54$ | No superan $-2{,}86$: los logaritmos de ambos precios tienen raíz unitaria.
+ADF en diferencias | $-12{,}28$ y $-12{,}25$ | Se rechaza la raíz unitaria: ambos son I(1), requisito para hablar de cointegración.
+Brent sobre WTI: \texttt{a}, \texttt{b} | $-0{,}353$; 1,094 | Relación de largo plazo estimada: un 1\,\% más en el WTI se asocia con 1,09\,\% más en el Brent.
+ADF de residuos | $-5{,}34$ y $-5{,}41$ | Más negativos que el valor crítico de Engle-Granger del 1\,\% ($-3{,}92$): los residuos son estacionarios y hay cointegración.
+\texttt{gamma} | $-0{,}147$ | Coeficiente de la regresión ADF de los residuos: cada mes se corrige el 15\,\% del desequilibrio.
+Valores críticos de MacKinnon | $-3{,}92$ / $-3{,}35$ / $-3{,}05$ | Se usan en lugar de los ADF usuales porque los residuos provienen de una regresión estimada.
+Residuo: desv. est. | 0,0552 | Desviación típica del diferencial respecto de su relación de largo plazo: 5,5\,\%.
+Mínimo / máximo | $-0{,}154$ (2008-09); 0,213 (2020-04) | Mayores desequilibrios: la crisis de 2008 y el colapso del WTI en abril de 2020.
+Vida media del desequilibrio | 4,4 meses | Tiempo para que se cierre la mitad de una brecha entre ambos precios.
+
+== cap11_ej02
+$p$ por BIC, $k$ | 3; $k=2$ | Rezagos del VAR en niveles y, por tanto, de las diferencias en el VECM.
+Autovalores | 0,0631; 0,0050 | Correlaciones canónicas al cuadrado; uno grande y otro casi cero sugieren un vector de cointegración.
+Traza $r\le0$ | 33,05 (VC 15,49) | Se rechaza que no haya cointegración.
+Traza $r\le1$ | 2,35 (VC 3,84) | No se rechaza que haya como máximo un vector: $r=1$.
+Máximo autovalor | 30,70 / 2,35 | Prueba alternativa con la misma conclusión.
+$\bm\beta$ normalizado | $(1;\ -1{,}112)$ | Relación de largo plazo $B_t-1{,}112\,W_t$ estacionaria.
+$\alpha_{\text{Brent}}$ | 0,034 ($t=0{,}40$) | El Brent no reacciona al desequilibrio: es el precio ``líder''.
+$\alpha_{\text{WTI}}$ | 0,166 ($t=2{,}03$) | El WTI corrige el desequilibrio: se ajusta hacia el Brent cada mes.
+Persistencia $1+\beta'\alpha$ | 0,849 | Parte del desequilibrio que persiste al mes siguiente.
+Vida media | 4,2 meses | Coherente con la de Engle-Granger.
+LR $\beta=(1,-1)$ | 22,39; $p\approx2\times10^{-6}$ | Se rechaza que los precios se muevan uno a uno en el largo plazo en toda la muestra.
+
+== cap11_ej03
+\texttt{T} | 284 / 190 / 474 | Meses de cada tramo.
+\texttt{media} | 5,72 / $-7{,}99$\,\% | Antes de 2011 el WTI costaba 5,7\,\% más que el Brent; después, 8\,\% menos: el diferencial cambió de signo.
+\texttt{desv.est.} | 4,22 / 5,44 / 8,23 | La dispersión en la muestra completa es mucho mayor porque mezcla dos niveles distintos.
+\texttt{ADF s (p)} | $-2{,}66$ / $-3{,}87$ / $-1{,}74$ | Dentro de cada tramo el diferencial es (casi) estacionario; en la muestra completa parece tener raíz unitaria por el quiebre.
+\texttt{traza r=0} | 46,53 / 22,88 | Johansen detecta cointegración en ambos tramos.
+\texttt{beta\_WTI} | $-1{,}048$ / $-1{,}114$ | Coeficiente de cointegración; en el primer tramo es cercano a $-1$.
+\texttt{LR beta=(1,-1)}, \texttt{valor p} | 25,28 / 6,12 | Se rechaza $(1,-1)$ en ambos tramos, aunque con menos fuerza después de 2011.
+Mínimo / máximo | $-27{,}72$\,\% (2011-09); 16,20\,\% | El mínimo coincide con el exceso de oferta en Cushing por el petróleo de esquisto.
+Promedios 2011--2013 / 2014--2026 | $-14{,}56$ / $-6{,}45$\,\% | El descuento del WTI se redujo después de 2014 (nuevos oleoductos y exportaciones desde 2015), pero no volvió a ser positivo.
+
+== cap11_ej04
+$T$ | 153 años | Datos anuales reales de enero, 1871--2023.
+ADF de \texttt{log P}, \texttt{log D}, \texttt{log E} | $-0{,}31$; $-0{,}43$; 0,70 | Precio, dividendos y utilidades reales son I(1).
+ADF de \texttt{log(D/P)} | $-1{,}41$ | No se rechaza la raíz unitaria: contradice el modelo de valor presente con descuento constante.
+ADF de \texttt{log(E/P)} | $-4{,}66$ | La razón utilidad/precio sí es estacionaria.
+Precio y D: traza | 21,21 / 0,05 | Hay un vector de cointegración entre precio y dividendos.
+$\beta$ (P, D) | $(1;\ -1{,}72)$ | Pero el precio crece 1,72 veces más que los dividendos, no uno a uno.
+$\alpha_P$, $\alpha_D$ | $-0{,}049$ ($t=-0{,}96$); 0,115 ($t=4{,}39$) | Son los dividendos los que se ajustan al precio, no al revés: el precio anticipa los dividendos futuros.
+LR $\beta=(1,-1)$ (D) | 17,51 ($p<0{,}0001$) | Se rechaza la proporcionalidad.
+Precio y E: traza, $\beta$ | 33,32; $(1;\ -1{,}285)$ | Cointegración más clara y coeficiente más cercano a 1.
+$\alpha_E$ | 0,301 ($t=5{,}66$) | Las utilidades se ajustan al precio.
+LR $\beta=(1,-1)$ (E) | 10,91 ($p=0{,}001$) | También se rechaza, aunque con menos fuerza.
+Razón D/P | 5,86\,\% (1871); 1,70\,\% (2023) | Caída de largo plazo que explica la falta de estacionariedad.
+Razón de pago D/E | 70,2\,\% / 48,9\,\% | Las empresas reparten hoy una fracción mucho menor de sus utilidades (y recompran acciones).
+
+== cap11_ej05
+Período | 262 meses | Pronósticos a un mes de 2005-01 a 2026-10.
+RECM Brent | 10,78 / 10,42 / 10,55 | Raíz del ECM (\%) del paseo aleatorio, el VAR en diferencias y el VECM: el VAR en diferencias es el mejor.
+Clark-West (Brent) | $t=-1{,}73$; $p=0{,}958$ | El VECM no mejora al VAR en diferencias.
+$R^2$ fuera de muestra (Brent) | $-2{,}54$\,\% | Negativo: el término de corrección de errores empeora el pronóstico.
+RECM WTI | 10,73 / 10,50 / 10,54 | El mismo orden en el WTI.
+Clark-West y $R^2$ (WTI) | $t=0{,}11$; $-0{,}63$\,\% | Tampoco hay mejora: la cointegración existe pero no ayuda a pronosticar a un mes, porque el ajuste es lento y $\beta$ cambia con el tiempo.

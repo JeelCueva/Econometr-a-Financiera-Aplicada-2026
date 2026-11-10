@@ -1,0 +1,12 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 152 años & Rendimientos reales totales anuales, enero a enero. \\
+\texttt{media}, \texttt{desv. est.} & 0,0664; 0,1725 & Rendimiento real medio de 6,6\,\% anual con volatilidad de 17\,\%. \\
+\texttt{rho1} & 0,013 & Prácticamente no hay autocorrelación de un año al siguiente. \\
+\texttt{VR} & 1,019 a 0,828 & Cae por debajo de 1 al aumentar el horizonte: a 10 años la varianza es 17\,\% menor que la del paseo aleatorio, señal de reversión a la media. \\
+\texttt{z}, \texttt{z*} & $-0{,}77$ a 0,23 & Ninguno es significativo: con solo 15 períodos de 10 años la prueba tiene muy poca potencia. La evidencia de reversión no es concluyente. \\
+\end{xltabular}}

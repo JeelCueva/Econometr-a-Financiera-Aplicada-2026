@@ -1,0 +1,48 @@
+== cap07_ej01
+\texttt{T} | 9121 | Rendimientos diarios del Brent.
+ACF 1--5 | $-0{,}026$ a 0,015 | Autocorrelaciones muy pequeñas; la razón de varianzas las resume.
+\texttt{q} | 2, 5, 10, 20 | Horizonte en días con que se compara la varianza del rendimiento acumulado.
+\texttt{VR} | 0,947 a 0,997 | $\widehat{VR}(q)$: varianza de $q$ días dividida entre $q$ veces la diaria. Igual a 1 bajo paseo aleatorio; menor que 1 indica una leve reversión.
+\texttt{z} | $-1{,}61$ a $-0{,}10$ | Estadístico bajo homocedasticidad; ninguno supera 1,96 en valor absoluto.
+\texttt{z*} | $-0{,}50$ a $-0{,}04$ | Estadístico robusto a heterocedasticidad (el apropiado aquí): aún más lejos de rechazar.
+Conclusión | no se rechaza | El precio del Brent es compatible con un paseo aleatorio RW3 con ambos estadísticos.
+
+== cap07_ej02
+\texttt{T} | 819 meses | Muestra mensual 1949--2017.
+\texttt{rho1} | 0,018 a 0,206 | Autocorrelación de primer orden: alta en las carteras pequeñas (S1), casi nula en las grandes (S5).
+\texttt{VR(2)}, \texttt{VR(4)}, \texttt{VR(12)} | 0,97 a 1,31 | Mayores que 1 en las pequeñas: tendencia positiva de corto plazo (los rendimientos se prolongan).
+\texttt{z*(q)} | $-0{,}33$ a 4,76 | Estadístico robusto: significativo (mayor que 1,96) en S1V1, S1V3, S1V5 y S3V3 a 2 meses; no en las grandes.
+Correlación $k=0$ | 0,648 | Correlación contemporánea entre la cartera pequeña y la grande.
+corr(peq$_t$, gran$_{t-1}$) | 0,155 | El rendimiento de la cartera grande del mes pasado se relaciona con el de la pequeña de hoy.
+corr(gran$_t$, peq$_{t-1}$) | 0,027 | Al revés casi no hay relación: las grandes ``adelantan'' a las pequeñas (efecto adelanto-rezago).
+Correlaciones $k=2,3$ | $-0{,}06$ a 0,06 | Pequeñas: el efecto dura alrededor de un mes.
+\texttt{(Intercept)} | 0,0092 | Rendimiento medio mensual de la pequeña cuando los rezagos son cero.
+\texttt{pe[1:(n-1)]}, $b_1$ | 0,1045 ($p=0{,}021$) | Efecto del rendimiento pasado de la propia cartera pequeña.
+\texttt{gr[1:(n-1)]}, $b_2$ | 0,1200 ($p=0{,}055$) | Efecto del rendimiento pasado de la grande; marginalmente significativo, de magnitud similar a $b_1$: ambas fuentes contribuyen.
+
+== cap07_ej03
+\texttt{T} | 152 años | Rendimientos reales totales anuales, enero a enero.
+\texttt{media}, \texttt{desv. est.} | 0,0664; 0,1725 | Rendimiento real medio de 6,6\,\% anual con volatilidad de 17\,\%.
+\texttt{rho1} | 0,013 | Prácticamente no hay autocorrelación de un año al siguiente.
+\texttt{VR} | 1,019 a 0,828 | Cae por debajo de 1 al aumentar el horizonte: a 10 años la varianza es 17\,\% menor que la del paseo aleatorio, señal de reversión a la media.
+\texttt{z}, \texttt{z*} | $-0{,}77$ a 0,23 | Ninguno es significativo: con solo 15 períodos de 10 años la prueba tiene muy poca potencia. La evidencia de reversión no es concluyente.
+
+== cap07_ej04
+Días con rendimiento cero | 171 | Se excluyen porque no tienen signo.
+\texttt{n1(+)}, \texttt{n2(-)} | p. ej. 4617 / 4333 | Número de rendimientos positivos y negativos.
+\texttt{rachas} | 4395 / 343 / 383 | Secuencias consecutivas de igual signo observadas.
+\texttt{esperadas} | 4471,5 / 393,1 / 385,3 | Rachas esperadas si los signos fueran independientes, $1+2n_1n_2/n$.
+\texttt{z} Brent | $-1{,}62$ | Menos rachas de las esperadas, pero no significativo: no hay dependencia en los signos.
+\texttt{z} S1V3 | $-3{,}66$ | Muchas menos rachas: los signos de la cartera pequeña se repiten (persistencia), coherente con su $\rho_1$ y $VR>1$.
+\texttt{z} S5V3 | $-0{,}17$ | La cartera grande no muestra dependencia, igual que en la razón de varianzas.
+
+== cap07_ej05
+\texttt{T}, media mensual | 819; 0,0070 | Rendimiento medio mensual del factor momentum (UMD): 8,37\,\% anual.
+Desv. est. anual | 13,49\,\% | Volatilidad anual del factor.
+$t$ clásico / Newey-West | 5,13 / 5,06 | La media es muy significativa; corregir por autocorrelación casi no cambia el resultado.
+Razón de Sharpe anual | 0,620 | Rendimiento por unidad de riesgo: más alto que el del mercado en el mismo período.
+Asimetría | $-1{,}378$ | Fuertemente negativa: momentum gana poco a poco y pierde mucho de golpe.
+Peor mes | 2009-04 ($-34{,}58$\,\%) | El desplome de momentum en el rebote de los mercados tras la crisis financiera.
+Caída máxima acumulada | $-57{,}6$\,\% (fondo 2009-09) | Pérdida desde el máximo previo hasta el mínimo: un inversionista perdió más de la mitad.
+1949--1999 | 10,64\,\%; $t=7{,}01$ | En la primera mitad la prima es grande y muy significativa.
+2000--2017 | 1,67\,\%; $t=0{,}36$ | Desde 2000 la prima casi desaparece y no es significativa.

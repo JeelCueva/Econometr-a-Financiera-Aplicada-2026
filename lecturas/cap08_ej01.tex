@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+ACF de $r$ (Brent) & $-0{,}026$ a 0,015 & Autocorrelaciones del rendimiento: casi nulas; la media no es predecible. \\
+ACF de $r^2$ (Brent) & 0,334 en el rezago 1 & Autocorrelaciones del rendimiento al cuadrado: grandes; la varianza sí es predecible (efecto ARCH). \\
+$Q(10)$ de $r$ / de $r^2$ (Brent) & 25,7 / 1718,6 & Ljung-Box con 10 rezagos: la autocorrelación de los cuadrados es casi 70 veces mayor que la de los rendimientos. \\
+LM de Engle: $R^2$ & 0,1199 & $R^2$ de la regresión de $r_t^2$ sobre 5 rezagos de $r_{t-j}^2$: los cuadrados pasados explican el 12\,\% de los presentes. \\
+LM de Engle: estadístico & 1092,9; $p\approx10^{-234}$ & $LM=T\cdot R^2\sim\chi^2_5$ bajo $H_0$ (sin ARCH): se rechaza de forma rotunda. \\
+ACF de $r$ (S\&P 500 mensual) & 0,274 en el rezago 1 & Autocorrelación debida al promedio mensual de Shiller (efecto Working, Capítulo~2), no a predictibilidad real. \\
+ACF de $r^2$ (S\&P 500 mensual) & 0,05 a 0,28 & Positivas en los cinco rezagos: hay agrupamiento de volatilidad también en datos mensuales. \\
+LM (S\&P 500) & $R^2=0{,}100$; LM 186,6; $p\approx10^{-38}$ & Se rechaza la ausencia de efectos ARCH. \\
+\end{xltabular}}

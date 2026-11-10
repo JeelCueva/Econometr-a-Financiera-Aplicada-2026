@@ -1,0 +1,22 @@
+Muestra: 1949-01 a 2017-03, T = 819 meses
+
+Cartera    rho1   VR(2)  z*(2)   VR(4)  z*(4)  VR(12) z*(12)
+S1V1      0.148    1.15   3.45   1.22   2.57   1.20   1.21
+S1V3      0.161    1.16   4.03   1.23   3.09   1.23   1.53
+S1V5      0.206    1.21   4.76   1.31   3.92   1.28   1.81
+S3V3      0.115    1.12   2.76   1.12   1.55   1.01   0.08
+S5V1      0.054    1.06   1.21   1.07   0.88   1.19   1.20
+S5V3      0.018    1.02   0.47   0.97  -0.33   1.06   0.42
+S5V5      0.068    1.07   1.58   1.11   1.32   1.15   0.96
+
+Correlaciones cruzadas (pequeña = S1V3, grande = S5V3):
+  k = 0: corr(peq_t, gran_t-k) =  0.648   corr(gran_t, peq_t-k) =  0.648
+  k = 1: corr(peq_t, gran_t-k) =  0.155   corr(gran_t, peq_t-k) =  0.027
+  k = 2: corr(peq_t, gran_t-k) = -0.005   corr(gran_t, peq_t-k) = -0.062
+  k = 3: corr(peq_t, gran_t-k) =  0.056   corr(gran_t, peq_t-k) = -0.006
+
+Regresión peq_t = a + b1 peq_t-1 + b2 gran_t-1:
+                 coef      ee       t       p
+a              0.0092  0.0020  4.5666  0.0000
+b1 (peq_t-1)   0.1045  0.0453  2.3061  0.0214
+b2 (gran_t-1)  0.1200  0.0624  1.9241  0.0547

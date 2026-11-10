@@ -1,0 +1,13 @@
+Estimación: 1999-01-05 a 2009-12-31 (2367 días); evaluación: 2010-01-04 a 2018-12-28 (2248 días)
+DCC estimado: a = 0.0189, b = 0.9796
+
+Estrategia     volat. anual (%)   peso medio S&P  Nasdaq   Brent   rotación diaria media
+constante          14.561           1.146   -0.336   0.191       0.0000
+EWMA               13.977           1.396   -0.535   0.138       0.2058
+DCC                13.813           1.407   -0.507   0.100       0.1277
+iguales            16.366           0.333    0.333   0.333       0.0000
+
+Diebold-Mariano sobre r_p^2 (t > 0: la DCC tiene menor varianza):
+  DCC frente a constante  t =  4.33 (p bilateral = 0.0000)
+  DCC frente a EWMA       t =  1.69 (p bilateral = 0.0905)
+  DCC frente a iguales    t =  9.02 (p bilateral = 0.0000)

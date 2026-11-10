@@ -1,0 +1,21 @@
+T = 5030 (1999-01-05 a 2018-12-31)
+
+GJR-GARCH(1,1)-t:
+         coef  ee_rob  t_rob
+mu     0.0367  0.0104   3.52
+omega  0.0132  0.0029   4.47
+alpha  0.0000  0.0097   0.00
+gamma  0.1815  0.0224   8.10
+beta   0.8987  0.0132  68.06
+nu     7.5041  0.8350   8.99
+
+GARCH(1,1)-t: alpha = 0.0995, beta = 0.9002, log-ver = -6834.48
+GJR-GARCH-t: log-ver = -6748.27; LR (gamma = 0) = 172.42, p = 2.19e-39
+persistencia alpha + gamma/2 + beta = 0.98944; vida media = 65.3 días
+varianza incondicional = 1.2456 (muestral 1.4492); volatilidad anual = 17.7 %
+coeficiente de e_{t-1}^2: si e < 0, alpha + gamma = 0.1815; si e > 0, alpha = 0.0000
+
+VIX: 5029 días en común; correlación con la volatilidad GJR = 0.900
+promedios: VIX = 19.94; volatilidad GJR = 16.89; diferencia = 3.04 puntos
+
+comprobación con arch: [0.0367 0.0132 0.     0.1815 0.8987 7.5041], log-ver = -6748.27

@@ -1,0 +1,3 @@
+grado con menor ECM en datos nuevos: 3 ; ECM: 0.1665 ; ECM con grado 12: 4.75
+Campbell-Thompson: S mensual = 0.1209; S^2 = 0.01462; R2 = 0.005: (S^2 + R2)/(1 - R2) = 0.01972; aumento proporcional = 0.3486
+Campbell-Thompson: S mensual = 0.1209; S^2 = 0.01462; R2 = 0.01: (S^2 + R2)/(1 - R2) = 0.02487; aumento proporcional = 0.7008

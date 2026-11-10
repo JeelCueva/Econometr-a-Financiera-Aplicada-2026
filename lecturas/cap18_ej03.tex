@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Curtosis de residuos EWMA & 6,01 / 4,55 & Al dividir por la volatilidad EWMA la curtosis cae a la mitad: gran parte de las colas pesadas viene de la volatilidad cambiante. \\
+Desv. est. de residuos & 1,05 / 1,04 & Cercanas a 1: la estandarización funciona. \\
+Pearson, $\tau$ de residuos & 0,921; 0,745 & La dependencia entre residuos es aún mayor que entre rendimientos. \\
+$\hat\lambda$ al 1\,\% & inf. 0,457 $\to$ 0,656 & Tras filtrar la volatilidad, la dependencia en la cola inferior extrema aumenta: no es un artefacto de la volatilidad común. \\
+Cópulas de residuos: log-verosim. & $t$: 4822 & Todas mejoran; la $t$ sigue siendo la mejor. \\
+$t$ de residuos: $\nu$ & 5,20 & Las colas de la cópula son algo menos pesadas que con rendimientos brutos (3,62), pero siguen lejos de la gaussiana. \\
+\end{xltabular}}

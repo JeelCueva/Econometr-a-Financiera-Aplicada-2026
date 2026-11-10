@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 531 meses & Curvas cupón cero de EE.\,UU. de dic-1946 a feb-1991 (McCulloch-Kwon). \\
+\texttt{media} & 4,82 a 6,16 & Rendimiento medio (\% anual) por vencimiento: la curva promedio tiene pendiente positiva. \\
+\texttt{desv.est.} & 3,19 a 3,36 & Volatilidad del nivel de cada tasa: casi la misma en todos los vencimientos. \\
+\texttt{autocorr(1)} & 0,980 a 0,994 & Persistencia mensual muy alta: las tasas son casi un paseo aleatorio, más las largas. \\
+\texttt{autocorr(12)} & 0,83 a 0,92 & Aun a un año de distancia las tasas están muy correlacionadas. \\
+\texttt{corr. con 1 mes} & 0,93 a 1,00 & Las tasas se mueven juntas; la correlación baja con la distancia entre vencimientos. \\
+Pendiente $r_{120}-r_3$ & media 1,032 & En promedio la tasa a 10 años supera en 1 punto a la de 3 meses. \\
+Meses con curva invertida & 63 (11,9\,\%) & Meses con tasa larga menor que la corta. \\
+Mínimo / máximo de la pendiente & $-3{,}22$ (1980-03); 4,11 (1982-08) & Inversión extrema durante la política antiinflacionaria de Volcker y pendiente máxima en la recesión siguiente. \\
+\% de varianza por componente & 98,25 / 1,54 / 0,15 & Tres componentes explican prácticamente toda la varianza de la curva. \\
+Cargas CP1 & 0,30 a 0,33 & Casi iguales en todos los vencimientos: el primer componente es el \emph{nivel}. \\
+Cargas CP2 & $-0{,}32$ a 0,58 & Crecen con el vencimiento: el segundo es la \emph{pendiente}. \\
+Cargas CP3 & positivas en los extremos, negativas en el medio & El tercero es la \emph{curvatura}. \\
+\end{xltabular}}

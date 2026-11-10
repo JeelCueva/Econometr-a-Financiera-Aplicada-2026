@@ -1,0 +1,26 @@
+GJR(1,1)-t:
+         coef  ee_rob   t_rob
+mu     0.0463  0.0184    2.52
+omega  0.0601  0.0121    4.95
+alpha  0.0676  0.0075    8.97
+gamma  0.0314  0.0102    3.09
+beta   0.9115  0.0074  122.69
+nu     5.2735  0.2837   18.59
+EGARCH(1,1)-t:
+         coef  ee_rob   t_rob
+mu     0.0385  0.0183    2.11
+omega  0.0314  0.0045    6.96
+alpha  0.1629  0.0135   12.09
+gamma -0.0304  0.0067   -4.53
+beta   0.9863  0.0023  424.25
+nu     5.2763  0.2847   18.53
+
+LR (gamma = 0 en el GJR) = 10.81, p = 0.0010
+Modelo     k    log-ver        AIC        BIC
+GARCH      5  -19752.61   39515.21   39550.81
+GJR        6  -19747.20   39506.40   39549.11
+EGARCH     6  -19722.71   39457.42   39500.13
+GJR: coeficiente de e^2 si e < 0: 0.0990; si e > 0: 0.0676; cociente = 1.46
+choque de +-2 desviaciones (5.408 %): cociente sigma2(-)/sigma2(+): GJR = 1.11; EGARCH = 1.13
+
+GJR-t sin 2020-2026 (hasta 2019, T = 7390): gamma = 0.0301 (ee rob. 0.0093, t = 3.24)

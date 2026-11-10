@@ -1,0 +1,5 @@
+T = 9278 días (1990-01-02 a 2026-09-22)
+ADF: t = -6.539 con 11 rezagos (VC 5% = -2,86)
+KPSS: eta = 0.568 con l = 37 (VC 5% = 0,463)
+AR(1): phi = 0.9799  media de largo plazo = 2.903 (VIX = 18.23)
+Vida media de un choque = ln(0,5)/ln(phi) = 34.2 días

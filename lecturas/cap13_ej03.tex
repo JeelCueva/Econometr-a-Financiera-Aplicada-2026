@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$P(X\le4)$ & 0,8922 & Con 250 días y VaR correcto, hasta 4 excepciones ocurren el 89\,\% de las veces: zona verde. \\
+$P(X\le9)$ & 0,9997 & 10 o más excepciones son casi imposibles si el modelo es correcto: zona roja. \\
+Columnas por año & p. ej. 2008: 21 roja & Número de excepciones y zona de Basilea (verde 0--4, amarilla 5--9, roja 10 o más). \\
+2007 y 2008 & roja en HS y EWMA & Los años de crisis concentran los problemas. \\
+2014 EWMA & 10 roja & La EWMA con normal falla incluso en un año sin crisis por subestimar las colas. \\
+Años en verde / amarilla / roja & HS 12/4/2; EWMA 8/8/2; GARCH-$t$ 12/6/0 & El GARCH-$t$ nunca cae en zona roja. \\
+Multiplicador medio & 3,23 / 3,37 / 3,20 & Factor por el que el regulador multiplica el VaR para el capital (3 en verde, hasta 4 en roja); el GARCH-$t$ exige menos capital. \\
+\end{xltabular}}

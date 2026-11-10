@@ -1,0 +1,21 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Observaciones & 2981 & Días de negociación en Nueva York entre el 31-dic-2014 y el 6-nov-2026 con precio de cierre de Credicorp. \\
+Eventos detectados & 17 & Días en que el cociente $c_t=P^a_t/P_t$ salta más de $10^{-4}$: son las fechas ex-dividendo que registra Yahoo Finance. \\
+\texttt{P\_ant} & p. ej. 132,32 & Precio de cierre del día anterior a la fecha ex-dividendo, $P_{t-1}$; es la base sobre la que se mide el dividendo. \\
+\texttt{f} (factor) & p. ej. 0,9335 & Factor de ajuste $f_t=1-d_t$: todos los precios ajustados anteriores a esa fecha se multiplican por él. Cuanto más lejos de 1, mayor el dividendo. \\
+\texttt{D} (dividendo) & p. ej. 8,803 & Dividendo por acción en dólares recuperado con $D_t=(1-f_t)P_{t-1}$. Coincide con el anunciado por la empresa (Tabla~\ref{tab:divbap}). \\
+\texttt{d\_pct} & 0,24 a 6,65 & Rendimiento por dividendo del día, $100\,D_t/P_{t-1}$: porcentaje del precio que se paga como dividendo. Los mayores (5--6,6\,\%) ocurren desde 2020. \\
+Dos registros en abril de 2020 & 8,803 y 8,803 & El mismo dividendo aparece dos días seguidos: es un error de Yahoo, pues la empresa pagó uno solo. \\
+Máximo $\lvert$error$\rvert$ en la Prop. 1.3 & $3\times10^{-16}$ & Diferencia entre los dos lados de \eqref{eq:difajuste}. Es del tamaño del redondeo de la computadora: la proposición se cumple exactamente. \\
+Máx $\lvert R^a-R\rvert$ fuera de eventos & $1{,}41\times10^{-6}$ & Fuera de las fechas ex-dividendo ambos rendimientos coinciden; la diferencia mínima se debe a que el precio ajustado se guardó con 4 decimales. \\
+Rendimiento acumulado con $P$ & 117,21\,\% & Ganancia solo por variación del precio: 1 dólar se convirtió en 2,17. No incluye dividendos. \\
+Rendimiento acumulado con $P^a$ de Yahoo & 271,75\,\% & Ganancia con dividendos reinvertidos según Yahoo; está inflada por el dividendo duplicado de 2020. \\
+Rendimiento acumulado con $P^a$ corregido & 247,02\,\% & Ganancia total correcta con dividendos reinvertidos: 1 dólar se convirtió en 3,47. \\
+Tasa anual compuesta con $P$ & 6,77\,\% & Rendimiento anual constante equivalente solo por precio en los 11,85 años. \\
+Tasa anual compuesta con $P^a$ corregido & 11,07\,\% & Rendimiento anual total; la diferencia de 4,3 puntos con la fila anterior es el aporte anual de los dividendos. \\
+\end{xltabular}}

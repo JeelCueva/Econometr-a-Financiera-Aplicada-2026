@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Meses & 143 & Rendimientos mensuales de ene-2015 a nov-2026; el último mes es parcial. \\
+Error mínimo & $1{,}94\times10^{-5}$ & El menor error del período es positivo, como exige la Prop.~\ref{prop:logport}; TRUE confirma que ningún mes es negativo. \\
+Error medio & 21,71 pb & En promedio, $\sum_iw_ir_{i,t}$ subestima el rendimiento logarítmico del portafolio en 0,22 puntos porcentuales al mes. \\
+Error máximo & 129,20 pb (2020-11) & El mayor error ocurre cuando las tres acciones se movieron de forma muy distinta. \\
+Media de disp/2 & 21,73 pb & La mitad de la varianza transversal promedio casi coincide con el error medio, como predice la aproximación de segundo orden. \\
+Correlación (error, disp/2) & 0,9996 & El error es prácticamente una función de la dispersión entre las tres acciones. \\
+$a$ de la regresión & $8{,}0\times10^{-6}$ & Constante casi nula: sin dispersión no hay error. \\
+$b$ de la regresión & 0,4976 & Pendiente casi igual al $\tfrac12$ teórico: el error es la mitad de la varianza transversal. \\
+Suma de errores & 31,04 & En 143 meses los errores suman 31 puntos logarítmicos: la aproximación no sirve para el largo plazo. \\
+Rebalanceo mensual & 6,4527 & Valor final de 1 dólar invertido manteniendo pesos de 1/3 cada mes. \\
+Comprar y mantener & 5,3858 & Valor final de 1 dólar sin rebalancear (pesos iniciales de 1/3). \\
+Valor final por acción & 3,47 / 9,46 / 3,22 & Lo que se convirtió 1 dólar invertido en cada acción por separado (\texttt{BAP}, \texttt{SCCO}, \texttt{BVN}). \\
+Pesos finales sin rebalanceo & 0,21 / 0,59 / 0,20 & Sin rebalancear, Southern Copper pasa a pesar el 59\,\% del portafolio: el riesgo se concentra. \\
+\end{xltabular}}

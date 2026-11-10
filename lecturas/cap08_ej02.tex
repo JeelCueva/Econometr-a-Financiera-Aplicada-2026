@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T}, log-verosimilitud & 9121; $-20\,074{,}21$ & Valor máximo de la verosimilitud normal; sirve para comparar modelos. \\
+Varianza inicial (\textit{backcast}) & 0,5172 & Valor con que se inicia la recursión de $\sigma_t^2$ (promedio ponderado de los primeros cuadrados). \\
+\texttt{mu} & 0,0346 & Rendimiento medio diario (\%). \\
+\texttt{omega} & 0,0517 & Constante de la ecuación de varianza. \\
+\texttt{alpha} & 0,0902 & Reacción de la varianza al choque de ayer: un choque grande eleva la varianza de mañana. \\
+\texttt{beta} & 0,9074 & Peso de la varianza de ayer: la volatilidad es muy persistente. \\
+\texttt{ee\_hess}, \texttt{t\_hess} & p. ej. 0,0055; 16,5 & Errores estándar con la inversa del hessiano; suponen que las innovaciones son normales. \\
+\texttt{ee\_rob}, \texttt{t\_rob} & p. ej. 0,0094; 9,6 & Errores robustos de Bollerslev-Wooldridge; son mayores porque las innovaciones no son normales. Todos los parámetros de varianza siguen siendo significativos. \\
+Persistencia $\alpha+\beta$ & 0,99766 & Muy cerca de 1: los choques a la volatilidad se disipan lentamente. \\
+Vida media & 296,2 días & Tiempo para que se disipe la mitad de un choque de volatilidad: más de un año. \\
+Varianza incondicional & 22,113 (muestral 7,312) & $\omega/(1-\alpha-\beta)$; muy superior a la muestral porque la persistencia está tan cerca de 1 que la fórmula es inestable. \\
+Cuarto momento & 1,0116 & Mayor que 1: según el modelo, la curtosis de los rendimientos no existe. \\
+Volatilidad anualizada mín./máx. & 14,8\,\% / 395,0\,\% & Rango de la volatilidad condicional: tranquila a mediados de 2014, extrema en abril de 2020. \\
+\end{xltabular}}

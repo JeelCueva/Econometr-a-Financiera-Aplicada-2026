@@ -1,0 +1,2 @@
+tau = 0.5: rho = 0.7071; theta Clayton = 2.0000; theta Gumbel = 2.0000
+lambda: t(4) = 0.3968; Clayton inferior = 0.7071; Gumbel superior = 0.5858

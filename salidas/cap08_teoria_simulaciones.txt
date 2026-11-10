@@ -1,0 +1,5 @@
+ARCH(1) con omega = 0.5, alpha = 0.5: varianza simulada = 1.020 (teórica 1)
+curtosis simulada = 9.67; teórica 3(1-a^2)/(1-3a^2) = 9.00
+t estandarizada nu = 4: P(|z| > 4) = 4.81e-03
+t estandarizada nu = 8: P(|z| > 4) = 1.71e-03
+normal: P(|z| > 4) = 6.33e-05

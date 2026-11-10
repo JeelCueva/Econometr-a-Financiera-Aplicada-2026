@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Muestras & 2367 / 2248 días & Estimación 1999--2009; evaluación fuera de muestra 2010--2018. \\
+\texttt{a}, \texttt{b} & 0,0189; 0,9796 & Parámetros DCC fijos para la evaluación. \\
+\texttt{volat. anual} & 14,56 / 13,98 / 13,81 / 16,37 & Volatilidad realizada de cada cartera; la DCC logra la menor. \\
+\texttt{peso medio} & p. ej. DCC 1,41; $-0{,}51$; 0,10 & Pesos promedio en S\&P, Nasdaq y Brent; la mínima varianza vende en corto el Nasdaq para cubrir al S\&P. \\
+\texttt{rotación diaria media} & 0 / 0,206 / 0,128 & Suma de los cambios absolutos de pesos por día: la EWMA cambia mucho más la cartera (más costos de transacción). \\
+DM DCC vs constante & $t=4{,}33$; $p<0{,}0001$ & La DCC tiene una varianza significativamente menor que la covarianza constante. \\
+DM DCC vs EWMA & $t=1{,}69$; $p=0{,}09$ & Ventaja de la DCC solo marginal frente a la EWMA, pero con 40\,\% menos rotación. \\
+DM DCC vs iguales & $t=9{,}02$ & La DCC supera claramente a la cartera de pesos iguales en reducción de riesgo. \\
+\end{xltabular}}

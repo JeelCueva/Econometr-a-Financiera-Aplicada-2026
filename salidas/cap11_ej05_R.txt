@@ -1,0 +1,8 @@
+Pronósticos a un mes de Delta log precio: 2005-01 a 2026-10 (262 meses)
+
+Brent: RECM (%): paseo aleatorio = 10.776; VAR en diferencias = 10.415; VECM = 10.546
+  Clark-West, VAR en diferencias frente a VECM: t = -1.73 (p = 0.9582)
+  R2 fuera de muestra del VECM frente al VAR en diferencias: -2.54 %
+WTI: RECM (%): paseo aleatorio = 10.728; VAR en diferencias = 10.504; VECM = 10.537
+  Clark-West, VAR en diferencias frente a VECM: t = 0.11 (p = 0.4576)
+  R2 fuera de muestra del VECM frente al VAR en diferencias: -0.63 %

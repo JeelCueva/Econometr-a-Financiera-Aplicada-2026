@@ -1,0 +1,8 @@
+Muestra: 1871-01-01 a 2022-06-01 (T = 1818 regresiones traslapadas)
+b = 0.0412   R2 = 0.0107
+         ee_b   t_b
+clasico 0.009 4.425
+NW_12   0.028 1.455
+NW_24   0.030 1.352
+Sin traslape (eneros, T = 152): b = 0.0334  ee = 0.0307  t = 1.09
+Autocorrelación de dp: rezago 1 = 0.996, rezago 12 = 0.906

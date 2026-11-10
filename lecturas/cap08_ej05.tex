@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Muestras & 6370 / 2751 días & Días de estimación (hasta 2015) y de evaluación (2016--2026). \\
+$\omega$, $\alpha$, $\beta$ & 0,0265; 0,0697; 0,9300 & Parámetros fijos usados para pronosticar. \\
+\texttt{ECM} & 7947 / 7967 / 8476 & Error cuadrático medio del pronóstico de $r_t^2$; es muy sensible a los días extremos. \\
+\texttt{QLIKE} & 2,724 / 2,745 / 3,077 & Pérdida robusta al ruido de $r_t^2$ como proxy de la varianza; menor es mejor. El GARCH gana. \\
+MZ: \texttt{a}, \texttt{b} & 2,53; 0,736 (GARCH) & Regresión de Mincer-Zarnowitz $r_t^2=a+b\hat\sigma_t^2$: un pronóstico insesgado tendría $a=0$ y $b=1$. El GARCH sobrerreacciona un poco ($b<1$). \\
+MZ: \texttt{R2} & 0,066 / 0,063 / 0,003 & Proporción de $r_t^2$ explicada; es baja porque $r_t^2$ es un proxy muy ruidoso. \\
+DM GARCH frente a EWMA & $\bar d=0{,}022$; $t=3{,}70$ & Diferencia de QLIKE positiva y significativa: el GARCH supera a la EWMA. \\
+DM GARCH frente a ventana & $\bar d=0{,}353$; $t=3{,}73$ & El GARCH supera claramente a la varianza móvil de 250 días. \\
+\end{xltabular}}

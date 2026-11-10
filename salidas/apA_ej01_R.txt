@@ -1,0 +1,8 @@
+EPU: T = 132, media = 0.01130, desv = 0.07118, asimetría = -0.203, curtosis = 3.918
+   theta mensual = 0.1587;  anualizada x raiz(12) = 0.5499
+   EE (normal)  = 0.0876   IC 95%: [-0.0129, 0.3304]
+   EE (general) = 0.0892   IC 95%: [-0.0161, 0.3336]
+SP500: T = 132, media = 0.01007, desv = 0.04304, asimetría = -0.400, curtosis = 3.521
+   theta mensual = 0.2340;  anualizada x raiz(12) = 0.8107
+   EE (normal)  = 0.0882   IC 95%: [0.0611, 0.4069]
+   EE (general) = 0.0924   IC 95%: [0.0528, 0.4152]

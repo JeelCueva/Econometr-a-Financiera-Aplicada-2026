@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{omega} & $-0{,}0021$ & Constante de la ecuación del log de la varianza (puede ser negativa). \\
+\texttt{alpha} & 0,1285 & Efecto del tamaño del choque $\lvert z_{t-1}\rvert$ sobre el log de la varianza. \\
+\texttt{gamma} & $-0{,}1541$ ($t=-11{,}5$) & Efecto del signo: negativo, los choques negativos elevan la varianza. \\
+\texttt{beta} & 0,9824 & Persistencia del log de la varianza. \\
+Pendientes de $g(z)$ & $-0{,}026$ ($z>0$); $-0{,}283$ ($z<0$) & Una buena noticia casi no cambia la varianza (incluso la baja un poco); una mala la sube mucho. \\
+Vida media & 39,1 días & Tiempo de disipación de la mitad de un choque en el log de la varianza. \\
+\texttt{k}, log-ver, AIC, BIC & EGARCH: 6; $-6732$; 13\,476; 13\,516 & El EGARCH tiene la mayor verosimilitud y los menores AIC y BIC: es el modelo preferido. \\
+$\sigma^2(-)$, $\sigma^2(+)$ & GARCH 1,89 y 1,89 & Varianza de mañana tras un choque de $\pm2$ desviaciones: igual en el GARCH (simétrico). \\
+Cociente GJR / EGARCH & 1,80 / 1,85 & Tras una caída de 2,4\,\% la varianza de mañana es 80--85\,\% mayor que tras una subida igual. \\
+\end{xltabular}}

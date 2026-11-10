@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+SR factores (CAPM) & 0,152 (0,528 anual) & Máxima razón de Sharpe con solo el mercado. \\
+SR factores + 9 carteras & 0,334 (1,156 anual) & Máxima razón de Sharpe combinando factores y carteras: las carteras añaden mucho. \\
+SR$^2$ todos $-$ SR$^2$ factores & 0,088249 & Mejora de la razón de Sharpe al cuadrado al añadir las carteras. \\
+$\alpha'\Sigma^{-1}\alpha$ & 0,088249 & Forma cuadrática de las alfas: idéntica a la fila anterior, lo que verifica la Proposición~\ref{prop:grssharpe}. La GRS mide cuánto mejora el Sharpe. \\
+FF3 / Carhart: mejora & 0,067 / 0,058 & Con mejores factores, las carteras añaden menos: los modelos se acercan a la eficiencia, sin alcanzarla. \\
+SR de cada factor & Mkt 0,152; SMB 0,056; HML 0,129; Mom 0,179 & Razón de Sharpe mensual individual; momentum tiene la mayor y SMB la menor. \\
+\end{xltabular}}

@@ -1,0 +1,2 @@
+SR del factor = 0.1414; SR de la cartera tangente con todos = 0.1869
+SR_todos^2 - SR_f^2 = 0.01492;  alfa' Sigma^-1 alfa = 0.01492

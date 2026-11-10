@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$\lambda$ común & 0,1410 & Valor que minimiza el error total de ajuste de todas las curvas. \\
+Curvatura máxima en $\tau$ & 12,7 meses & Vencimiento en que la carga de la curvatura es máxima, $\approx1{,}79/\lambda$. \\
+RECM global & 0,102 / 0,130 & Error de ajuste promedio en puntos porcentuales (10 y 13 puntos básicos): el modelo de tres factores reproduce muy bien la curva. \\
+RECM por vencimiento & 0,056 a 0,237 & Errores mayores en 1 mes y en los extremos. \\
+\texttt{beta0} & media 6,13; $\rho(12)=0{,}92$ & Factor de \emph{nivel}: tasa de largo plazo, muy persistente. \\
+\texttt{beta1} & media $-1{,}33$ & Factor de \emph{pendiente}: negativo en promedio, curva con pendiente positiva. Menos persistente ($\rho(12)=0{,}35$). \\
+\texttt{beta2} & media 0,21 o 1,06 & Factor de \emph{curvatura}; su valor depende mucho de $\lambda$. \\
+corr(beta0, y120) & 0,991 & El nivel de Nelson-Siegel es casi la tasa a 10 años. \\
+corr($-$beta1, pendiente) & 0,984 & La pendiente coincide con el diferencial $y_{120}-y_3$. \\
+corr(beta2, curvatura) & 0,702 & La curvatura se relaciona con su versión empírica, aunque menos estrechamente. \\
+Fechas elegidas & 1981-09: beta0 13,6; RECM 0,314 & En 1981 las tasas eran muy altas y la curva tenía formas difíciles: el ajuste empeora. \\
+\end{xltabular}}

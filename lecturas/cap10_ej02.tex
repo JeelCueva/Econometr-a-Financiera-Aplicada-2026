@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{F(2, 5022)} & 1,870 ($p=0{,}154$) & Prueba $F$ clásica de que los rezagos de $\Delta v$ no entran en la ecuación de $r$; no se rechaza. \\
+\texttt{Wald HC0} & 1,947 ($p=0{,}378$) & Misma prueba robusta a heterocedasticidad ($\chi^2$); tampoco rechaza. \\
+$r$ no causa a $\Delta v$ ($p=2$) & $F$: $p=0{,}070$; Wald: $p=0{,}142$ & Rechazo marginal con la $F$ clásica que desaparece con la versión robusta. \\
+Con $p=7$ & $p$-valores 0,14 a 0,51 & Con más rezagos tampoco hay causalidad de Granger en ninguna dirección. \\
+Carteras: orden elegido & AIC 5; BIC 1 & Rezagos del VAR mensual de las carteras. \\
+La grande no causa a la pequeña ($p=1$) & $F$: $p=0{,}055$; Wald: $p=0{,}116$ & Evidencia débil de que la grande adelanta a la pequeña (efecto del Capítulo~7); no es significativa con errores robustos. \\
+La pequeña no causa a la grande & $p=0{,}56$ y 0,60 & No hay causalidad en esa dirección: la relación, si existe, es asimétrica. \\
+Con $p=5$ & $p=0{,}066$ y 0,346 & La conclusión no cambia con más rezagos. \\
+\end{xltabular}}

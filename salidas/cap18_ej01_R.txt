@@ -1,0 +1,20 @@
+Rendimientos logarítmicos diarios (%), 1999-01-05 a 2018-12-31; n = 5030
+  S&P 500: media = 0.0142; desv. est. = 1.2038; asimetría = -0.2046; curtosis = 11.1692
+  Nasdaq : media = 0.0219; desv. est. = 1.5932; asimetría = -0.0154; curtosis = 8.4267
+
+Pearson = 0.8872; tau de Kendall = 0.7348; rho de Spearman = 0.8919
+Spearman calculado con las pseudo-observaciones = Pearson de los rangos: 0.8919
+rho de la cópula gaussiana con el mismo tau: sin(pi tau / 2) = 0.9145; Pearson de las normales de rangos = 0.9005
+
+Dependencia en las colas: Pr(V <= q | U <= q) y Pr(V > 1 - q | U > 1 - q)
+     q     inferior   superior   gaussiana con rho = sin(pi tau / 2)
+   0.10     0.7416     0.7197     0.7118
+   0.05     0.6203     0.6998     0.6639
+   0.01     0.4573     0.5964     0.5741
+
+Peores 5 días del S&P 500 y el rango del Nasdaq ese día:
+  2008-10-15: S&P 500 =  -9.4695 %; Nasdaq =  -8.8502 % (pseudo-observación 0.0008)
+  2008-12-01: S&P 500 =  -9.3537 %; Nasdaq =  -9.3809 % (pseudo-observación 0.0006)
+  2008-09-29: S&P 500 =  -9.2190 %; Nasdaq =  -9.5877 % (pseudo-observación 0.0004)
+  2008-10-09: S&P 500 =  -7.9224 %; Nasdaq =  -5.6261 % (pseudo-observación 0.0050)
+  2008-11-20: S&P 500 =  -6.9482 %; Nasdaq =  -5.2037 % (pseudo-observación 0.0064)

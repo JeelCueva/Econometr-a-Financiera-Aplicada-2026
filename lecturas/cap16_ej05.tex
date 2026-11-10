@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+(a) $\delta=0$ & J1 0,216; Patell 0,217 & Si el evento aumenta la varianza, J1 y Patell rechazan 22\,\% de las veces sin que haya efecto: tamaño muy distorsionado. \\
+(a) BMP, signo & 0,078; 0,057 & BMP y la prueba de signo mantienen un tamaño cercano a 5\,\%: son robustas a la varianza inducida. \\
+(a) Corrado & 0,143 & Distorsionada, aunque menos que J1. \\
+(a) $\delta=1$\,\% & 0,48 a 0,86 & La potencia de las pruebas robustas es menor: es el costo de protegerse. \\
+(b) VIX: \texttt{CAAR} día $-2$ & 3,54 ($J1=2{,}80$) & Dos días antes del FOMC el VIX sube 3,5\,\% más de lo normal. \\
+(b) Día $-1$ y 0 & $-1{,}68$; $-1{,}48$ & Luego cae: la incertidumbre se resuelve con el anuncio. \\
+\texttt{var(SAR)} & 0,84 a 4,07 & Varianza de los rendimientos anormales estandarizados; mayor que 1 indica varianza inducida (muy alta en $\tau=3$). \\
+CAAR($-1,0$) & $-3{,}16$; J1 $-1{,}76$; BMP $-2{,}02$ & La caída del VIX alrededor del anuncio es significativa con la prueba robusta BMP. \\
+\end{xltabular}}

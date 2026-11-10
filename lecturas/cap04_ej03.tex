@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{rho} & $-0{,}028$ a 0,021 & Autocorrelación muestral de los rendimientos del Brent en cada rezago. \\
+\texttt{banda\_clasica} & 0,0205 & Banda de Bartlett, $1{,}96/\sqrt T$, igual en todos los rezagos; supone independencia. \\
+\texttt{banda\_robusta} & 0,038 a 0,090 & Banda válida con heterocedasticidad condicional; es 2 a 4 veces más ancha, sobre todo en el rezago 1. \\
+\texttt{t\_clasico} & $-2{,}69$ a 1,98 & Estadístico clásico; en los rezagos 2, 8 y 10 parecería significativo. \\
+\texttt{t\_robusto} & $-1{,}12$ a 1,07 & Estadístico robusto: ninguna autocorrelación es significativa. \\
+Ljung-Box $Q(10)$ & 25,74; $p=0{,}004$ & La prueba clásica rechaza la ausencia de autocorrelación. \\
+Robusta $Q^*(10)$ & 4,67; $p=0{,}912$ & La versión robusta no rechaza: el rechazo clásico era un efecto de la heterocedasticidad, no autocorrelación real. \\
+\end{xltabular}}

@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{a}, \texttt{b} & 0,106; 0,980 & Coeficientes del AR(1) mensual de la tasa a un mes. \\
+\texttt{s} & 0,604 & Desviación estándar del error mensual (puntos porcentuales). \\
+\texttt{kappa} & 0,2405 por año & Velocidad de reversión a la media de Vasicek, $-\ln b/\Delta$. \\
+\texttt{theta} & 5,33\,\% & Media de largo plazo a la que revierte la tasa. \\
+\texttt{sigma} & 2,11\,\% & Volatilidad instantánea anualizada de la tasa. \\
+Vida media & 2,88 años & Tiempo para que se cierre la mitad de la distancia entre la tasa y su media. \\
+Desv. est. estacionaria & 3,05\,\% & Dispersión de largo plazo que implica el modelo; cercana a la muestral (3,19\,\%). \\
+$P(r<0)$ bajo Vasicek & 0,0403 & El modelo asigna 4\,\% de probabilidad a tasas negativas: una debilidad del modelo con volatilidad constante. \\
+\texttt{2 gamma} & 1,279 (ee 0,126) & Pendiente de $\ln e_t^2$ sobre $\ln r_{t-1}$. \\
+\texttt{gamma} & 0,639 & La volatilidad crece con el nivel de la tasa; Vasicek supone $\gamma=0$ y Cox-Ingersoll-Ross $\gamma=0{,}5$. \\
+$t(\gamma=0)$, $t(\gamma=0{,}5)$ & 10,15; 2,21 & Se rechazan Vasicek y también CIR: el efecto nivel es aún más fuerte. \\
+Desv. est. por terciles & 0,27 / 0,33 / 0,95 & Con tasas altas la volatilidad es el triple que con tasas bajas: confirma el efecto nivel sin depender de un modelo. \\
+\end{xltabular}}

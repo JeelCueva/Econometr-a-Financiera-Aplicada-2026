@@ -1,0 +1,56 @@
+== cap10_ej01
+$T$, medias, desv. est. | 5029; 0,014 y $-0{,}001$; 1,20 y 6,82 | Días del VAR y momentos de $r$ y $\Delta v$ (\%): el VIX varía casi seis veces más que el índice.
+AIC, BIC, HQ por $p$ | p. ej. BIC mínimo 3,4286 | Criterios de información del VAR($p$); se elige el $p$ con el menor valor.
+Orden elegido | AIC 10; BIC 2; HQ 7 | Cada criterio elige un orden distinto; el BIC, que penaliza más, elige el más parsimonioso. Se usa el VAR(2).
+Ecuación de $r$: \texttt{r(t-1)}, \texttt{r(t-2)} | $-0{,}098$; $-0{,}072$ | Leve reversión diaria del S\&P 500, significativa ($\lvert t\rvert>3$).
+Ecuación de $r$: \texttt{dv(t-1)}, \texttt{dv(t-2)} | $-0{,}006$; $-0{,}005$ | El VIX pasado no predice el rendimiento ($\lvert t\rvert<1{,}96$).
+Ecuación de $\Delta v$: \texttt{r(t-1)}, \texttt{r(t-2)} | 0,186; 0,211 | Tras una subida del índice el VIX tiende a subir al día siguiente, pero no es significativo al 5\,\%.
+Ecuación de $\Delta v$: \texttt{dv(t-1)} | $-0{,}062$ ($t=-2{,}99$) | Los cambios del VIX revierten parcialmente al día siguiente.
+\texttt{constante} | 0,016; $-0{,}004$ | Medias condicionales casi nulas, no significativas.
+Covarianzas de residuos | 1,44; $-5{,}99$; 46,07 | Varianzas y covarianza de los choques del día: grandes y de signo opuesto.
+Correlación de residuos | $-0{,}736$ | La relación entre las dos series es sobre todo \emph{contemporánea}: el mismo día que cae el índice sube el VIX.
+Módulos de autovalores | 0,25 | Todos menores que 1: el VAR es estable y los choques se disipan en pocos días.
+
+== cap10_ej02
+\texttt{F(2, 5022)} | 1,870 ($p=0{,}154$) | Prueba $F$ clásica de que los rezagos de $\Delta v$ no entran en la ecuación de $r$; no se rechaza.
+\texttt{Wald HC0} | 1,947 ($p=0{,}378$) | Misma prueba robusta a heterocedasticidad ($\chi^2$); tampoco rechaza.
+$r$ no causa a $\Delta v$ ($p=2$) | $F$: $p=0{,}070$; Wald: $p=0{,}142$ | Rechazo marginal con la $F$ clásica que desaparece con la versión robusta.
+Con $p=7$ | $p$-valores 0,14 a 0,51 | Con más rezagos tampoco hay causalidad de Granger en ninguna dirección.
+Carteras: orden elegido | AIC 5; BIC 1 | Rezagos del VAR mensual de las carteras.
+La grande no causa a la pequeña ($p=1$) | $F$: $p=0{,}055$; Wald: $p=0{,}116$ | Evidencia débil de que la grande adelanta a la pequeña (efecto del Capítulo~7); no es significativa con errores robustos.
+La pequeña no causa a la grande | $p=0{,}56$ y 0,60 | No hay causalidad en esa dirección: la relación, si existe, es asimétrica.
+Con $p=5$ | $p=0{,}066$ y 0,346 | La conclusión no cambia con más rezagos.
+
+== cap10_ej03
+Factor de Cholesky $\bm P$ | diag. 1,199 y 4,596 | Matriz triangular con $\bm P\bm P'=\hat{\bm\Sigma}$; sus columnas son los choques ortogonales de una desviación estándar.
+\texttt{r<-r} en $h=0$ | 1,199 | Un choque propio de una desviación estándar al S\&P 500 lo mueve 1,2\,\% el mismo día.
+\texttt{dv<-r} en $h=0$ | $-4{,}99$ | Ese mismo choque baja el VIX 5\,\% en el día: es la correlación contemporánea atribuida al índice.
+\texttt{r<-dv} en $h=0$ | 0 | Con el orden $(r,\Delta v)$, el VIX no puede afectar al índice el mismo día: es un supuesto del orden, no un resultado.
+Respuestas en $h=1,2$ | p. ej. \texttt{dv<-r} 0,53 | Pequeñas correcciones al día siguiente; en $h=5$ ya son casi cero.
+Orden $(\Delta v,r)$ | \texttt{r<-dv} $=-0{,}88$ en $h=0$ | Al invertir el orden la correlación contemporánea se atribuye al VIX: el resultado depende del orden elegido.
+Respuesta acumulada del VIX | $-4{,}16$\,\% | Efecto total en 10 días de un choque positivo de una desviación estándar al índice.
+Bandas bootstrap 90\,\% | p. ej. [0,367; 0,696] en $h=1$ | Si el intervalo no contiene el 0, la respuesta es significativa; \texttt{r<-dv} incluye el 0 en $h=1,2$.
+
+== cap10_ej04
+$T$, medias, desv. est. | 761; inf 0,31, dtasa 0,00, ret 0,80 | Inflación mensual media de 0,31\,\% y rendimiento accionario de 0,80\,\%.
+Orden elegido | AIC 12; BIC 1; HQ 2 | Se usa el VAR(2) que elige HQ.
+dtasa no causa a inf | $F$ 5,14 ($p=0{,}006$); Wald $p=0{,}011$ | Los cambios de tasa ayudan a predecir la inflación.
+ret no causa a inf | $F$ $p=0{,}007$; Wald $p=0{,}108$ | Significativa con la $F$ clásica, pero no con la robusta: evidencia débil.
+inf, ret no causan a dtasa | $p=0{,}002$ y 0,001 (Wald) | La inflación y la bolsa predicen los cambios de tasas.
+inf no causa a ret | $p=0{,}26$ | La inflación pasada no predice el rendimiento accionario.
+dtasa no causa a ret | $p=0{,}0015$ (Wald) | Los cambios de tasa pasados sí predicen el rendimiento.
+inf y dtasa juntas | Wald 15,66 ($p=0{,}004$) | Conjuntamente, las variables macro tienen poder predictivo sobre la bolsa.
+Respuesta de ret a dtasa | $-0{,}24$, $-0{,}52$ en $h=0,1$ | Una subida de tasas de una desviación estándar reduce el rendimiento accionario ese mes y el siguiente.
+Respuesta acumulada a 24 meses | inf $-0{,}56$; dtasa $-0{,}85$ | Efecto total en puntos porcentuales: ambos choques son malas noticias para las acciones.
+Descomposición de varianza de ret | 96,4\,\% propio | A 24 meses, el 96\,\% de la incertidumbre del rendimiento se debe a sus propios choques; inflación y tasas explican menos del 4\,\%.
+Descomposición de inf | 96,85\,\% propio | La inflación también se explica casi solo por sus propios choques.
+
+== cap10_ej05
+Períodos | 411 meses (1983--2017) | Pronósticos a un mes con ventana creciente desde 1949.
+ECM | 30,72 / 30,09 / 30,00 | Error cuadrático medio de la media histórica, el AR(1) y el VAR(1); menor es mejor.
+$R^2$ fuera de muestra | AR(1) 2,04\,\%; VAR(1) 2,35\,\% | Reducción porcentual del ECM respecto de la media: pequeña pero positiva.
+Clark-West media vs AR(1) | $t=2{,}73$ ($p=0{,}003$) | La mejora del AR(1) sobre la media es significativa (prueba unilateral para modelos anidados).
+Clark-West media vs VAR(1) | $t=2{,}79$ ($p=0{,}003$) | También significativa para el VAR(1).
+Clark-West AR(1) vs VAR(1) | $t=1{,}17$ ($p=0{,}12$) | Añadir la cartera grande no mejora significativamente al AR(1).
+$R^2$ 1983--1999 | 5,69 / 5,09\,\% | La predictibilidad estaba concentrada en la primera mitad.
+$R^2$ 2000--2017 | $-0{,}58$ / 0,38\,\% | En la segunda mitad desaparece: el efecto se ha debilitado con el tiempo.

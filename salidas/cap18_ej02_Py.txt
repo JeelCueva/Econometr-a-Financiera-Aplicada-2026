@@ -1,0 +1,19 @@
+n = 5030; tau de Kendall empírico = 0.7348
+
+cópula      parámetro(s)             log-verosim.     AIC        tau   lambda_inf  lambda_sup
+gaussiana   rho = 0.9008               4189.5680    -8377.14  0.7141     0.0000     0.0000
+t           rho = 0.9122, nu = 3.623     4539.5179    -9075.04  0.7313     0.6659     0.6659
+clayton     theta = 3.3756             3447.9874    -6893.97  0.6279     0.8144     0.0000
+gumbel      theta = 3.5190             4258.5210    -8515.04  0.7158     0.0000     0.7823
+
+Estimadores por inversión del tau de Kendall:
+  gaussiana/t: rho = sin(pi tau / 2) = 0.9145; Clayton: theta = 2 tau / (1 - tau) = 5.5408; Gumbel: theta = 1 / (1 - tau) = 3.7704
+Colas empíricas al 1 %: inferior = 0.4573; superior = 0.5964
+
+LR de la t frente a la gaussiana (nu -> infinito, en la frontera) = 699.90
+Perfil de la log-verosimilitud de la t:
+  nu =  3: rho = 0.9089; log-verosimilitud = 4535.3755
+  nu =  5: rho = 0.9154; log-verosimilitud = 4529.2154
+  nu = 10: rho = 0.9159; log-verosimilitud = 4460.9446
+  nu = 20: rho = 0.9125; log-verosimilitud = 4375.5009
+  nu = 30: rho = 0.9102; log-verosimilitud = 4331.2384

@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 1109 meses & Exceso de rendimiento mensual del mercado (\%), jul-1926 a nov-2018. \\
+EM: iteraciones, log-verosimilitud & 53; $-3256{,}22$ & El algoritmo EM convergió en 53 pasos al máximo de la verosimilitud. \\
+\texttt{mu1}, \texttt{sigma1} & 1,01; 3,74 & Régimen tranquilo: rendimiento medio de 1\,\% al mes y volatilidad baja. \\
+\texttt{mu2}, \texttt{sigma2} & $-1{,}43$; 10,46 & Régimen volátil: pérdidas medias y volatilidad casi tres veces mayor. \\
+\texttt{ee} & p. ej. 0,880 para \texttt{mu2} & Errores estándar por hessiano numérico: \texttt{mu2} es imprecisa porque hay pocos meses volátiles. \\
+\texttt{p11}, \texttt{p22} & 0,984; 0,906 & Probabilidad de seguir en el mismo régimen al mes siguiente: ambos son persistentes. \\
+Probabilidades estacionarias & 0,857 / 0,143 & A largo plazo el mercado pasa el 86\,\% del tiempo en el régimen tranquilo. \\
+Duraciones esperadas & 63,4 / 10,6 meses & $1/(1-p_{jj})$: un período tranquilo dura más de 5 años; uno volátil, menos de uno. \\
+$\lambda=p_{11}+p_{22}-1$ & 0,890 & Autocorrelación del régimen: explica el agrupamiento de volatilidad. \\
+Momentos implícitos frente a muestrales & curtosis 7,52 frente a 10,90 & La mezcla reproduce la media y la desviación, y buena parte (no toda) de la curtosis. \\
+Diferencia de log-verosimilitud & 172,11 & Mejora frente a la normal simple: enorme. \\
+Sharpe por régimen & 0,270 / $-0{,}137$ & En el régimen volátil el mercado tiene una razón de Sharpe negativa. \\
+Meses volátiles & 147 de 1109 & Meses con probabilidad suavizada del régimen 2 mayor que 0,5. \\
+\end{xltabular}}

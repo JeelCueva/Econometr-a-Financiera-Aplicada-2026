@@ -1,0 +1,8 @@
+CAPM     SR factores = 0.1523 (anual 0.528); SR factores + 9 carteras = 0.3338 (anual 1.156)
+         SR2 todos - SR2 factores = 0.088249;  alfa' Sigma_MV^-1 alfa = 0.088249
+FF3      SR factores = 0.2271 (anual 0.787); SR factores + 9 carteras = 0.3451 (anual 1.195)
+         SR2 todos - SR2 factores = 0.067483;  alfa' Sigma_MV^-1 alfa = 0.067483
+Carhart  SR factores = 0.3300 (anual 1.143); SR factores + 9 carteras = 0.4089 (anual 1.417)
+         SR2 todos - SR2 factores = 0.058279;  alfa' Sigma_MV^-1 alfa = 0.058279
+
+SR mensual de cada factor por separado: Mkt 0.1522, SMB 0.0560, HML 0.1293, Mom 0.1791

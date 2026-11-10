@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$, medias, desv. est. & 5029; 0,014 y $-0{,}001$; 1,20 y 6,82 & Días del VAR y momentos de $r$ y $\Delta v$ (\%): el VIX varía casi seis veces más que el índice. \\
+AIC, BIC, HQ por $p$ & p. ej. BIC mínimo 3,4286 & Criterios de información del VAR($p$); se elige el $p$ con el menor valor. \\
+Orden elegido & AIC 10; BIC 2; HQ 7 & Cada criterio elige un orden distinto; el BIC, que penaliza más, elige el más parsimonioso. Se usa el VAR(2). \\
+Ecuación de $r$: \texttt{r(t-1)}, \texttt{r(t-2)} & $-0{,}098$; $-0{,}072$ & Leve reversión diaria del S\&P 500, significativa ($\lvert t\rvert>3$). \\
+Ecuación de $r$: \texttt{dv(t-1)}, \texttt{dv(t-2)} & $-0{,}006$; $-0{,}005$ & El VIX pasado no predice el rendimiento ($\lvert t\rvert<1{,}96$). \\
+Ecuación de $\Delta v$: \texttt{r(t-1)}, \texttt{r(t-2)} & 0,186; 0,211 & Tras una subida del índice el VIX tiende a subir al día siguiente, pero no es significativo al 5\,\%. \\
+Ecuación de $\Delta v$: \texttt{dv(t-1)} & $-0{,}062$ ($t=-2{,}99$) & Los cambios del VIX revierten parcialmente al día siguiente. \\
+\texttt{constante} & 0,016; $-0{,}004$ & Medias condicionales casi nulas, no significativas. \\
+Covarianzas de residuos & 1,44; $-5{,}99$; 46,07 & Varianzas y covarianza de los choques del día: grandes y de signo opuesto. \\
+Correlación de residuos & $-0{,}736$ & La relación entre las dos series es sobre todo \emph{contemporánea}: el mismo día que cae el índice sube el VIX. \\
+Módulos de autovalores & 0,25 & Todos menores que 1: el VAR es estable y los choques se disipan en pocos días. \\
+\end{xltabular}}

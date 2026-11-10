@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 819 meses & Observaciones mensuales de ene-1949 a mar-2017 usadas en la regresión. \\
+\texttt{beta} & 0,5409 & Si el exceso de rendimiento del mercado sube 1 punto, el de servicios públicos sube en promedio 0,54: es un sector defensivo. \\
+\texttt{ee} de beta & 0,0250 & Error estándar: con 95\,\% de confianza, $\beta$ está aproximadamente entre 0,49 y 0,59. \\
+\texttt{t(beta=1)} & $-18{,}39$ & Estadístico para $H_0:\beta=1$; su valor absoluto supera con creces 1,96: la beta es claramente menor que la del mercado. \\
+\texttt{alfa} & 0,00246 (2,96\,\% anual) & Rendimiento promedio no explicado por el mercado. Positivo: el sector rindió más de lo que predice el CAPM. \\
+\texttt{ee} de alfa, \texttt{t(alfa=0)} & 0,00107; 2,30 & La alfa es significativa al 5\,\% ($\lvert t\rvert>1{,}96$), aunque no al 1\,\%. \\
+\texttt{R2} & 0,3649 & El mercado explica el 36\,\% de la varianza mensual del sector; el 64\,\% restante es riesgo propio de la industria. \\
+Varianza total & 0,01730 & Varianza anualizada del exceso de rendimiento del sector. \\
+Sistemática / idiosincrática & 0,00631 / 0,01099 & Partes de la varianza debidas al mercado ($\beta^2\sigma_m^2$) y al riesgo propio; suman la total. \\
+Volatilidades anuales & 13,15 / 7,95 / 10,48\,\% & Raíces de las varianzas anteriores (no suman: se suman las varianzas, no las desviaciones). \\
+Comprobación con \texttt{lm()} & 0,54087; 0,00246 & La función estándar de R da los mismos coeficientes y errores; \texttt{Pr(>|t|)} = 0,0216 es el $p$-valor de la alfa y confirma su significancia al 5\,\%. \\
+\end{xltabular}}

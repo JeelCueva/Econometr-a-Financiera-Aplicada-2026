@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Período & 262 meses & Pronósticos a un mes de 2005-01 a 2026-10. \\
+RECM Brent & 10,78 / 10,42 / 10,55 & Raíz del ECM (\%) del paseo aleatorio, el VAR en diferencias y el VECM: el VAR en diferencias es el mejor. \\
+Clark-West (Brent) & $t=-1{,}73$; $p=0{,}958$ & El VECM no mejora al VAR en diferencias. \\
+$R^2$ fuera de muestra (Brent) & $-2{,}54$\,\% & Negativo: el término de corrección de errores empeora el pronóstico. \\
+RECM WTI & 10,73 / 10,50 / 10,54 & El mismo orden en el WTI. \\
+Clark-West y $R^2$ (WTI) & $t=0{,}11$; $-0{,}63$\,\% & Tampoco hay mejora: la cointegración existe pero no ayuda a pronosticar a un mes, porque el ajuste es lento y $\beta$ cambia con el tiempo. \\
+\end{xltabular}}

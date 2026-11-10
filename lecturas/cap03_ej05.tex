@@ -1,0 +1,12 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Pesos del portafolio tangente & $-87{,}1$ a 64,9\,\% & Proporción de la riqueza en cada industria que maximiza la razón de Sharpe en la muestra; los negativos son ventas en corto. Son extremos e inestables, típicos de la optimización con medias estimadas. \\
+Sharpe anual tangente & 0,809 & Exceso de rendimiento por unidad de volatilidad del portafolio óptimo \emph{dentro de la muestra}. \\
+Sharpe anual mercado & 0,527 & El mercado no es eficiente en media-varianza respecto de estas 12 industrias en la muestra. \\
+Máximo $\lvert\mu_i-\beta_{iq}\mu_q\rvert$ & $3{,}47\times10^{-18}$ & Con el portafolio tangente como referencia, la relación beta-rendimiento se cumple exactamente (Teorema~\ref{teo:betarend}): es una identidad matemática. \\
+Máximo $\lvert\alpha_i\rvert$ respecto del mercado & 3,32\,\% anual & Con el mercado como referencia sí hay alfas: el CAPM empírico depende de qué portafolio se use como mercado (crítica de Roll). \\
+\end{xltabular}}

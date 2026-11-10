@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Evaluación, rebalanceos & 1007 días; 48 & Período fuera de muestra y número de recomposiciones. \\
+\texttt{media anual} & 23,42 / 17,83 / 18,41\,\% & La cartera 1/N rindió más que las de mínima varianza. \\
+\texttt{vol. anual} & 21,82 / 21,63 / 22,86\,\% & La mínima varianza muestral apenas reduce la volatilidad; la EWMA incluso la aumenta. \\
+\texttt{Sharpe anual} & 1,07 / 0,82 / 0,81 & La 1/N tiene la mejor razón de Sharpe. \\
+\texttt{ee(Sharpe)} & 0,501 & Con 4 años el error estándar es de medio punto: las diferencias no son significativas. \\
+\texttt{máx. caída} & 29,5 / 30,1 / 36,0\,\% & Peor pérdida desde un máximo; mayor con EWMA. \\
+\texttt{rotación media} & 0 / 0,146 / 0,990 & La mínima varianza EWMA rota casi toda la cartera en cada rebalanceo: costos de transacción altos. \\
+\texttt{peso mínimo medio} & 0,25 / 0,05 / $-0{,}10$ & Las carteras optimizadas concentran o venden en corto algunas acciones. \\
+Pesos medios (muestral) & AAPL 0,41; GOOG 0,40 & La optimización se concentra en las dos acciones menos volátiles. \\
+Diferencia de varianzas & $-0{,}034$ & La mínima varianza reduce la varianza diaria muy poco. \\
+Correlación entre estrategias & 0,953 & Ambas carteras se mueven casi igual: con cuatro acciones tan correlacionadas, optimizar aporta poco (DeMiguel, Garlappi y Uppal, 2009). \\
+\end{xltabular}}

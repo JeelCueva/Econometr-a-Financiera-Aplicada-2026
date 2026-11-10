@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 819 meses & Muestra mensual 1949--2017. \\
+\texttt{rho1} & 0,018 a 0,206 & Autocorrelación de primer orden: alta en las carteras pequeñas (S1), casi nula en las grandes (S5). \\
+\texttt{VR(2)}, \texttt{VR(4)}, \texttt{VR(12)} & 0,97 a 1,31 & Mayores que 1 en las pequeñas: tendencia positiva de corto plazo (los rendimientos se prolongan). \\
+\texttt{z*(q)} & $-0{,}33$ a 4,76 & Estadístico robusto: significativo (mayor que 1,96) en S1V1, S1V3, S1V5 y S3V3 a 2 meses; no en las grandes. \\
+Correlación $k=0$ & 0,648 & Correlación contemporánea entre la cartera pequeña y la grande. \\
+corr(peq$_t$, gran$_{t-1}$) & 0,155 & El rendimiento de la cartera grande del mes pasado se relaciona con el de la pequeña de hoy. \\
+corr(gran$_t$, peq$_{t-1}$) & 0,027 & Al revés casi no hay relación: las grandes ``adelantan'' a las pequeñas (efecto adelanto-rezago). \\
+Correlaciones $k=2,3$ & $-0{,}06$ a 0,06 & Pequeñas: el efecto dura alrededor de un mes. \\
+\texttt{(Intercept)} & 0,0092 & Rendimiento medio mensual de la pequeña cuando los rezagos son cero. \\
+\texttt{pe[1:(n-1)]}, $b_1$ & 0,1045 ($p=0{,}021$) & Efecto del rendimiento pasado de la propia cartera pequeña. \\
+\texttt{gr[1:(n-1)]}, $b_2$ & 0,1200 ($p=0{,}055$) & Efecto del rendimiento pasado de la grande; marginalmente significativo, de magnitud similar a $b_1$: ambas fuentes contribuyen. \\
+\end{xltabular}}

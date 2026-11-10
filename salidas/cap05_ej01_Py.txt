@@ -1,0 +1,6 @@
+log precio (c)   ADF: t =   -1.912 (p = 29 rezagos; VC 5% = -2.86) | KPSS: eta = 16.749 (l = 37; VC 5% = 0.463)
+                 comprobación con arch: ADF   -1.912 (p-valor 0.326) | KPSS 16.749 (p-valor 0.000)
+log precio (ct)  ADF: t =   -3.179 (p = 29 rezagos; VC 5% = -3.41) | KPSS: eta =  2.622 (l = 37; VC 5% = 0.146)
+                 comprobación con arch: ADF   -3.179 (p-valor 0.089) | KPSS  2.622 (p-valor 0.000)
+rendimiento (c)  ADF: t =  -17.108 (p = 28 rezagos; VC 5% = -2.86) | KPSS: eta =  0.027 (l = 37; VC 5% = 0.463)
+                 comprobación con arch: ADF  -17.108 (p-valor 0.000) | KPSS  0.027 (p-valor 0.985)

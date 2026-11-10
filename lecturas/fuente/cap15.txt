@@ -1,0 +1,61 @@
+== cap15_ej01
+$T$ | 531 meses | Curvas cupón cero de EE.\,UU. de dic-1946 a feb-1991 (McCulloch-Kwon).
+\texttt{media} | 4,82 a 6,16 | Rendimiento medio (\% anual) por vencimiento: la curva promedio tiene pendiente positiva.
+\texttt{desv.est.} | 3,19 a 3,36 | Volatilidad del nivel de cada tasa: casi la misma en todos los vencimientos.
+\texttt{autocorr(1)} | 0,980 a 0,994 | Persistencia mensual muy alta: las tasas son casi un paseo aleatorio, más las largas.
+\texttt{autocorr(12)} | 0,83 a 0,92 | Aun a un año de distancia las tasas están muy correlacionadas.
+\texttt{corr. con 1 mes} | 0,93 a 1,00 | Las tasas se mueven juntas; la correlación baja con la distancia entre vencimientos.
+Pendiente $r_{120}-r_3$ | media 1,032 | En promedio la tasa a 10 años supera en 1 punto a la de 3 meses.
+Meses con curva invertida | 63 (11,9\,\%) | Meses con tasa larga menor que la corta.
+Mínimo / máximo de la pendiente | $-3{,}22$ (1980-03); 4,11 (1982-08) | Inversión extrema durante la política antiinflacionaria de Volcker y pendiente máxima en la recesión siguiente.
+\% de varianza por componente | 98,25 / 1,54 / 0,15 | Tres componentes explican prácticamente toda la varianza de la curva.
+Cargas CP1 | 0,30 a 0,33 | Casi iguales en todos los vencimientos: el primer componente es el \emph{nivel}.
+Cargas CP2 | $-0{,}32$ a 0,58 | Crecen con el vencimiento: el segundo es la \emph{pendiente}.
+Cargas CP3 | positivas en los extremos, negativas en el medio | El tercero es la \emph{curvatura}.
+
+== cap15_ej02
+$(m,k)$ | (1,3) a (12,120) | Plazo de la tasa corta $m$ y de la larga $k$ (meses).
+\texttt{n} | 423 a 529 | Observaciones de cada regresión (se pierden meses al final porque hacen falta tasas futuras).
+\texttt{b} | 0,20 a 1,54 | Pendiente: cuánto del diferencial actual se traduce en cambios futuros de la tasa corta. La HE predice 1.
+\texttt{ee(b)} | 0,14 a 0,40 | Errores de Newey-West que corrigen el traslape de los pronósticos.
+\texttt{t(b=1)} | $-4{,}95$ a 2,10 | Se rechaza la HE a horizontes cortos; con $(12,60)$ no se rechaza, y con $(12,120)$ el coeficiente supera a 1.
+\texttt{R2} | 0,007 a 0,519 | El diferencial predice poco a corto plazo y mucho a 10 años (0,52).
+(b) \texttt{b} tasa larga | $-1{,}35$ | Regresión de Campbell-Shiller: la HE predice $+1$; el signo negativo significa que cuando la curva tiene pendiente alta, la tasa larga \emph{baja} en lugar de subir.
+$t(b=1)$, $t(b=0)$ | $-3{,}79$; $-2{,}18$ | Se rechaza la HE con claridad; el resultado clásico de Campbell y Shiller (1991).
+\texttt{R2} (b) | 0,019 | Poder explicativo bajo pero el signo es el informativo.
+
+== cap15_ej03
+$n$ | 2, 3, 6, 12 | Vencimiento del bono que se compra y vende al mes siguiente.
+\texttt{media rx} | 0,030 a 0,069 | Exceso de rendimiento medio mensual (\%) de mantener el bono un mes frente a la letra de un mes: crece con el vencimiento (prima por plazo).
+\texttt{desv.est.} | 0,051 a 0,488 | Volatilidad del exceso: crece mucho más rápido que la media.
+\texttt{Sharpe anual} | 2,05 a 0,49 | La razón de Sharpe cae con el vencimiento: los bonos cortos pagaban mucho por unidad de riesgo.
+\texttt{b (Fama-Bliss)} | 0,52 a 1,30 | Coeficiente del diferencial a plazo; la HE predice 0. Que sea cercano a 1 indica que el diferencial predice el exceso de rendimiento, no la tasa futura.
+\texttt{ee}, \texttt{t(b=0)} | $t=2{,}41$ a 5,21 | Significativos en los cuatro vencimientos: la prima por plazo varía en el tiempo.
+\texttt{R2} | 0,035 a 0,118 | El diferencial explica entre el 3 y el 12\,\% del exceso mensual.
+
+== cap15_ej04
+$\lambda$ común | 0,1410 | Valor que minimiza el error total de ajuste de todas las curvas.
+Curvatura máxima en $\tau$ | 12,7 meses | Vencimiento en que la carga de la curvatura es máxima, $\approx1{,}79/\lambda$.
+RECM global | 0,102 / 0,130 | Error de ajuste promedio en puntos porcentuales (10 y 13 puntos básicos): el modelo de tres factores reproduce muy bien la curva.
+RECM por vencimiento | 0,056 a 0,237 | Errores mayores en 1 mes y en los extremos.
+\texttt{beta0} | media 6,13; $\rho(12)=0{,}92$ | Factor de \emph{nivel}: tasa de largo plazo, muy persistente.
+\texttt{beta1} | media $-1{,}33$ | Factor de \emph{pendiente}: negativo en promedio, curva con pendiente positiva. Menos persistente ($\rho(12)=0{,}35$).
+\texttt{beta2} | media 0,21 o 1,06 | Factor de \emph{curvatura}; su valor depende mucho de $\lambda$.
+corr(beta0, y120) | 0,991 | El nivel de Nelson-Siegel es casi la tasa a 10 años.
+corr($-$beta1, pendiente) | 0,984 | La pendiente coincide con el diferencial $y_{120}-y_3$.
+corr(beta2, curvatura) | 0,702 | La curvatura se relaciona con su versión empírica, aunque menos estrechamente.
+Fechas elegidas | 1981-09: beta0 13,6; RECM 0,314 | En 1981 las tasas eran muy altas y la curva tenía formas difíciles: el ajuste empeora.
+
+== cap15_ej05
+\texttt{a}, \texttt{b} | 0,106; 0,980 | Coeficientes del AR(1) mensual de la tasa a un mes.
+\texttt{s} | 0,604 | Desviación estándar del error mensual (puntos porcentuales).
+\texttt{kappa} | 0,2405 por año | Velocidad de reversión a la media de Vasicek, $-\ln b/\Delta$.
+\texttt{theta} | 5,33\,\% | Media de largo plazo a la que revierte la tasa.
+\texttt{sigma} | 2,11\,\% | Volatilidad instantánea anualizada de la tasa.
+Vida media | 2,88 años | Tiempo para que se cierre la mitad de la distancia entre la tasa y su media.
+Desv. est. estacionaria | 3,05\,\% | Dispersión de largo plazo que implica el modelo; cercana a la muestral (3,19\,\%).
+$P(r<0)$ bajo Vasicek | 0,0403 | El modelo asigna 4\,\% de probabilidad a tasas negativas: una debilidad del modelo con volatilidad constante.
+\texttt{2 gamma} | 1,279 (ee 0,126) | Pendiente de $\ln e_t^2$ sobre $\ln r_{t-1}$.
+\texttt{gamma} | 0,639 | La volatilidad crece con el nivel de la tasa; Vasicek supone $\gamma=0$ y Cox-Ingersoll-Ross $\gamma=0{,}5$.
+$t(\gamma=0)$, $t(\gamma=0{,}5)$ | 10,15; 2,21 | Se rechazan Vasicek y también CIR: el efecto nivel es aún más fuerte.
+Desv. est. por terciles | 0,27 / 0,33 / 0,95 | Con tasas altas la volatilidad es el triple que con tasas bajas: confirma el efecto nivel sin depender de un modelo.

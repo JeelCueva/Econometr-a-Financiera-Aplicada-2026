@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Nombre del archivo & p. ej. \texttt{bap\_yahoo.csv} & Cada fila corresponde a un archivo de \texttt{datos/peru/}. \\
+Número de filas & 9 a 3013 & Observaciones de cada archivo (sin contar el encabezado). \\
+Primera fecha y valor & p. ej. 2014-12-31; 160.18 & Inicio de la serie y su primer valor (en la primera columna de datos). \\
+Última fecha y valor & p. ej. 2026-11-06; 347.93 & Fin de la serie y su último valor: deben coincidir con la Tabla~\ref{tab:fuentes1}. \\
+Archivos de dividendos & 13 a 47 filas & Un registro por dividendo en la fecha ex-dividendo de Yahoo. \\
+\texttt{scco\_splits.csv} & 9 filas & Numerador y denominador de cada ``desdoblamiento'' (dividendos en acciones) de Southern Copper. \\
+\end{xltabular}}

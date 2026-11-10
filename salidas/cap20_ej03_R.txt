@@ -1,0 +1,16 @@
+Fuera de muestra 1957-01 a 2018-11 (743 meses)
+R2 fuera (%)    CW     p(CW)   modelo
+       0.61    2.13   0.0167   combinación (media de 10)
+       0.50    2.29   0.0111   combinación (mediana de 10)
+      -0.36    2.16   0.0155   componentes principales (k = 1)
+      -0.78    2.19   0.0141   componentes principales (k = 2)
+      -1.53    2.04   0.0206   componentes principales (k = 3)
+
+desviación estándar de los pronósticos: combinación = 0.1104; media histórica = 0.0818
+correlación entre la combinación y el exceso realizado = 0.0730
+
+Inversionista media-varianza (aversión 3, varianza de 60 meses, peso en acciones entre 0 y 150 %):
+  equivalente cierto anual con la media histórica = 6.617 %; peso medio en acciones = 1.168
+  combinación (media de 10): equivalente cierto = 7.570 %; ganancia = 0.953 puntos por año; peso medio = 0.943
+  componentes principales (k = 1): equivalente cierto = 7.003 %; ganancia = 0.386 puntos por año; peso medio = 0.516
+  solo dp: equivalente cierto = 5.737 %; ganancia = -0.880 puntos por año; peso medio = 0.374

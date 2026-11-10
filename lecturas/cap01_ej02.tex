@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Dato atípico de la BVL & 22\,521,03 & Valor del 21-jun-2024 en la serie del BCRP, entre 29\,857,57 y 30\,058,66: un error de registro que se elimina. \\
+Días con índice repetido & 54 & Rendimientos exactamente iguales a cero: el BCRP repite el valor del día anterior en feriados peruanos hasta 2020. \\
+$T$ & 3011 / 2980 & Número de rendimientos diarios de la BVL y del S\&P 500. Difieren porque cada mercado tiene su propio calendario. \\
+$r\le R$ en todas las fechas & TRUE & Se cumple en todos los días la desigualdad $\ln(1+R)\le R$: el rendimiento logarítmico nunca supera al simple. \\
+Mayor diferencia $R-r$ (BVL) & 0,00584 & 0,58 puntos porcentuales el 12-mar-2020 ($R=-10{,}42$\,\%, $r=-11{,}01$\,\%): la brecha crece con el tamaño del movimiento. \\
+Mayor diferencia $R-r$ (S\&P 500) & 0,00781 & 0,78 puntos el 16-mar-2020, el peor día del índice en la muestra ($R=-11{,}98$\,\%). \\
+Períodos mensuales / anuales & 143 / 12 & Meses y años (2015--2026) en que se agregan los rendimientos diarios. \\
+Máx $\lvert$suma log $-$ log prod$\rvert$ & $\approx2\times10^{-15}$ & Diferencia entre sumar logaritmos y multiplicar rendimientos brutos: es redondeo, así que ambas agregaciones son idénticas (Props.~\ref{prop:multi} y~\ref{prop:aditiva}). \\
+Rendimientos anuales BVL & $-33{,}43$ a 58,06\,\% & Ganancia de cada año en soles; muy variables: caída en 2015, alzas fuertes en 2016 y 2025. 2026 llega solo hasta noviembre. \\
+Rendimientos anuales S\&P 500 & $-19{,}44$ a 28,88\,\% & Ganancia de cada año en dólares (solo precio, sin dividendos). \\
+\texttt{media} diaria & 0,00044 / 0,00043 & Rendimiento logarítmico promedio por día: unos 0,044\,\%, equivalente a cerca de 11\,\% al año en ambos índices. \\
+\texttt{desv\_est} diaria & 0,01131 / 0,01114 & Volatilidad diaria de 1,1\,\%: un día ``típico'' el índice se mueve alrededor de 1\,\% hacia arriba o hacia abajo. \\
+\texttt{minimo} / \texttt{maximo} & $-0{,}110$ a 0,091 & Peor y mejor día en logaritmos; los extremos se concentran en marzo de 2020. \\
+\end{xltabular}}

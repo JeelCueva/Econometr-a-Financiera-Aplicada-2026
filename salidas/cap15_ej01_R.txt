@@ -1,0 +1,29 @@
+Rendimientos cupón cero de EE. UU. (McCulloch-Kwon), 1946-12 a 1991-02, T = 531 meses
+
+Vencimiento   media   desv.est.   autocorr(1)   autocorr(12)   corr. con 1 mes
+   1 meses    4.820     3.193       0.9800        0.8260         1.0000
+   2 meses    5.007     3.253       0.9834        0.8322         0.9982
+   3 meses    5.126     3.285       0.9844        0.8382         0.9963
+   5 meses    5.288     3.325       0.9853        0.8462         0.9936
+   6 meses    5.347     3.342       0.9851        0.8476         0.9924
+  11 meses    5.504     3.355       0.9859        0.8586         0.9865
+  12 meses    5.526     3.354       0.9862        0.8617         0.9853
+  36 meses    5.821     3.302       0.9900        0.8935         0.9624
+  60 meses    5.973     3.267       0.9918        0.9056         0.9492
+ 120 meses    6.157     3.188       0.9937        0.9204         0.9329
+
+pendiente r120 - r3: media = 1.032; meses con curva invertida (r120 < r3): 63 (11.9 %)
+mínimo de la pendiente: -3.223 (1980-03); máximo: 4.108 (1982-08)
+
+Componentes principales (covarianza): % de la varianza total: 98.25 1.54 0.15 
+Cargas (vencimiento: CP1  CP2  CP3)
+     1:   0.306  -0.316   0.527
+     2:   0.313  -0.303   0.316
+     3:   0.317  -0.267   0.148
+     5:   0.322  -0.205  -0.137
+     6:   0.323  -0.184  -0.239
+    11:   0.325  -0.049  -0.423
+    12:   0.325  -0.019  -0.423
+    36:   0.318   0.334  -0.146
+    60:   0.312   0.464   0.073
+   120:   0.300   0.576   0.374

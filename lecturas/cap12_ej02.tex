@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Etapa 1: \texttt{alpha}, \texttt{beta} & S\&P 0,102 y 0,887; Brent 0,047 y 0,952 & GARCH de cada serie; el Brent reacciona menos a los choques pero su volatilidad es más persistente. \\
+\texttt{a} & 0,0130 (ee 0,0027) & Reacción de la correlación a los productos de los choques estandarizados de ayer: pequeña pero significativa. \\
+\texttt{b} & 0,9844 (ee 0,0035) & Persistencia de la correlación. \\
+$a+b$, vida media & 0,9974; 266 días & La correlación es muy persistente: un choque tarda un año en disiparse a la mitad. \\
+log-ver DCC / CCC & 115,97 / 40,19 & Verosimilitud de la parte de correlación de cada modelo. \\
+LR & 151,56; $p\approx10^{-33}$ & Se rechaza que la correlación sea constante. \\
+Correlación CCC & 0,131 & Correlación constante entre los residuos estandarizados. \\
+Correlación DCC mín./máx. & $-0{,}268$ (2008-08); 0,518 (2010-05) & Rango de la correlación condicional diaria. \\
+Promedios anuales & $-0{,}121$ (2003) a 0,390 (2012) & Cerca de cero hasta 2008 y positiva desde 2009, alcanzando su máximo en 2012. \\
+\end{xltabular}}

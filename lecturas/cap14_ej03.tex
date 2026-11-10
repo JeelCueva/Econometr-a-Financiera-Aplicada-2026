@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Carteras, $T$ & 30; 819 & Corte transversal con 30 carteras de prueba. \\
+FF3: \texttt{R2} transversal & 0,156 & Las betas de los tres factores explican solo el 16\,\% de las diferencias de rendimiento medio entre las 30 carteras. \\
+$\lambda'\Omega^{-1}\lambda$ & 0,033 / 0,071 & Término de la corrección de Shanken; pequeño, por eso los errores corregidos apenas cambian. \\
+\texttt{constante} & 1,353 ($t=6{,}82$) & Rendimiento de una cartera con betas cero; debería ser 0. Significativa: el modelo deja mucho sin explicar. \\
+\texttt{lambda} MktRF (FF3) & $-0{,}665$ ($t=-2{,}67$) & Prima de mercado estimada negativa, frente a una media del factor de 0,645: inconsistente con la teoría. \\
+\texttt{ee FM} / \texttt{ee Shanken} & p. ej. 0,246 / 0,249 & Errores de Fama-MacBeth y corregidos por estimar las betas; la corrección los aumenta poco. \\
+Carhart: \texttt{R2} transversal & 0,713 & Con momentum el modelo explica el 71\,\% de las diferencias entre carteras. \\
+\texttt{lambda} Mom & 0,787 ($t=5{,}58$) & Prima por momentum significativa y cercana a la media del factor (0,698): el mercado ``paga'' por esta exposición. \\
+\texttt{lambda} HML (Carhart) & 0,269 ($t=2{,}60$) & Prima de valor significativa, algo menor que la media del factor (0,348). \\
+\texttt{media del factor} & 0,645 / 0,159 / 0,348 / 0,698 & Si el factor es un rendimiento negociable, su prima debería igualar su media: compárese con \texttt{lambda}. \\
+\end{xltabular}}

@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Rezagos de Newey-West, $L$ & 6 & Número de autocovarianzas incluidas en el estimador HAC. \\
+\texttt{t\_alfa\_cl} & $-2{,}24$ a 2,87 & Estadístico $t$ de la alfa con errores clásicos (repite el Ejercicio~\ref{ej:industrias}). \\
+\texttt{t\_alfa\_HC1} & casi iguales & Con errores robustos a heterocedasticidad las $t$ de las alfas apenas cambian. \\
+\texttt{t\_alfa\_NW} & $-2{,}16$ a 2,32 & Con Newey-West bajan un poco (p. ej. \texttt{NoDur} de 2,87 a 2,27) pero siguen por encima de 1,96 en las mismas cuatro industrias. \\
+\texttt{ee\_beta\_cl} & 0,015 a 0,032 & Errores estándar clásicos de las betas. \\
+\texttt{ee\_beta\_HC1} & 0,019 a 0,043 & Más grandes que los clásicos en todas las industrias: la heterocedasticidad afecta sobre todo a la pendiente. \\
+\texttt{ee\_beta\_NW} & 0,023 a 0,050 & Aún mayores: además de heterocedasticidad hay autocorrelación en los errores. \\
+Alfas significativas & 4 / 4 / 4 & La conclusión del Ejercicio~\ref{ej:industrias} es robusta: el número de alfas significativas no cambia. \\
+Cociente medio NW/clásico & 1,596 & En promedio, el error estándar correcto de la beta es 60\,\% mayor que el clásico. \\
+\end{xltabular}}

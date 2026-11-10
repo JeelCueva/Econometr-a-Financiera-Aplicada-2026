@@ -1,0 +1,13 @@
+Panel diario: 1999-01-05 a 2018-12-28, T = 4615 días comunes al S&P 500, al Nasdaq y al Brent
+Correlaciones de toda la muestra:
+[[1.     0.8848 0.1393]
+ [0.8848 1.     0.1074]
+ [0.1393 0.1074 1.    ]]
+
+S&P-Brent: EWMA mín. -0.638 (2004-12-02), máx. 0.744 (2012-06-07); ventana de 250 días: mín. -0.248, máx. 0.544
+  1999-2007: correlación muestral = 0.006
+  2009-2018: correlación muestral = 0.299
+
+S&P-Nasdaq: EWMA mín. 0.487 (2000-04-12), máx. 0.991 (2011-08-15); ventana de 250 días: mín. 0.767, máx. 0.974
+  1999-2007: correlación muestral = 0.852
+  2009-2018: correlación muestral = 0.954

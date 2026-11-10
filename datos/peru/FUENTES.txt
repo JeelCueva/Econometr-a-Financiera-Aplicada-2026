@@ -1,0 +1,25 @@
+Datos peruanos del Capítulo 1 (y de los Apéndices A y C). Autor del libro: Jeel Cueva.
+Descarga: 8 de noviembre de 2026 (BCRP) y 9 de noviembre de 2026 (Yahoo Finance). Período: 31-dic-2014 en adelante.
+
+BCRPData, API pública: https://estadisticas.bcrp.gob.pe/estadisticas/series/api/<código>/json/<inicio>/<fin>
+  bvl_indice_general_bcrp.csv       PD38026MD  Índice S&P/BVL Perú General, diario (3013 datos, 31-dic-2014 a 05-nov-2026).
+                                    Hasta 2020 repite el valor del día anterior en feriados peruanos; desde 2021 los
+                                    feriados vienen como "n.d." y se omitieron. Dato erróneo conservado en el archivo:
+                                    21-jun-2024 = 22521.03 (los programas lo eliminan).
+  tc_interbancario_venta_bcrp.csv   PD04638PD  Tipo de cambio - TC Interbancario (S/ por US$) - Venta, diario
+                                    (2952 datos, 31-dic-2014 a 05-nov-2026; los "n.d." se omitieron).
+
+Yahoo Finance, punto de acceso https://query1.finance.yahoo.com/v8/finance/chart/<símbolo>
+(interval=1d, events=div|split, includeAdjustedClose=true; fechas en la zona horaria de la bolsa):
+  bap_yahoo.csv, scco_yahoo.csv, bvn_yahoo.csv, epu_yahoo.csv   cierre y cierre ajustado (dividendos y desdoblamientos),
+                                    2981 días, 31-dic-2014 a 06-nov-2026. El cierre ajustado se reconstruyó como
+                                    cierre x factor de ajuste por tramos, redondeado a 4 decimales.
+  gspc_yahoo.csv                    ^GSPC, índice S&P 500, cierre (2981 días).
+  *_dividendos.csv                  dividendos por acción en dólares, en la fecha ex-dividendo que registra Yahoo.
+                                    Atención: BAP registra dos veces (08 y 09-abr-2020) el único dividendo de 2020
+                                    (US$ 8,8026 según Credicorp, https://credicorp.gcs-web.com/node/5931).
+  scco_splits.csv                   dividendos en acciones de SCCO registrados como desdoblamientos (2024-2026).
+  pen_x_yahoo_mensual.csv           PEN=X, último dato disponible de cada mes (144 datos, a 09-nov-2026).
+
+Las series se transfirieron codificadas y se verificaron con sumas de control por bloques antes de decodificarlas.
+Programas de descarga equivalentes: codigo/R/apC_descarga.R y codigo/Python/apC_descarga.py (requieren internet).

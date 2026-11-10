@@ -1,0 +1,11 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Origen, VIX & 2026-09-22; 14,21 & Último dato observado; el VIX está por debajo de su nivel de largo plazo. \\
+\texttt{mediana} & 14,33 a 16,70 & Pronóstico puntual del VIX ($e^{\text{pronóstico del log}}$); sube gradualmente hacia la media. \\
+IC 95\,\% & p. ej. [9,50; 24,98] a 22 días & Rango en que se espera el VIX con 95\,\% de probabilidad; se ensancha con el horizonte y es asimétrico (más amplio hacia arriba) por trabajar en logaritmos. \\
+Límite de largo plazo & 18,25 [9,39; 35,48] & Distribución hacia la que converge el pronóstico: el VIX ``normal'' y su rango habitual. \\
+\end{xltabular}}

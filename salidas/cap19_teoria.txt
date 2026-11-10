@@ -1,0 +1,1 @@
+pendiente agrupada en la simulación = 0.8105; factor de Moulton con m = 30 y rho = 0,7 x 0,7: 3.9000

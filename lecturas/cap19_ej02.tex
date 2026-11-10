@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Coeficientes EF & 0,110; 0,310 & Los mismos de efectos fijos; solo cambia cómo se mide su incertidumbre. \\
+Autocorrelación de residuos & 0,632 & Los errores de cada empresa están muy correlacionados en el tiempo. \\
+Correlación entre empresas & 0,155 & Hay choques comunes a todas las empresas en el mismo año. \\
+Clásicos & 0,0119; 0,0174 & Suponen errores independientes y homocedásticos: subestiman la incertidumbre. \\
+White (HC1) & 0,0194; 0,0428 & Robusto a heterocedasticidad. \\
+Agrupados por empresa & 0,0156; 0,0540 & Robustos a autocorrelación dentro de cada empresa; el del capital se triplica. \\
+Agrupados por año & 0,0173; 0,0323 & Robustos a correlación entre empresas en el mismo año. \\
+Dos vías & 0,0129; 0,0461 & Robustos a ambos tipos de correlación. \\
+Driscoll-Kraay & 0,0177; 0,0348 & Robusto a correlación transversal y temporal. \\
+$t$ & 5,7 a 17,9 & Con cualquier error estándar ambos coeficientes son significativos. \\
+Valor crítico con $G-1$ gl & 2,262 & Con solo 10 grupos conviene usar la $t$ con 9 grados de libertad en vez de 1,96. \\
+Efectos de empresa y año & valor 0,118; capital 0,358 & Al controlar choques comunes de cada año, el efecto del capital aumenta. \\
+Efectos de año & $-46{,}2$ a 47,3 & Inversión común a todas las empresas en cada año respecto del promedio: alta a fines de los treinta, baja en los cincuenta. \\
+\end{xltabular}}

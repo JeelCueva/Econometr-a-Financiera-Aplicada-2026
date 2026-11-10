@@ -1,0 +1,7 @@
+Pesos del portafolio tangente (%):
+NoDur Durbl Manuf Enrgy Chems BusEq Telcm Utils Shops  Hlth Money Other 
+ 64.9   3.2  31.4  31.5 -26.8  14.9   7.5  19.4  16.0  31.6  -6.6 -87.1 
+
+Sharpe anual: tangente 0.809 | mercado 0.527
+Máximo |mu_i - beta_iq * mu_q| = 3.47e-18
+Máximo |alfa_i| respecto del mercado = 3.32 % anual

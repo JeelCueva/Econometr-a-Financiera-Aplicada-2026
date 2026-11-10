@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+corr$(r_{t-j},r_t^2)$ S\&P 500 & $-0{,}113$ a $-0{,}080$ & Negativa en los cinco rezagos: después de caídas la volatilidad sube más que después de subidas (efecto apalancamiento). \\
+corr$(r_{t-j}^2,r_t)$ S\&P 500 & $-0{,}032$ a 0,051 & Pequeña: la volatilidad pasada casi no predice el rendimiento. \\
+Engle-Ng: \texttt{constante} & 0,994 & Valor medio de $z_t^2$ cuando los demás regresores son cero. \\
+\texttt{sesgo de signo S-} & 0,173 ($t=2{,}06$) & Los días después de un choque negativo, $z_t^2$ es mayor: el GARCH simétrico subestima la varianza tras caídas. \\
+\texttt{tamaño negativo S- z} & 0,035 ($t=0{,}66$) & El tamaño de los choques negativos no añade información adicional. \\
+\texttt{tamaño positivo S+ z} & $-0{,}189$ ($t=-2{,}82$) & Los choques positivos grandes elevan la varianza menos de lo que supone el GARCH. \\
+Prueba conjunta S\&P 500 & LM 34,09; $p\approx2\times10^{-7}$ & Se rechaza la simetría: hace falta un modelo asimétrico. \\
+Correlaciones del Brent & $-0{,}117$ en $j=1$ & Asimetría solo en el primer rezago; luego casi desaparece. \\
+Prueba conjunta Brent & LM 15,36; $p=0{,}0015$ & También rechaza, aunque ningún componente individual es significativo al 5\,\%: la asimetría del petróleo es más débil. \\
+\end{xltabular}}

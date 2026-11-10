@@ -1,0 +1,5 @@
+Chow con quiebre en 1992-10: F = 11.43  p = 1.27e-05
+Beta antes = 0.629  después = 0.384 | alfa anual antes = 2.19 %  después = 4.35 %
+Wald robusto (HC1): W = 10.97  p = 4.16e-03
+sup-F = 16.69 en 1987-02 (valor crítico asintótico al 5 %: 11,7 / 2 = 5,85)
+CUSUM: máximo |W_t| / banda = 0.73; no cruza las bandas

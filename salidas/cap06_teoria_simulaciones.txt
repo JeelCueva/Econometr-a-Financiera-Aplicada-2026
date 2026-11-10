@@ -1,0 +1,1 @@
+Sesgo simulado de phi (T = 100): {np.float64(0.0): np.float64(-0.0104), np.float64(0.2): np.float64(-0.0142), np.float64(0.4): np.float64(-0.0228), np.float64(0.6): np.float64(-0.0285), np.float64(0.8): np.float64(-0.0335), np.float64(0.9): np.float64(-0.0398), np.float64(0.95): np.float64(-0.0439), np.float64(0.99): np.float64(-0.0495)}

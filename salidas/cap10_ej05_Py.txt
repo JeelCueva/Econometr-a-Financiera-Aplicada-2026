@@ -1,0 +1,8 @@
+Pronósticos a un mes: 1983-01 a 2017-03 (411 meses); estimación inicial 1949-01 a 1982-12
+ECM: media = 30.7166; AR(1) = 30.0903; VAR(1) = 29.9954
+R2 fuera de muestra respecto de la media: AR(1) = 2.04 %; VAR(1) = 2.35 %
+Clark-West (unilateral): media vs AR(1): t = 2.73 (p = 0.0032)
+                         media vs VAR(1): t = 2.79 (p = 0.0027)
+                         AR(1) vs VAR(1): t = 1.17 (p = 0.1214)
+  1983-01 a 1999-12: R2 fuera de muestra AR(1) =   5.69 %; VAR(1) =   5.09 %
+  2000-01 a 2017-12: R2 fuera de muestra AR(1) =  -0.58 %; VAR(1) =   0.38 %

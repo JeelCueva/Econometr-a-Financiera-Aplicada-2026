@@ -1,0 +1,2 @@
+la carga de curvatura es máxima en lambda*tau = 1.7933, es decir, tau = 29.45 meses (valor 0.2984)
+Vasicek: kappa = 0.5, theta = 5.0, sigma = 1.0; vida media = 1.386 años; desv. est. estacionaria = 1.0000

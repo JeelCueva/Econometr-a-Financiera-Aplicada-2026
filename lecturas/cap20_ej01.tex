@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Objetivo, $n$ & 1095 meses & Exceso de rendimiento del mercado del mes siguiente (\%), 1927--2018. \\
+Período fuera de muestra & 743 meses & Pronósticos desde 1957 usando solo datos anteriores a cada mes. \\
+\texttt{pendiente} & p. ej. cape $-1{,}14$ & Coeficiente de la regresión en toda la muestra: signo esperado en la mayoría (CAPE alto anuncia rendimientos bajos). \\
+\texttt{t(White)} & $-2{,}21$ a 1,93 & Solo el CAPE es significativo al 5\,\% dentro de la muestra. \\
+\texttt{R2 dentro} & 0,00 a 0,73\,\% & Ningún predictor explica más del 1\,\% de la varianza mensual: la predictibilidad es muy pequeña. \\
+\texttt{R2 fuera} & $-2{,}50$ a 0,21\,\% & Reducción del ECM frente a la media histórica; negativo en 8 de 10: casi todos pronostican peor que la media. \\
+\texttt{R2 fuera CT} & $-1{,}39$ a 0,51\,\% & Con la restricción de Campbell-Thompson (pronóstico no negativo, pendiente con signo esperado) mejoran algunos. \\
+\texttt{CW}, \texttt{p(CW)} & p. ej. vol12 1,90 ($p=0{,}029$) & Prueba de Clark-West para modelos anidados; solo vol12 es significativa al 5\,\%, y dp, cape, lty y tbl al 10\,\%. \\
+Lectura conjunta & — & Lo que parece predictibilidad dentro de la muestra no sobrevive fuera de ella (Goyal y Welch, 2008). \\
+\end{xltabular}}

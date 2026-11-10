@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Volatilidad EWMA pronosticada & 1,76 / 2,10\,\% & Volatilidad diaria esperada para el 2 de enero de 2019, tras el agitado diciembre de 2018. \\
+\texttt{tau simulado} & 0,67 a 0,76 & Dependencia de los escenarios simulados con cada cópula. \\
+\texttt{VaR 99 \%} & 5,01 a 5,23\,\% & Pérdida de la cartera que solo se supera el 1\,\% de los días; similar con todas las cópulas. \\
+\texttt{ES 99 \%} & 6,35 a 6,77\,\% & Pérdida promedio en el peor 1\,\%; Clayton (cola inferior) da el mayor. \\
+\texttt{VaR 99,9 \%} & 8,29 a 9,22\,\% & En el extremo las cópulas difieren más: Gumbel subestima el riesgo de caída. \\
+Independencia & VaR 3,68\,\% & Suponer independencia subestimaría el riesgo en un tercio. \\
+Comonotonía & VaR 5,27\,\% & Dependencia perfecta: cota superior del riesgo. \\
+Histórica filtrada & ES 6,96\,\% & Usar los pares observados de residuos da el riesgo más alto, cercano a la comonotonía. \\
+Cota comonótona del ES & 7,10 & ES si los dos índices tuvieran sus peores días juntos. \\
+Beneficio de diversificación & 0,13 puntos & Combinar dos índices tan dependientes casi no reduce el riesgo extremo. \\
+\end{xltabular}}

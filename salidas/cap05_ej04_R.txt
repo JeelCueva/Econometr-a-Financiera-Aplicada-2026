@@ -1,0 +1,7 @@
+T = 621 meses (1975-01 a 2026-09)
+ADF lo: niveles t = -0.861 | diferencias t = -7.391
+ADF ls: niveles t = -0.091 | diferencias t = -9.919
+
+Niveles:     b = 0.5301  t = 32.85  R2 = 0.6355  DW = 0.0096
+ADF de los residuos (sin constante): t = -2.100
+Diferencias: b = 0.0151  t = 0.30  R2 = 0.00015

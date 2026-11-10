@@ -1,0 +1,8 @@
+log-verosimilitud = -3256.3688
+  p[0->0]        0.9844
+  p[1->0]        0.0952
+  const[0]       1.0074
+  const[1]      -1.4351
+  sigma2[0]     14.0090
+  sigma2[1]    109.6179
+desviaciones estándar por régimen: [ 3.7429 10.4699]

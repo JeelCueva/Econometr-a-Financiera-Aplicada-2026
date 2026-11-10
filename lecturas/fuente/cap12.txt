@@ -1,0 +1,49 @@
+== cap12_ej01
+$T$ | 4615 días | Días con dato en las tres series a la vez (intersección de calendarios).
+Matriz de correlaciones | sp-nq 0,885; sp-br 0,139; nq-br 0,107 | Correlación promedio de toda la muestra: los dos índices bursátiles se mueven casi juntos; el petróleo, casi independiente.
+S\&P-Brent EWMA mín./máx. | $-0{,}638$ (2004) / 0,744 (2012) | La correlación EWMA ($\lambda=0{,}94$) oscila mucho: puede cambiar de signo en meses.
+Ventana de 250 días | $-0{,}248$ a 0,544 | La ventana móvil oscila menos que la EWMA porque promedia un año completo.
+1999--2007 / 2009--2018 | 0,006 / 0,299 | La relación acciones-petróleo apareció después de la crisis de 2008.
+S\&P-Nasdaq EWMA | 0,487 a 0,991 | Correlación siempre alta, salvo durante la burbuja tecnológica (abril de 2000).
+1999--2007 / 2009--2018 | 0,852 / 0,954 | También aumentó después de 2008.
+
+== cap12_ej02
+Etapa 1: \texttt{alpha}, \texttt{beta} | S\&P 0,102 y 0,887; Brent 0,047 y 0,952 | GARCH de cada serie; el Brent reacciona menos a los choques pero su volatilidad es más persistente.
+\texttt{a} | 0,0130 (ee 0,0027) | Reacción de la correlación a los productos de los choques estandarizados de ayer: pequeña pero significativa.
+\texttt{b} | 0,9844 (ee 0,0035) | Persistencia de la correlación.
+$a+b$, vida media | 0,9974; 266 días | La correlación es muy persistente: un choque tarda un año en disiparse a la mitad.
+log-ver DCC / CCC | 115,97 / 40,19 | Verosimilitud de la parte de correlación de cada modelo.
+LR | 151,56; $p\approx10^{-33}$ | Se rechaza que la correlación sea constante.
+Correlación CCC | 0,131 | Correlación constante entre los residuos estandarizados.
+Correlación DCC mín./máx. | $-0{,}268$ (2008-08); 0,518 (2010-05) | Rango de la correlación condicional diaria.
+Promedios anuales | $-0{,}121$ (2003) a 0,390 (2012) | Cerca de cero hasta 2008 y positiva desde 2009, alcanzando su máximo en 2012.
+
+== cap12_ej03
+\texttt{a}, \texttt{b} | 0,0225; 0,9732 | Parámetros del DCC con las tres series; persistencia 0,9957.
+LR frente a CCC | 788,73 (2 g.l.) | Rechazo abrumador de correlaciones constantes.
+Calma: S\&P-Nasdaq | 0,933 | Correlación promedio entre enero de 2006 y agosto de 2008.
+Crisis: S\&P-Nasdaq | 0,961 | Sube algo en la crisis.
+Calma / crisis: S\&P-Brent | $-0{,}053$ / 0,161 | Pasa de negativa a positiva: en la crisis acciones y petróleo cayeron juntos.
+Calma / crisis: Nasdaq-Brent | $-0{,}066$ / 0,141 | El mismo patrón.
+2017--2018 | 0,910; 0,103; 0,035 | Tras la crisis las correlaciones con el petróleo se moderan, pero no vuelven a ser negativas.
+Volatilidad anual en la crisis | S\&P 50,0\,\%; Nasdaq 49,9\,\%; Brent 71,2\,\% | Volatilidades GARCH promedio, unas tres veces las normales: la diversificación falla justo cuando más se necesita.
+Menor autovalor de $\bm R_t$ | 0,0295 | Positivo en todos los días: las matrices de correlación estimadas son válidas (definidas positivas).
+
+== cap12_ej04
+Muestras | 2367 / 2248 días | Estimación 1999--2009; evaluación fuera de muestra 2010--2018.
+\texttt{a}, \texttt{b} | 0,0189; 0,9796 | Parámetros DCC fijos para la evaluación.
+\texttt{volat. anual} | 14,56 / 13,98 / 13,81 / 16,37 | Volatilidad realizada de cada cartera; la DCC logra la menor.
+\texttt{peso medio} | p. ej. DCC 1,41; $-0{,}51$; 0,10 | Pesos promedio en S\&P, Nasdaq y Brent; la mínima varianza vende en corto el Nasdaq para cubrir al S\&P.
+\texttt{rotación diaria media} | 0 / 0,206 / 0,128 | Suma de los cambios absolutos de pesos por día: la EWMA cambia mucho más la cartera (más costos de transacción).
+DM DCC vs constante | $t=4{,}33$; $p<0{,}0001$ | La DCC tiene una varianza significativamente menor que la covarianza constante.
+DM DCC vs EWMA | $t=1{,}69$; $p=0{,}09$ | Ventaja de la DCC solo marginal frente a la EWMA, pero con 40\,\% menos rotación.
+DM DCC vs iguales | $t=9{,}02$ | La DCC supera claramente a la cartera de pesos iguales en reducción de riesgo.
+
+== cap12_ej05
+Calma / crisis | 637 / 146 días | Tamaños de los dos períodos comparados.
+Varianza del S\&P 500 | 1,03 / 12,38 | En la crisis la varianza diaria se multiplicó por 12.
+$\delta$ | 11,01 | Aumento relativo de la varianza, $\sigma^2_{\text{crisis}}/\sigma^2_{\text{calma}}-1$, usado en la corrección.
+\texttt{rho calma} / \texttt{rho crisis} | Nasdaq 0,933 / 0,977; Brent $-0{,}113$ / 0,224 | Correlaciones observadas en cada período.
+\texttt{rho crisis ajustada} | 0,798 / 0,066 | Correlación de Forbes-Rigobon: elimina el aumento mecánico causado por la mayor volatilidad.
+\texttt{z (sin ajuste)} | 5,90 / 3,68 | Prueba de igualdad de correlaciones (transformación de Fisher): parecería haber contagio con ambos mercados.
+\texttt{z (ajustada)} | $-6{,}36$ / 1,94 | Con la corrección, no hay contagio con el Nasdaq (la correlación ajustada es incluso menor) y con el Brent el aumento queda en el límite de la significancia.

@@ -1,0 +1,21 @@
+Banda de Bartlett al 95 %: +/- 0.0205
+
+                r      r2   abs_r
+rezago_1  -0.0030  0.3345  0.2586
+rezago_2  -0.0259  0.0704  0.2172
+rezago_3  -0.0088  0.0612  0.2235
+rezago_4   0.0150  0.0532  0.2097
+rezago_5  -0.0097  0.0752  0.2006
+rezago_6  -0.0189  0.1340  0.2084
+rezago_7   0.0042  0.0958  0.2093
+rezago_8   0.0208  0.0450  0.1812
+rezago_9   0.0120  0.0805  0.2032
+rezago_10 -0.0282  0.1546  0.2176
+
+Prueba de Ljung-Box (H0: sin autocorrelación hasta el rezago m)
+r      m = 10  Q =      25.74  p-valor = 0.004105
+r      m = 20  Q =      72.59  p-valor = 6.828e-08
+r2     m = 10  Q =    1721.27  p-valor = 0
+r2     m = 20  Q =    2486.89  p-valor = 0
+abs_r  m = 10  Q =    4170.82  p-valor = 0
+abs_r  m = 20  Q =    6855.36  p-valor = 0

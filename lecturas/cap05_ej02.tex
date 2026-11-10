@@ -1,0 +1,13 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 9278 días & Observaciones diarias del log VIX, ene-1990 a set-2026. \\
+ADF $t$ & $-6{,}54$ (11 rezagos) & Muy por debajo de $-2{,}86$: se rechaza la raíz unitaria; el VIX es estacionario. \\
+KPSS $\eta$ & 0,568 & Algo mayor que 0,463: rechaza la estacionariedad al 5\,\%. El conflicto es típico de series estacionarias pero muy persistentes. \\
+\texttt{phi} & 0,9799 & Coeficiente AR(1) diario: cerca de 1, la serie vuelve a su media pero muy lentamente. \\
+Media de largo plazo & 2,903 (VIX 18,23) & Nivel al que tiende el log VIX, $c/(1-\phi)$; equivale a un VIX ``normal'' de 18. \\
+Vida media & 34,2 días & Tiempo para que se disipe la mitad de un choque: unos siete semanas de negociación. \\
+\end{xltabular}}

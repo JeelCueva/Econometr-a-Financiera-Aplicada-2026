@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 1830 meses & Observaciones mensuales de la tasa a 10 años, 1871 a 2023. \\
+Rezagos por AIC & 22 & Número de diferencias rezagadas en la regresión ADF que minimiza el criterio de Akaike. \\
+\texttt{gamma} & $-0{,}00288$ & Coeficiente de $y_{t-1}$; bajo raíz unitaria es 0. Es negativo pero muy pequeño. \\
+\texttt{ee} de gamma & 0,00169 & Error estándar de $\hat\gamma$. \\
+\texttt{delta\_1}, \texttt{delta\_2} & 0,409; $-0{,}254$ & Coeficientes de las diferencias rezagadas: capturan la dinámica de corto plazo, no se interpretan para la prueba. \\
+\texttt{constante} & 0,0119 & Término constante de la regresión ADF. \\
+$t$ de gamma & $-1{,}70$ & Estadístico ADF; no supera ni el valor crítico del 10\,\% ($-2{,}57$): no se rechaza la raíz unitaria (no se usan los valores de la $t$ normal). \\
+En diferencias & $t=-10{,}37$ & Se rechaza con claridad la raíz unitaria en las diferencias. \\
+KPSS niveles / diferencias & 1,164 / 0,075 & Rechaza estacionariedad en niveles y no en diferencias: la tasa es $I(1)$ en esta muestra. \\
+\end{xltabular}}

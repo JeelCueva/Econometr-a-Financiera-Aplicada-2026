@@ -1,0 +1,10 @@
+Modelo: ln I_it = rho ln I_i,t-1 + beta ln F_it + alfa_i + e_it  (Grunfeld, 1935-1954)
+  MCO agrupado:        rho = 0.9137 (0.0238); beta = 0.1017 (0.0276); n = 190
+  efectos fijos:       rho = 0.7000 (0.0446); beta = 0.4422 (0.0762)
+  Anderson-Hsiao (VI): rho = 0.4981 (0.2879); beta = 0.6905 (0.1128); n = 180; instrumento: ln I_i,t-2
+  correlación entre el instrumento y el regresor endógeno = -0.0656
+
+Sesgo aproximado de Nickell con T = 19 y rho = 0.70: -(1 + rho)/(T - 1) = -0.0944
+Simulación (1000 paneles con N = 10, T = 20, rho = 0.7):
+  efectos fijos:  media = 0.5912; sesgo = -0.1088; desv. est. = 0.0624; fórmula -(1+rho)/(T-1) = -0.0944
+  Anderson-Hsiao: mediana = 0.7106; sesgo de la mediana = 0.0106; rango intercuartílico = 0.2428

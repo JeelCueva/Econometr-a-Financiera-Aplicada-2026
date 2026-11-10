@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Muestras & 640 / 455 meses & Entrenamiento 1927--1980; prueba 1981--2018. \\
+MCO lineal & ECM 34,03 / 20,30; $R^2$ $-7{,}79$\,\% & Ajusta mejor en entrenamiento, pero pronostica peor que la media en la prueba. \\
+Profundidad 0 & ECM prueba 18,83 & Árbol sin divisiones: pronostica la media de entrenamiento. Es el mejor en la prueba. \\
+\texttt{hojas} & 1 a 10 & Grupos finales en que el árbol divide los meses. \\
+ECM entrenamiento & 35,56 $\to$ 31,05 & Baja siempre al aumentar la profundidad. \\
+ECM prueba & 18,83 $\to$ 23,11 & Sube con la profundidad: es la firma del sobreajuste. \\
+\texttt{R2 prueba} & 0 a $-22{,}7$\,\% & Cada nivel adicional empeora el pronóstico. \\
+Árbol de profundidad 2 & primera división en cape $\le2{,}18$ & Los 24 meses con CAPE muy bajo tuvieron rendimientos altos (6,95\,\%); la regla es una curiosidad de la muestra que no se repite después de 1980. \\
+\end{xltabular}}

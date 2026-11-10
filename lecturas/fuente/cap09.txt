@@ -1,0 +1,55 @@
+== cap09_ej01
+corr$(r_{t-j},r_t^2)$ S\&P 500 | $-0{,}113$ a $-0{,}080$ | Negativa en los cinco rezagos: después de caídas la volatilidad sube más que después de subidas (efecto apalancamiento).
+corr$(r_{t-j}^2,r_t)$ S\&P 500 | $-0{,}032$ a 0,051 | Pequeña: la volatilidad pasada casi no predice el rendimiento.
+Engle-Ng: \texttt{constante} | 0,994 | Valor medio de $z_t^2$ cuando los demás regresores son cero.
+\texttt{sesgo de signo S-} | 0,173 ($t=2{,}06$) | Los días después de un choque negativo, $z_t^2$ es mayor: el GARCH simétrico subestima la varianza tras caídas.
+\texttt{tamaño negativo S- z} | 0,035 ($t=0{,}66$) | El tamaño de los choques negativos no añade información adicional.
+\texttt{tamaño positivo S+ z} | $-0{,}189$ ($t=-2{,}82$) | Los choques positivos grandes elevan la varianza menos de lo que supone el GARCH.
+Prueba conjunta S\&P 500 | LM 34,09; $p\approx2\times10^{-7}$ | Se rechaza la simetría: hace falta un modelo asimétrico.
+Correlaciones del Brent | $-0{,}117$ en $j=1$ | Asimetría solo en el primer rezago; luego casi desaparece.
+Prueba conjunta Brent | LM 15,36; $p=0{,}0015$ | También rechaza, aunque ningún componente individual es significativo al 5\,\%: la asimetría del petróleo es más débil.
+
+== cap09_ej02
+$T$ | 5030 | Rendimientos diarios del S\&P 500 de 1999 a 2018.
+\texttt{alpha} | 0,0000 | Reacción de la varianza a choques positivos: nula.
+\texttt{gamma} | 0,1815 ($t=8{,}10$) | Reacción adicional a choques negativos: toda la respuesta de la varianza viene de las malas noticias.
+\texttt{beta} | 0,8987 | Persistencia de la varianza de ayer.
+\texttt{nu} | 7,50 | Grados de libertad de la $t$: colas pesadas, algo menos que en el Brent.
+log-ver GARCH / GJR | $-6834{,}48$ / $-6748{,}27$ | El GJR mejora la verosimilitud en 86 puntos.
+LR ($\gamma=0$) | 172,42; $p\approx10^{-39}$ | Razón de verosimilitudes $\sim\chi^2_1$: se rechaza la simetría sin duda.
+Persistencia | 0,98944 | $\alpha+\gamma/2+\beta$ (el término $\gamma/2$ porque la mitad de los choques son negativos).
+Vida media | 65,3 días | Tiempo para que se disipe la mitad de un choque de volatilidad.
+Varianza incondicional / anual | 1,2456; 17,7\,\% | Nivel de largo plazo de la varianza diaria y su volatilidad anual.
+Coeficientes de $e^2_{t-1}$ | 0,1815 si $e<0$; 0 si $e>0$ | Resume la asimetría: un choque negativo eleva la varianza; uno positivo no.
+Correlación con el VIX | 0,900 | La volatilidad del GJR sigue de cerca al índice de volatilidad implícita.
+VIX frente a GJR | 19,94 / 16,89; 3,04 puntos | El VIX es en promedio 3 puntos mayor: es la prima por riesgo de volatilidad que pagan los compradores de opciones.
+
+== cap09_ej03
+\texttt{omega} | $-0{,}0021$ | Constante de la ecuación del log de la varianza (puede ser negativa).
+\texttt{alpha} | 0,1285 | Efecto del tamaño del choque $\lvert z_{t-1}\rvert$ sobre el log de la varianza.
+\texttt{gamma} | $-0{,}1541$ ($t=-11{,}5$) | Efecto del signo: negativo, los choques negativos elevan la varianza.
+\texttt{beta} | 0,9824 | Persistencia del log de la varianza.
+Pendientes de $g(z)$ | $-0{,}026$ ($z>0$); $-0{,}283$ ($z<0$) | Una buena noticia casi no cambia la varianza (incluso la baja un poco); una mala la sube mucho.
+Vida media | 39,1 días | Tiempo de disipación de la mitad de un choque en el log de la varianza.
+\texttt{k}, log-ver, AIC, BIC | EGARCH: 6; $-6732$; 13\,476; 13\,516 | El EGARCH tiene la mayor verosimilitud y los menores AIC y BIC: es el modelo preferido.
+$\sigma^2(-)$, $\sigma^2(+)$ | GARCH 1,89 y 1,89 | Varianza de mañana tras un choque de $\pm2$ desviaciones: igual en el GARCH (simétrico).
+Cociente GJR / EGARCH | 1,80 / 1,85 | Tras una caída de 2,4\,\% la varianza de mañana es 80--85\,\% mayor que tras una subida igual.
+
+== cap09_ej04
+GJR: \texttt{alpha}, \texttt{gamma} | 0,0676; 0,0314 ($t=3{,}09$) | En el Brent los choques positivos también elevan la volatilidad; los negativos, algo más.
+EGARCH: \texttt{gamma} | $-0{,}0304$ ($t=-4{,}53$) | Asimetría significativa pero cinco veces menor que en el S\&P 500.
+\texttt{nu} | 5,27 | Colas muy pesadas en ambos modelos.
+LR ($\gamma=0$) | 10,81; $p=0{,}001$ | Se rechaza la simetría al 1\,\%.
+AIC / BIC | EGARCH 39\,457 / 39\,500 | El EGARCH es el preferido; el GJR mejora poco al GARCH por BIC (39\,549 frente a 39\,551).
+Coeficientes de $e^2$ en el GJR | 0,0990 / 0,0676; cociente 1,46 | Un choque negativo pesa 46\,\% más que uno positivo en la varianza de mañana.
+Cociente de impactos $\pm2$ desv. | GJR 1,11; EGARCH 1,13 | Tras una caída de 5,4\,\% la varianza es solo 11--13\,\% mayor que tras una subida igual (frente a 80\,\% en el S\&P 500).
+GJR hasta 2019 | $\gamma=0{,}0301$; $t=3{,}24$ | Sin el período 2020--2026 la asimetría se mantiene: no la causa solo el colapso de 2020.
+
+== cap09_ej05
+$T$, media, varianza | 1109; 0,660; 28,38 | Exceso de rendimiento mensual del mercado en \%: prima media de 0,66\,\% al mes.
+GARCH-M normal: \texttt{lambda} | 0,01167 ($t=1{,}33$) | Rendimiento adicional por unidad de varianza; positivo como predice la teoría, pero no significativo.
+\texttt{mu} | 0,599 | Parte constante del exceso de rendimiento esperado.
+log-ver | $-3254{,}31$ | Verosimilitud del modelo normal.
+Prima por volatilidad promedio | 0,339\,\% (4,07\,\% anual) | $\lambda$ por la varianza media: parte de la prima que el modelo atribuye al riesgo.
+GARCH-M $t$ | $\lambda=0{,}0087$ ($t=0{,}99$) | Con colas pesadas el efecto se reduce y sigue sin ser significativo.
+GJR-M $t$ | $\lambda=0{,}0041$ ($t=0{,}37$) | Al permitir asimetría el efecto casi desaparece: la relación riesgo-rendimiento en el tiempo no se detecta con estos datos.

@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$N$ & 40 anuncios & Reuniones programadas del FOMC, 2014--2018. \\
+\texttt{CAAR} & $-0{,}22$ a 0,18 & Rendimiento anormal promedio (\%) de cada día relativo al anuncio. \\
+\texttt{J1} & $-1{,}75$ a 1,42 & Estadístico paramétrico estándar del CAAR; ninguno supera 1,96. \\
+\texttt{Patell} & $-1{,}83$ a 1,16 & Prueba con rendimientos anormales estandarizados por la volatilidad de cada evento. \\
+\texttt{BMP} & $-2{,}17$ en $\tau=-2$ & Prueba de Boehmer-Musumeci-Poulsen, robusta a cambios de varianza; un único valor significativo entre 11 es lo esperable por azar. \\
+\texttt{signo}, \texttt{positivos} & 26/40 en $\tau=-1$ & Prueba no paramétrica del número de rendimientos positivos; la víspera sube en 65\,\% de los casos, sin llegar a ser significativa. \\
+Ventanas & CAAR($-1,0$) 0,15; $J1=0{,}84$ & Ningún efecto acumulado es significativo. \\
+Corrado día 0 & $-0{,}92$ & La prueba de rangos tampoco detecta efecto. \\
+Regresión: \texttt{día -1} & 0,199 ($t=1{,}85$) & La víspera del anuncio el índice rinde 0,2 puntos más que un día normal: efecto ``pre-FOMC'' marginalmente significativo. \\
+Regresión: \texttt{día 0} & $-0{,}007$ ($t=-0{,}06$) & El día del anuncio no hay rendimiento anormal promedio. \\
+Desv. est. con y sin anuncio & 0,747 / 0,841 & Los días de anuncio no son más volátiles que los demás en esta muestra. \\
+\end{xltabular}}

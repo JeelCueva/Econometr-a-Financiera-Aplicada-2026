@@ -1,0 +1,5 @@
+Calma: 637 días; crisis: 146 días. Varianza diaria del S&P 500: 1.0311 en calma y 12.3838 en crisis; delta = 11.0099
+
+Mercado       rho calma   rho crisis   rho crisis ajustada   z (sin ajuste)   z (ajustada)
+Nasdaq          0.9330       0.9770               0.7976             5.90          -6.36
+Brent          -0.1131       0.2236               0.0661             3.68           1.94

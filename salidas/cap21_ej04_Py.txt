@@ -1,0 +1,18 @@
+Cartera 1/N (rebalanceo diario); GARCH(1,1)-t estimado en 2014-2015: mu = 0.1287, omega = 0.3016, alfa = 0.1134, beta = 0.7279, nu = 6.12
+  reestimado con datos hasta 2015: alfa = 0.1134, beta = 0.7279, nu = 6.12
+  reestimado con datos hasta 2016: alfa = 0.1354, beta = 0.7970, nu = 5.25
+  reestimado con datos hasta 2017: alfa = 0.1126, beta = 0.8493, nu = 4.35
+Prueba retrospectiva: 2016-01-04 a 2018-12-31 (754 días)
+
+nivel   excepciones  esperadas   Kupiec LR   p       Christoffersen LR   p      pérdida/ES en excepciones   método
+ 99.0         14          7.5       4.46  0.0346           0.53   0.4664                1.043        simulación histórica (250 días)
+ 99.0         21          7.5      16.34  0.0001           0.26   0.6111                1.173        EWMA normal
+ 99.0         14          7.5       4.46  0.0346           0.53   0.4664                0.931        GARCH(1,1)-t
+ 99.0         13          7.5       3.28  0.0700           0.46   0.4991                0.931        GARCH(1,1)-t reestimado cada año
+ 97.5         28         18.9       3.97  0.0462           5.54   0.0186                1.054        simulación histórica (250 días)
+ 97.5         28         18.9       3.97  0.0462           0.00   0.9664                1.194        EWMA normal
+ 97.5         27         18.9       3.19  0.0739           2.01   0.1564                1.006        GARCH(1,1)-t
+ 97.5         27         18.9       3.19  0.0739           0.00   0.9733                0.982        GARCH(1,1)-t reestimado cada año
+
+GARCH(1,1)-t con toda la muestra: alfa = 0.1414, beta = 0.8305, nu = 4.34
+Pronóstico para el día siguiente a 2018-12-31: volatilidad = 2.8710 %; VaR 99 % = 7.4188 %; ES 99 % = 10.1774 %

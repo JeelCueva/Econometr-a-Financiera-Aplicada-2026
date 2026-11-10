@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$\tau$ empírico & 0,735 & Referencia para comparar el $\tau$ implícito de cada cópula. \\
+Gaussiana: $\rho$ & 0,901 & Parámetro de correlación; sin dependencia en las colas ($\lambda=0$). \\
+$t$: $\rho$, $\nu$ & 0,912; 3,62 & Grados de libertad bajos: dependencia fuerte y simétrica en ambas colas ($\lambda=0{,}666$). \\
+Clayton: $\theta$ & 3,376 & Dependencia solo en la cola inferior ($\lambda_{\text{inf}}=0{,}81$). \\
+Gumbel: $\theta$ & 3,519 & Dependencia solo en la cola superior ($\lambda_{\text{sup}}=0{,}78$). \\
+\texttt{log-verosim.} & 3448 a 4540 & La $t$ tiene la mayor verosimilitud por un amplio margen. \\
+\texttt{AIC} & $-9075$ ($t$) & Menor es mejor: la $t$ es la cópula preferida. \\
+\texttt{tau} implícito & 0,628 a 0,731 & La $t$ es la que mejor reproduce el $\tau$ empírico; Clayton lo subestima. \\
+Inversión del $\tau$ & Clayton 5,54 frente a 3,38 & Estimadores por momentos; la gran diferencia en Clayton indica que esa cópula está mal especificada. \\
+LR $t$ frente a gaussiana & 699,90 & Rechazo rotundo de la gaussiana (en la frontera, la distribución es una mezcla de $\chi^2$). \\
+Perfil de $\nu$ & máximo cerca de 3--5 & La log-verosimilitud cae al aumentar $\nu$: los datos piden colas pesadas. \\
+\end{xltabular}}

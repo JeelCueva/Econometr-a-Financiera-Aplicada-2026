@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{n} & 1257 días & Rendimientos simples diarios, 2014--2018. \\
+\texttt{media anual} & 7,16 a 31,41\,\% & Media diaria por 252; Amazon fue la de mayor rendimiento y el S\&P 500 la menor. \\
+\texttt{vol. anual} & 13,23 a 30,99\,\% & Volatilidad anualizada: cada acción es dos veces más volátil que el índice. \\
+\texttt{asimetría} & $-0{,}43$ a 0,96 & Positiva en Amazon y Alphabet (grandes subidas tras resultados), negativa en el índice. \\
+\texttt{curtosis} & 6,67 a 18,21 & Colas pesadas en todas; Facebook, por su caída de julio de 2018. \\
+\texttt{JB} & 707 a 12\,125 & Todas superan el valor crítico 9,21: se rechaza la normalidad. \\
+\texttt{LB(10) r}, \texttt{p} & solo GOOG $p=0{,}025$ & Los rendimientos casi no están autocorrelacionados (al 1\,\% ninguno). \\
+\texttt{LB(10) r2}, \texttt{p} & S\&P 386,0; FB $p=0{,}32$ & Agrupamiento de volatilidad fuerte en el índice y en Apple; débil en Facebook y Alphabet. \\
+\texttt{peor día} & $-18{,}96$\,\% (FB) & Mayor caída diaria de cada serie y su fecha. \\
+Correlaciones & 0,40 a 0,67 & Las acciones se correlacionan moderadamente entre sí y más con el índice: hay espacio para diversificar. \\
+\end{xltabular}}

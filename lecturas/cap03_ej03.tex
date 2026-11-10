@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Prima de mercado promedio & 7,74\,\% anual & Exceso de rendimiento promedio del mercado; según el CAPM, debe ser la pendiente $\gamma_1$. \\
+\texttt{(Intercept)}, $\hat\gamma_0$ & 7,052 & Exceso de rendimiento anual de una industria con beta cero; el CAPM predice 0. \\
+$t$ y $p$ del intercepto & 4,887; 0,001 & El intercepto es significativamente distinto de 0: contradice al CAPM. \\
+\texttt{beta}, $\hat\gamma_1$ & 1,344 & Rendimiento anual adicional por cada unidad de beta; el CAPM predice 7,74. \\
+$t$ y $p$ de la pendiente & 0,902; 0,388 & La pendiente no es significativamente distinta de cero: más beta no se traduce en más rendimiento. \\
+\texttt{R2} transversal & 0,075 & La beta explica solo el 7,5\,\% de las diferencias de rendimiento promedio entre industrias. \\
+Comparación final & 1,34 frente a 7,74 & La recta estimada es mucho más plana que la teórica: es el resultado clásico de Black, Jensen y Scholes (1972). \\
+\end{xltabular}}

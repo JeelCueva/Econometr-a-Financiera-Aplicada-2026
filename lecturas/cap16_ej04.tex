@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Diseño & 1007 fechas $\times$ 4 acciones; 1000 muestras & Simulación con datos reales: cada muestra tiene 20 eventos elegidos al azar. \\
+$\delta=0$ & 0,042 a 0,066 & Tamaño empírico: proporción de rechazos cuando no hay efecto. Debería ser 0,05; todas las pruebas están cerca. \\
+$\delta=0{,}5$\,\% & 0,36 a 0,64 & Potencia ante un efecto pequeño: Corrado (0,64) y BMP (0,53) son las que más detectan. \\
+$\delta=1$\,\% & 0,93 a 0,99 & Con un efecto de 1\,\% casi todas lo detectan. \\
+$\delta=2$\,\% & 0,99 a 1,00 & Potencia prácticamente total. \\
+AR(0) de todas las fechas & media 0,0008; mediana $-0{,}029$ & La distribución de rendimientos anormales tiene media cero. \\
+Fracción positiva, asimetría & 0,488; 1,137 & Asimetría positiva: menos de la mitad son positivos, por eso las pruebas de rangos y de signo ganan potencia frente a las paramétricas. \\
+\end{xltabular}}

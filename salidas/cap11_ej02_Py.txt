@@ -1,0 +1,16 @@
+VAR en niveles: BIC elige p = 3 (AIC elige 3), de modo que k = p - 1 = 2 rezagos de las diferencias
+
+autovalores: 0.06311  0.00497  (n = 471)
+H0          traza   VC 95 %    máx. autovalor   VC 95 %
+r <= 0     33.052    15.494          30.703        14.264
+r <= 1      2.349     3.841           2.349         3.841
+
+vector de cointegración normalizado: beta = (1, -1.1119)
+coeficientes de ajuste:
+  alpha_Brent =   0.0342 (ee 0.0862, t =  0.40)
+  alpha_WTI   =   0.1664 (ee 0.0820, t =  2.03)
+persistencia del desequilibrio 1 + beta'alpha = 0.8492; vida media = 4.2 meses
+
+H0: beta = (1, -1): LR = 22.388, p = 2.23e-06 (chi-cuadrado con 1 g.l.)
+
+comprobación con statsmodels: traza = [33.052  2.349], máx. = [30.703  2.349]; beta = [ 1.     -1.1119]; alpha = [0.0342 0.1664]

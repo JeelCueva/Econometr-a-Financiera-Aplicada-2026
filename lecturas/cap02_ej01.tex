@@ -1,0 +1,21 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Período & 1987-05-21 a 2026-11-03 & Fechas del primer y último rendimiento diario del Brent usados. \\
+\texttt{T} & 9121 & Número de rendimientos logarítmicos diarios. \\
+\texttt{media} & 0,00019 & Rendimiento promedio diario de 0,019\,\%: casi cero frente a la volatilidad, como es típico en datos diarios. \\
+\texttt{desv\_est} & 0,0270 & Volatilidad diaria de 2,7\,\%, más del doble que la de un índice bursátil amplio. \\
+\texttt{asimetria} & $-1{,}49$ & Negativa: las caídas extremas son más grandes que las subidas extremas. Bajo normalidad sería 0. \\
+\texttt{curtosis} & 55,97 & Muy por encima de 3 (normal): colas extremadamente pesadas; hay muchos más días extremos que los que predice la normal. \\
+\texttt{JB} & $1{,}07\times10^{6}$ & Estadístico de Jarque-Bera; bajo normalidad se distribuye $\chi^2_2$, cuyo valor crítico al 5\,\% es 5,99. \\
+\texttt{p\_valor} & 0 & Probabilidad de observar un JB tan grande si los rendimientos fueran normales: se rechaza la normalidad sin ninguna duda. \\
+Cinco mayores $\lvert r\rvert$ & $-0{,}644$ (21-abr-2020) & Días más extremos; cuatro de cinco son de marzo-abril de 2020 (colapso de la demanda por la pandemia) y uno de la Guerra del Golfo (1991). \\
+Sin abril de 2020: \texttt{asimetria} & $-0{,}46$ & Al quitar dos días la asimetría cae a un tercio: este momento depende de muy pocas observaciones. \\
+Sin abril de 2020: \texttt{curtosis} & 17,79 & Baja de 56 a 18, pero sigue lejos de 3: las colas pesadas no se deben solo a 2020. \\
+Sin abril de 2020: \texttt{JB}, \texttt{p\_valor} & 83\,438; 0 & La normalidad se sigue rechazando con claridad. \\
+$P(\lvert z\rvert>4)$ observada & 0,005591 & El 0,56\,\% de los días el rendimiento se aleja más de 4 desviaciones estándar de la media. \\
+$P(\lvert z\rvert>4)$ normal & $6{,}3\times10^{-5}$ & Lo que predice la normal: los días extremos son unas 88 veces más frecuentes de lo que ella indica. \\
+\end{xltabular}}

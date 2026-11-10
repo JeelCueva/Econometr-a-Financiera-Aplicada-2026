@@ -1,0 +1,11 @@
+último dato: 2026-11-03; r_T = -0.336 %; sigma2_T = 24.7793
+sigma2_T+1 = 0.0593 + 0.0832 x 0.1505 + 0.9123 x 24.7793 = 22.6778
+varianza incondicional = 13.286 (volatilidad anual 57.9 %)
+h =   1: E[sigma2] = 22.678  (vol. diaria 4.762 %; anualizada 75.6 %)
+h =   5: E[sigma2] = 22.511  (vol. diaria 4.745 %; anualizada 75.3 %)
+h =  21: E[sigma2] = 21.874  (vol. diaria 4.677 %; anualizada 74.2 %)
+h =  63: E[sigma2] = 20.404  (vol. diaria 4.517 %; anualizada 71.7 %)
+h = 126: E[sigma2] = 18.657  (vol. diaria 4.319 %; anualizada 68.6 %)
+h = 252: E[sigma2] = 16.344  (vol. diaria 4.043 %; anualizada 64.2 %)
+varianza acumulada a  21 días =    468 -> volatilidad del período 21.63 % (regla de la raíz: 21.82 %)
+varianza acumulada a 252 días =   4771 -> volatilidad del período 69.07 % (regla de la raíz: 75.60 %)

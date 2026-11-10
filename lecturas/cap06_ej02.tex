@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+AR(1): \texttt{ar1}, \texttt{intercept} & 0,9798; 2,904 & Persistencia diaria del log VIX y su media (\texttt{intercept} es la media del proceso en R, no la constante $c$). \\
+\texttt{ee} & 0,0021; 0,0347 & Errores estándar de los coeficientes: ambos muy precisos. \\
+\texttt{AIC}, \texttt{BIC} & $-23\,624$; $-23\,603$ & Criterios de información (menor es mejor) para comparar modelos. \\
+$Q(10)$, $Q(20)$ del AR(1) & 100,3 y 108,6; $p\approx0$ & Ljung-Box de los residuos: queda autocorrelación sin modelar. \\
+AR(2) & \texttt{ar2} = 0,074 & El segundo rezago es significativo (ee 0,010) y mejora el AIC en 49 unidades. \\
+ARMA(1,1) & \texttt{ar1} 0,9832; \texttt{ma1} $-0{,}084$ & Mejor AIC y BIC de los tres: es el modelo elegido. \\
+$Q$ del ARMA(1,1) & 73,2; $p\approx10^{-12}$ & Aún hay autocorrelación residual; con 9000 datos la prueba detecta desviaciones pequeñas, y además los residuos tienen heterocedasticidad. \\
+\texttt{sigma2} & 0,004556 & Varianza del error: desviación diaria de un 6,7\,\% en el nivel del VIX. \\
+Raíz AR & 1,0171 & Raíz del polinomio $1-\phi z$; mayor que 1 en valor absoluto: el modelo es estacionario, aunque está cerca del límite. \\
+Vida media & 40,9 días & Días para que se disipe la mitad de un choque al VIX: unos dos meses de negociación. \\
+\end{xltabular}}

@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{k} & 2, 5, 6, 12 & Número de parámetros de cada modelo. \\
+log-verosimilitud & $-3428$ a $-3234$ & Aumenta con el número de regímenes. \\
+AIC & 6493 (3 regímenes) & El AIC prefiere el modelo de tres regímenes. \\
+BIC & 6552,7 (3) y 6554,5 (2) & El BIC casi empata entre dos y tres regímenes y rechaza claramente uno solo. \\
+LR medias iguales & 9,00; $p=0{,}003$ & Las medias de los dos regímenes son distintas: no solo cambia la volatilidad. \\
+Modelo de solo varianza & $\sigma$ 3,89 y 11,44 & Volatilidades de cada régimen cuando la media es común. \\
+3 regímenes: $\mu$, $\sigma$ & 1,22/2,72; 0,67/4,52; $-1{,}29$/11,92 & Calma, normal y crisis. \\
+Duraciones & 24,4; 27,6; 12,2 meses & Persistencia de cada régimen. \\
+Matriz de transición & ceros en (1,3) y (3,1) & No se pasa directamente de la calma a la crisis: siempre se pasa por el régimen intermedio. \\
+Probabilidades estacionarias & 0,32 / 0,58 / 0,10 & El régimen de crisis ocupa el 10\,\% del tiempo. \\
+Meses asignados & 347 / 664 / 98 & Clasificación por la mayor probabilidad suavizada. \\
+\end{xltabular}}

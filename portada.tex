@@ -1,0 +1,91 @@
+% =====================================================================
+%  Portada, anteportada y créditos — Econometría Financiera Aplicada (Jeel Cueva)
+%  Banda superior: manchas difuminadas en cobre, vino y turquesa; bloque inferior azul petróleo.
+%  La pequeña curva cobre del pie es el índice S&P/BVL Perú General semanal 2015-2026 (BCRP).
+% =====================================================================
+% Paleta andina: azul petróleo profundo, cobre (minería peruana), turquesa, vino y arena
+\definecolor{petroleo}{RGB}{14,72,86}
+\definecolor{petroleoOscuro}{RGB}{8,46,58}
+\definecolor{tintaPortada}{RGB}{22,18,30}
+\definecolor{cobre}{RGB}{222,140,82}
+\definecolor{cobreClaro}{RGB}{242,186,140}
+\definecolor{turquesaClaro}{RGB}{128,214,214}
+\begin{titlepage}
+\newgeometry{margin=0pt}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  % ---- banda superior: fondo tinta y manchas de color difuminadas ----
+  \coordinate (A) at ([yshift=-9.4cm]current page.north west);
+  \begin{scope}
+    \clip (current page.north west) rectangle (A -| current page.east);
+    \fill[tintaPortada] (current page.north west) rectangle (A -| current page.east);
+    \definecolor{m1}{RGB}{122,30,62}\definecolor{m2}{RGB}{214,120,60}\definecolor{m3}{RGB}{40,170,170}
+    \definecolor{m4}{RGB}{232,190,120}\definecolor{m5}{RGB}{176,52,48}\definecolor{m6}{RGB}{20,110,120}
+    \foreach \x/\y/\r/\c in {2.5/-3.5/8/m1, 10.5/-1.0/7.5/m2, 13.5/-8.5/7/m3, 19.5/-2.0/6.5/m4,
+                             21.5/-9.0/6/m5, 5.5/-10.0/5.5/m6, 16.0/-4.5/4.5/m3}{
+      \fill[\c,fill opacity=0.85,path fading=nube] ([xshift=\x cm,yshift=\y cm]current page.north west) circle (\r cm);}
+  \end{scope}
+  % ---- bloque inferior ocre ----
+  \shade[top color=petroleo,bottom color=petroleoOscuro] (A) rectangle (current page.south east);
+  % ---- filetes blancos: vertical a la izquierda y horizontal entre bloques ----
+  \draw[cobre,line width=0.9pt] ([xshift=1.9cm]current page.north west) -- ([xshift=1.9cm]current page.south west);
+  \draw[cobre,line width=1.2pt] (A) -- (A -| current page.east);
+  \draw[cobre,line width=0.6pt] ([yshift=-4.6cm]A) -- ++(1.9cm,0);
+  % ---- textos de la banda ----
+  \node[anchor=north west,inner sep=0pt,font=\sffamily\large,text=cobreClaro]
+       at ([xshift=2.6cm,yshift=-1.3cm]current page.north west) {Teoría, demostraciones y datos reales};
+  \node[anchor=south west,inner sep=0pt,font=\sffamily\fontsize{28}{32}\selectfont,text=white]
+       at ([xshift=2.6cm,yshift=0.7cm]A) {Jeel Cueva};
+  % ---- título ----
+  \node[anchor=north west,inner sep=0pt,align=left,text=white,font=\sffamily\fontsize{50}{56}\selectfont]
+       at ([xshift=2.6cm,yshift=-1.1cm]A) {Econometría\\Financiera\\Aplicada};
+  \node[anchor=north west,inner sep=0pt,align=left,text=cobreClaro,font=\sffamily\fontsize{22}{27}\selectfont]
+       at ([xshift=2.6cm,yshift=-7.6cm]A) {con ejemplos en R y Python};
+  \node[anchor=north west,inner sep=0pt,align=left,text=turquesaClaro,font=\sffamily\itshape\fontsize{20}{24}\selectfont]
+       at ([xshift=2.6cm,yshift=-9.4cm]A) {Primera edición};
+  % ---- marca del pie: la curva del índice de la BVL ----
+  \begin{scope}[shift={([xshift=-7.3cm,yshift=2.2cm]current page.south east)}]
+    \begin{axis}[width=4.6cm,height=2.4cm,scale only axis,axis lines=none,xmin=0,xmax=620,ymin=40,ymax=440,ymode=log]
+      \addplot[cobre,line width=1.3pt] table[x=t,y=v] {graficos/portada_bvl.dat};
+    \end{axis}
+  \end{scope}
+  \node[anchor=north east,inner sep=0pt,font=\sffamily\small,text=cobreClaro]
+       at ([xshift=-2.7cm,yshift=1.95cm]current page.south east) {Bolsa de Valores de Lima, 2015--2026};
+\end{tikzpicture}
+\restoregeometry
+\end{titlepage}
+
+% ---------------- Anteportada ----------------
+\thispagestyle{plain}
+\vspace*{1.2cm}
+\begin{flushleft}
+{\large Jeel Cueva}\\[1.6cm]
+{\fontsize{30}{36}\selectfont Econometría Financiera Aplicada}\\[10pt]
+{\Large con ejemplos en R y Python}\\[14pt]
+{\normalsize Teoría, demostraciones y práctica con datos reales del Perú y del mundo}\\[18pt]
+{\small Primera edición}
+\end{flushleft}
+\vspace*{\fill}
+\begin{flushleft}\small
+Lima, 2026
+\end{flushleft}
+\clearpage
+
+% ---------------- Página de créditos ----------------
+\thispagestyle{plain}
+\vspace*{\fill}
+\begin{flushleft}\small
+\textbf{Econometría Financiera Aplicada}\\
+con ejemplos en R y Python\\[10pt]
+\copyright\ 2026 Jeel Cueva. Todos los derechos reservados.\\
+Obra escrita y editada por su autor.\\[10pt]
+Primera edición, noviembre de 2026. Lima, Perú.\\[10pt]
+Programas en R y Python, salidas completas y bases de datos (repositorio en GitHub):\\
+\url{\sitioweb}\\[10pt]
+Los datos provienen de fuentes públicas: Banco Central de Reserva del Perú (BCRPData), Yahoo Finance,
+Kenneth R. French Data Library, base de datos de Robert Shiller, EIA de EE.\,UU., CBOE y otras que se
+citan en cada capítulo. Todos los resultados numéricos del libro son la salida real de los programas
+publicados en ese repositorio.\\[10pt]
+Compuesto en \LaTeX{} con la familia tipográfica Libertinus.
+\end{flushleft}
+\clearpage

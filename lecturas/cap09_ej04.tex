@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+GJR: \texttt{alpha}, \texttt{gamma} & 0,0676; 0,0314 ($t=3{,}09$) & En el Brent los choques positivos también elevan la volatilidad; los negativos, algo más. \\
+EGARCH: \texttt{gamma} & $-0{,}0304$ ($t=-4{,}53$) & Asimetría significativa pero cinco veces menor que en el S\&P 500. \\
+\texttt{nu} & 5,27 & Colas muy pesadas en ambos modelos. \\
+LR ($\gamma=0$) & 10,81; $p=0{,}001$ & Se rechaza la simetría al 1\,\%. \\
+AIC / BIC & EGARCH 39\,457 / 39\,500 & El EGARCH es el preferido; el GJR mejora poco al GARCH por BIC (39\,549 frente a 39\,551). \\
+Coeficientes de $e^2$ en el GJR & 0,0990 / 0,0676; cociente 1,46 & Un choque negativo pesa 46\,\% más que uno positivo en la varianza de mañana. \\
+Cociente de impactos $\pm2$ desv. & GJR 1,11; EGARCH 1,13 & Tras una caída de 5,4\,\% la varianza es solo 11--13\,\% mayor que tras una subida igual (frente a 80\,\% en el S\&P 500). \\
+GJR hasta 2019 & $\gamma=0{,}0301$; $t=3{,}24$ & Sin el período 2020--2026 la asimetría se mantiene: no la causa solo el colapso de 2020. \\
+\end{xltabular}}

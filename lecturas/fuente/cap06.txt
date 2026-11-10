@@ -1,0 +1,47 @@
+== cap06_ej01
+\texttt{T}, banda | 845; $\pm0{,}067$ | Cambios mensuales de la tasa; la banda $1{,}96/\sqrt T$ indica qué autocorrelaciones son significativas.
+\texttt{ACF} | 0,310 en el rezago 1 | Solo el primer rezago sale claramente de la banda (y el segundo apenas): patrón típico de un MA(1) o MA(2).
+\texttt{PACF} | 0,310; $-0{,}212$; \ldots | Decae alternando signos: también compatible con un MA. Un AR(1) puro tendría PACF nula desde el rezago 2.
+\texttt{ar1}, \texttt{ar2}, \texttt{ma1}, \texttt{ma2} | p. ej. MA(1): 0,445 | Coeficientes estimados por máxima verosimilitud de cada modelo.
+\texttt{AIC} | 17,45 a 64,33 | Criterio de Akaike: menor es mejor. Prefiere el MA(2) (17,45), muy cerca del ARMA(1,1).
+\texttt{BIC} | 36,41 a 78,55 | Criterio bayesiano, penaliza más los parámetros; también elige el MA(2), con el MA(1) muy próximo (37,49).
+AR(1) | AIC 64,33 | Es claramente el peor: la dinámica no es autorregresiva.
+$\theta$ implicado por Working | 0,2679 | MA(1) que generaría un promedio mensual de datos diarios ($\rho_1=1/4$); el estimado (0,445) es mayor, así que hay algo más que el efecto del promedio.
+
+== cap06_ej02
+AR(1): \texttt{ar1}, \texttt{intercept} | 0,9798; 2,904 | Persistencia diaria del log VIX y su media (\texttt{intercept} es la media del proceso en R, no la constante $c$).
+\texttt{ee} | 0,0021; 0,0347 | Errores estándar de los coeficientes: ambos muy precisos.
+\texttt{AIC}, \texttt{BIC} | $-23\,624$; $-23\,603$ | Criterios de información (menor es mejor) para comparar modelos.
+$Q(10)$, $Q(20)$ del AR(1) | 100,3 y 108,6; $p\approx0$ | Ljung-Box de los residuos: queda autocorrelación sin modelar.
+AR(2) | \texttt{ar2} = 0,074 | El segundo rezago es significativo (ee 0,010) y mejora el AIC en 49 unidades.
+ARMA(1,1) | \texttt{ar1} 0,9832; \texttt{ma1} $-0{,}084$ | Mejor AIC y BIC de los tres: es el modelo elegido.
+$Q$ del ARMA(1,1) | 73,2; $p\approx10^{-12}$ | Aún hay autocorrelación residual; con 9000 datos la prueba detecta desviaciones pequeñas, y además los residuos tienen heterocedasticidad.
+\texttt{sigma2} | 0,004556 | Varianza del error: desviación diaria de un 6,7\,\% en el nivel del VIX.
+Raíz AR | 1,0171 | Raíz del polinomio $1-\phi z$; mayor que 1 en valor absoluto: el modelo es estacionario, aunque está cerca del límite.
+Vida media | 40,9 días | Días para que se disipe la mitad de un choque al VIX: unos dos meses de negociación.
+
+== cap06_ej03
+Parámetros 1990--2015 | $\mu=2{,}92$; $\phi=0{,}986$; $\theta=-0{,}090$ | Modelo estimado solo con datos anteriores a 2016; se mantiene fijo al pronosticar.
+Orígenes | 2728 | Días de 2016--2026 desde los que se pronostica.
+\texttt{RMSE ARMA} | 0,079 / 0,154 / 0,242 | Raíz del error cuadrático medio de pronóstico (en log VIX) a 1, 5 y 22 días; crece con el horizonte.
+\texttt{RMSE paseo} | 0,079 / 0,158 / 0,263 | Error del pronóstico ``mañana igual que hoy''.
+\texttt{RMSE media} | 0,330 | Error de pronosticar siempre la media histórica: mucho peor a todos los horizontes.
+\texttt{ARMA/paseo} | 0,991 / 0,974 / 0,918 | Menor que 1: el ARMA gana. La ganancia es mínima a 1 día y llega a 8\,\% a 22 días, porque la reversión a la media importa más a horizontes largos.
+\texttt{DM (paseo - ARMA)} | 2,62 / 5,02 / 3,80 | Estadístico de Diebold-Mariano; mayor que 1,96: la mejora del ARMA es significativa en los tres horizontes.
+
+== cap06_ej04
+Origen, VIX | 2026-09-22; 14,21 | Último dato observado; el VIX está por debajo de su nivel de largo plazo.
+\texttt{mediana} | 14,33 a 16,70 | Pronóstico puntual del VIX ($e^{\text{pronóstico del log}}$); sube gradualmente hacia la media.
+IC 95\,\% | p. ej. [9,50; 24,98] a 22 días | Rango en que se espera el VIX con 95\,\% de probabilidad; se ensancha con el horizonte y es asimétrico (más amplio hacia arriba) por trabajar en logaritmos.
+Límite de largo plazo | 18,25 [9,39; 35,48] | Distribución hacia la que converge el pronóstico: el VIX ``normal'' y su rango habitual.
+
+== cap06_ej05
+\texttt{T} | 929 meses | Muestra mensual 1946--2023.
+\texttt{b} | 0,00611 ($t=2{,}35$) | Coeficiente de predicción de $\ln(D/P)$ sobre el rendimiento del mes siguiente; parece significativo.
+\texttt{phi} | 0,99759 | Persistencia mensual del predictor: casi una raíz unitaria.
+\texttt{corr(u, v)} | $-0{,}983$ | Correlación entre el error de la regresión de rendimientos y la innovación del predictor: casi perfecta y negativa (si sube el precio, baja $D/P$).
+$\sigma_{uv}/\sigma_v^2$ | $-0{,}9541$ | Factor que traslada el sesgo de $\hat\phi$ al de $\hat b$.
+Sesgo de Kendall | $-0{,}00430$ | Sesgo hacia abajo de $\hat\phi$ en muestra finita, $\approx-(1+3\phi)/T$.
+Sesgo de Stambaugh | 0,00410 | Sesgo hacia arriba de $\hat b$ que resulta de los dos anteriores.
+\texttt{b corregido} | 0,00201 | Coeficiente sin sesgo: un tercio del estimado.
+Proporción atribuible al sesgo | 67,1\,\% | Dos tercios de la ``predictibilidad'' estimada son sesgo de muestra finita.

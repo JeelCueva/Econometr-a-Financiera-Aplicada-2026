@@ -1,0 +1,19 @@
+Datos anuales (enero), 1871 a 2023, T = 153; valores reales
+
+ADF con constante (rezagos por AIC); valor crítico al 5 %: -2.86
+  log P     t =  -0.31 (p = 3)
+  log D     t =  -0.43 (p = 2)
+  log E     t =   0.70 (p = 9)
+  log(D/P)  t =  -1.41 (p = 2)
+  log(E/P)  t =  -4.66 (p = 0)
+
+Precio y D: k = 1; traza r=0: 21.21 (VC 95 % 15.49); r<=1: 0.05 (VC 3.84)
+  beta = (1, -1.7204); alpha_P = -0.0489 (t = -0.96); alpha_D = 0.1149 (t = 4.39)
+  LR beta = (1, -1): 17.51 (p = 0.0000)
+
+Precio y E: k = 0; traza r=0: 33.32 (VC 95 % 15.49); r<=1: 0.16 (VC 3.84)
+  beta = (1, -1.2850); alpha_P = 0.0070 (t = 0.19); alpha_E = 0.3012 (t = 5.66)
+  LR beta = (1, -1): 10.91 (p = 0.0010)
+
+razón dividendo/precio: 5.86 % en 1871 y 1.70 % en 2023
+razón de pago D/E promedio: 1871-1950 = 70.2 %; 1990-2023 = 48.9 %

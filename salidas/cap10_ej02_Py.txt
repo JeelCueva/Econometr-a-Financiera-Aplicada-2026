@@ -1,0 +1,14 @@
+S&P 500 y VIX diarios, 1999-2018:
+  dv no causa a r:                   p = 2: F(2, 5022) =  1.870 (p = 0.1543); Wald HC0 =  1.947 (p = 0.3777)
+  r no causa a dv:                   p = 2: F(2, 5022) =  2.666 (p = 0.0696); Wald HC0 =  3.899 (p = 0.1424)
+  dv no causa a r:                   p = 7: F(7, 5007) =  1.496 (p = 0.1636); Wald HC0 =  6.296 (p = 0.5057)
+  r no causa a dv:                   p = 7: F(7, 5007) =  1.571 (p = 0.1390); Wald HC0 =  8.243 (p = 0.3117)
+
+Carteras S1V3 (pequeña) y S5V3 (grande), mensuales 1949-2017:
+  orden elegido: AIC = 5, BIC = 1
+  la grande no causa a la pequeña:   p = 1: F(1, 815) =  3.702 (p = 0.0547); Wald HC0 =  2.472 (p = 0.1159)
+  la pequeña no causa a la grande:   p = 1: F(1, 815) =  0.333 (p = 0.5642); Wald HC0 =  0.276 (p = 0.5995)
+  la grande no causa a la pequeña:   p = 5: F(5, 803) =  2.083 (p = 0.0655); Wald HC0 =  5.615 (p = 0.3455)
+  la pequeña no causa a la grande:   p = 5: F(5, 803) =  0.863 (p = 0.5053); Wald HC0 =  4.356 (p = 0.4994)
+
+comprobación con statsmodels (VAR(1), grande -> pequeña): F = 3.702, gl = (1, 1630), p = 0.0545

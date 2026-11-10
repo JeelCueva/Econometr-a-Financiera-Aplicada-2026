@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Muestra, $T$ & 1871-01 a 2022-06; 1818 & Meses con rendimiento de 12 meses hacia adelante; las regresiones se traslapan 11 meses. \\
+\texttt{b} & 0,0412 & Si $\ln(D/P)$ sube 0,1 (unos 10\,\%), el rendimiento esperado de los próximos 12 meses sube 0,4 puntos logarítmicos. \\
+\texttt{R2} & 0,0107 & La razón dividendo/precio explica solo el 1\,\% de la variación de los rendimientos anuales. \\
+\texttt{clasico}: ee, $t$ & 0,009; 4,43 & Con errores clásicos la predicción parece muy significativa, pero ignoran el traslape. \\
+\texttt{NW\_12}, \texttt{NW\_24} & $t=1{,}46$ y 1,35 & Con Newey-West el error estándar se triplica y el coeficiente deja de ser significativo. \\
+Sin traslape (eneros) & $b=0{,}033$; $t=1{,}09$ & Con un dato por año ($T=152$) tampoco es significativo: confirma la conclusión con Newey-West. \\
+Autocorrelación de \texttt{dp} & 0,996 (rezago 1); 0,906 (rezago 12) & El predictor es casi un paseo aleatorio: esto, junto con el traslape, infla los $t$ clásicos (y anticipa el sesgo de Stambaugh del Capítulo~6). \\
+\end{xltabular}}

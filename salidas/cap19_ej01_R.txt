@@ -1,0 +1,13 @@
+Panel balanceado: N = 10 empresas, T = 20 años (1935-1954), n = 200
+medias: inversión = 145.96; valor = 1081.68; capital = 276.02
+  MCO agrupado           valor   0.1156 (0.0058)   capital   0.2307 (0.0255)
+  between                valor   0.1346 (0.0287)   capital   0.0320 (0.1909)
+  efectos fijos (within) valor   0.1101 (0.0119)   capital   0.3101 (0.0174)
+  efectos aleatorios     valor   0.1098 (0.0105)   capital   0.3081 (0.0172)
+  primeras diferencias   valor   0.0891 (0.0082)   capital   0.2787 (0.0472)
+
+efectos aleatorios: sigma_u = 84.2010; sigma_e = 52.7680; theta = 0.8612; constante = -57.8344
+efectos fijos estimados por empresa: -70.3 101.9 -235.6 -27.8 -114.6 -23.2 -66.6 -57.5 -87.2 -6.6
+F de efectos individuales = 49.1766 con (9, 188) gl; valor p = 8.70e-45
+Hausman (efectos fijos frente a aleatorios) = 2.3304; valor p chi2(2) = 0.3119
+R2 within = 0.7668; R2 del MCO agrupado = 0.8124

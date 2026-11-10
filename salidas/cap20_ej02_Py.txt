@@ -1,0 +1,13 @@
+Predictores: dp, ep, cape, lty, tbl, infl, mom12, vol12 (de = dp - ep y tms = lty - tbl se omiten por colinealidad exacta)
+Fuera de muestra 1957-01 a 2018-11; reestimación anual (62 veces); lambda elegido con los últimos 120 meses de cada muestra
+R2 fuera (%)   R2 fuera CT (%)    CW     p(CW)   lambda mediano   modelo
+      -6.04           -2.93    -0.08   0.5311              -   MCO (todos)
+      -1.12            0.17     0.33   0.3698         3.3240   ridge
+      -2.33           -0.94    -0.50   0.6922         0.8458   red elástica (0,5)
+      -1.95           -0.90    -0.27   0.6047         0.4989   lasso
+
+Lasso: número medio de predictores seleccionados = 2.56; reestimaciones sin ningún predictor = 14 de 62
+fracción de reestimaciones en que el lasso selecciona cada predictor:
+  dp=0.21  ep=0.23  cape=0.77  lty=0.26  tbl=0.26  infl=0.35  mom12=0.42  vol12=0.06
+
+desviación estándar de los pronósticos: media histórica = 0.0818; MCO = 1.0139; ridge = 0.4394; lasso = 0.5249

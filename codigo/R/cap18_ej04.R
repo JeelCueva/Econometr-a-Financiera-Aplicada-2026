@@ -1,0 +1,31 @@
+# Capítulo 18, Ejercicio 18.4: VaR y ES de una cartera S&P 500 / Nasdaq con distintas cópulas
+source("codigo/R/cap18_funciones.R")
+D <- indices(); f <- D$fecha; x <- D$x; y <- D$y; lam <- 0.94; n <- length(x)
+zx <- ewma_estandarizar(x); zy <- ewma_estandarizar(y)
+hx <- hy <- numeric(n); hx[1] <- mean(x[1:30]^2); hy[1] <- mean(y[1:30]^2)
+for (i in 2:n) { hx[i] <- lam * hx[i - 1] + (1 - lam) * x[i - 1]^2; hy[i] <- lam * hy[i - 1] + (1 - lam) * y[i - 1]^2 }
+sx <- sqrt(lam * hx[n] + (1 - lam) * x[n]^2); sy <- sqrt(lam * hy[n] + (1 - lam) * y[n]^2)
+cat(sprintf("Volatilidad EWMA pronosticada para el día siguiente a %s: S&P 500 = %.4f %%; Nasdaq = %.4f %%\n", f[n], sx, sy))
+A <- ajustar(pseudo(zx), pseudo(zy)); r <- A$t[1]; nu <- A$t[2]
+cat(sprintf("Cópulas de los residuos: gaussiana rho = %.4f; t rho = %.4f, nu = %.3f; Clayton theta = %.4f; Gumbel theta = %.4f\n", A$gaussiana[1], r, nu, A$clayton[1], A$gumbel[1]))
+N <- 20000; g <- lcg_nuevo(2018); U1 <- lcg_u(g, N); U2 <- lcg_u(g, N); U3 <- lcg_u(g, N); U4 <- lcg_u(g, N)
+S <- list(); rg <- A$gaussiana[1]; z1 <- qnorm(U1); z2 <- qnorm(U2)
+S$gaussiana <- list(U1, pnorm(rg * z1 + sqrt(1 - rg^2) * z2))
+W <- qchisq(U3, nu) / nu; S$t <- list(pt(z1 / sqrt(W), nu), pt((r * z1 + sqrt(1 - r^2) * z2) / sqrt(W), nu))
+th <- A$clayton[1]; S$Clayton <- list(U1, ((U2^(-th / (1 + th)) - 1) * U1^-th + 1)^(-1 / th))
+al <- 1 / A$gumbel[1]; V <- pi * U1; E <- -log(U2)
+St <- sin(al * V) / sin(V)^(1 / al) * (sin((1 - al) * V) / E)^((1 - al) / al)
+S$Gumbel <- list(exp(-(-log(U3) / St)^al), exp(-(-log(U4) / St)^al))
+S$independencia <- list(U1, U2); S[["comonotonía"]] <- list(U1, U1)
+cat(sprintf("\nCartera 50 %% S&P 500 y 50 %% Nasdaq; %d simulaciones; márgenes = cuantiles empíricos de los residuos\n", N))
+cat("tau simulado   VaR 99 %   ES 99 %    VaR 99,9 %   cópula\n")
+for (nom in names(S)) { u <- S[[nom]][[1]]; v <- S[[nom]][[2]]
+  L <- -(0.5 * sx * quantile(zx, u, names = FALSE) + 0.5 * sy * quantile(zy, v, names = FALSE))
+  v1 <- quantile(L, 0.99, names = FALSE); v2 <- quantile(L, 0.999, names = FALSE)
+  tk <- if (nom == "comonotonía") 1 else cor(u[1:2000], v[1:2000], method = "kendall")
+  cat(sprintf("%12.4f   %8.4f  %8.4f  %11.4f   %s\n", tk, v1, mean(L[L >= v1]), v2, nom)) }
+Lh <- -(0.5 * sx * zx + 0.5 * sy * zy); v1 <- quantile(Lh, 0.99, names = FALSE)
+cat(sprintf("%12s   %8.4f  %8.4f  %11.4f   histórica filtrada (pares observados de residuos, n = %d)\n", "", v1, mean(Lh[Lh >= v1]), quantile(Lh, 0.999, names = FALSE), length(Lh)))
+k <- sum(Lh >= v1); cota <- 0.5 * sx * mean(sort(-zx, decreasing = TRUE)[1:k]) + 0.5 * sy * mean(sort(-zy, decreasing = TRUE)[1:k])
+cat(sprintf("\nCota comonótona exacta del ES histórico (promedio de las %d mayores pérdidas de cada índice) = %.4f\n", k, cota))
+cat(sprintf("ES histórico de la cartera = %.4f; beneficio de diversificación = %.4f puntos\n", mean(Lh[Lh >= v1]), cota - mean(Lh[Lh >= v1])))

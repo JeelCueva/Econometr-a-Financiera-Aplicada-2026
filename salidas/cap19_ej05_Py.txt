@@ -1,0 +1,11 @@
+especificación                    pendiente   ee(mes)   ee(dos vías)   t(dos vías)   varianza de x que usa
+  agrupado (sin efectos)           -0.00027   0.01038     0.01008       -0.03      1.0000
+  efectos de cartera               -0.00251   0.01048     0.01021       -0.25      0.9760
+  efectos de mes                    0.01634   0.00688     0.00673        2.43      0.3270
+  cartera y mes                     0.01045   0.00689     0.00667        1.57      0.3030
+
+Regresión de series de tiempo del promedio de las 30 carteras sobre su propio x promedio: pendiente = -0.00834
+Descomposición de la varianza de x: dentro de cada mes = 0.3270; entre meses = 0.6730
+Pendiente agrupada = 0.3270 x 0.01634 + 0.6730 x -0.00834 = -0.00027
+
+Interpretación económica de la pendiente con efectos de mes: 10 puntos más de rendimiento pasado -> 0.163 puntos más de exceso de rendimiento mensual

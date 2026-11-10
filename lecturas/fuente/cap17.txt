@@ -1,0 +1,63 @@
+== cap17_ej01
+$T$ | 1109 meses | Exceso de rendimiento mensual del mercado (\%), jul-1926 a nov-2018.
+EM: iteraciones, log-verosimilitud | 53; $-3256{,}22$ | El algoritmo EM convergió en 53 pasos al máximo de la verosimilitud.
+\texttt{mu1}, \texttt{sigma1} | 1,01; 3,74 | Régimen tranquilo: rendimiento medio de 1\,\% al mes y volatilidad baja.
+\texttt{mu2}, \texttt{sigma2} | $-1{,}43$; 10,46 | Régimen volátil: pérdidas medias y volatilidad casi tres veces mayor.
+\texttt{ee} | p. ej. 0,880 para \texttt{mu2} | Errores estándar por hessiano numérico: \texttt{mu2} es imprecisa porque hay pocos meses volátiles.
+\texttt{p11}, \texttt{p22} | 0,984; 0,906 | Probabilidad de seguir en el mismo régimen al mes siguiente: ambos son persistentes.
+Probabilidades estacionarias | 0,857 / 0,143 | A largo plazo el mercado pasa el 86\,\% del tiempo en el régimen tranquilo.
+Duraciones esperadas | 63,4 / 10,6 meses | $1/(1-p_{jj})$: un período tranquilo dura más de 5 años; uno volátil, menos de uno.
+$\lambda=p_{11}+p_{22}-1$ | 0,890 | Autocorrelación del régimen: explica el agrupamiento de volatilidad.
+Momentos implícitos frente a muestrales | curtosis 7,52 frente a 10,90 | La mezcla reproduce la media y la desviación, y buena parte (no toda) de la curtosis.
+Diferencia de log-verosimilitud | 172,11 | Mejora frente a la normal simple: enorme.
+Sharpe por régimen | 0,270 / $-0{,}137$ | En el régimen volátil el mercado tiene una razón de Sharpe negativa.
+Meses volátiles | 147 de 1109 | Meses con probabilidad suavizada del régimen 2 mayor que 0,5.
+
+== cap17_ej02
+Meses en recesión | 199 de 1109 | Meses en recesión según el NBER.
+Pr media en recesión / expansión | 0,437 / 0,079 | El régimen volátil es mucho más probable en recesión.
+Tabla de clasificación | 852; 58; 110; 89 | Coincidencias y discrepancias entre el régimen estimado y el NBER.
+Pr(volátil $\mid$ recesión) | 0,447 | Menos de la mitad de los meses de recesión son volátiles: no toda recesión agita la bolsa.
+Pr(volátil $\mid$ expansión) | 0,064 | Pocas falsas alarmas.
+Correlación | 0,466 | Relación moderada entre la probabilidad suavizada y el indicador de recesión.
+Episodios: inicio, fin, meses | p. ej. 1929-05 a 1934-07, 63 | Períodos volátiles de al menos 6 meses; 2000-2001 y 2008-2009 aparecen claramente.
+\texttt{rend. medio}, \texttt{desv. est.} | $-4{,}62$ a 0,13; 5,3 a 12,8 | Rendimiento y volatilidad en cada episodio.
+Meses en recesión del episodio | p. ej. 43 de 63 | Casi todos los episodios se solapan con recesiones.
+Pr media por recesión | 0,96 (1929) a 0,002 (1953) | Las recesiones de 1945--1961 y 1980--1991 no generaron volatilidad bursátil; las de 1929, 1937, 1973, 2001 y 2008 sí.
+
+== cap17_ej03
+$T$, media, desv., autocorr. | 198; 0,51; 1,52; 0,58 | Variación trimestral de la producción industrial (\%) y su persistencia.
+AR(1) lineal | $\phi=0{,}579$; log-ver $-319{,}23$ | Modelo de referencia sin regímenes.
+(A) \texttt{c1}, \texttt{c2} | $-3{,}67$; 0,44 | Constantes de cada régimen: caídas abruptas frente a crecimiento normal.
+(A) \texttt{p11}, \texttt{p22} | 0,472; 0,982 | El régimen de caída dura menos de 2 trimestres: solo capta los colapsos más agudos.
+(A) log-verosimilitud | $-299{,}37$ | Mejor que el AR(1) lineal.
+(A) Clasificación | 6 detectados, 22 no detectados | El modelo de varianza común identifica pocas recesiones: concordancia 0,888, correlación 0,477.
+(B) \texttt{mu1}, \texttt{sigma1} | $-1{,}45$; 1,90 | Régimen de recesión: caída media y mayor volatilidad.
+(B) \texttt{mu2}, \texttt{sigma2} | 0,98; 0,91 | Régimen de expansión.
+(B) Duraciones | 4,4 / 20,1 trimestres | Duraciones parecidas a las del NBER (recesiones de un año, expansiones de cinco).
+(B) Clasificación | 25 coinciden; 11 falsas alarmas; 4 no detectados | Concordancia 0,924 y correlación 0,802: el modelo B reproduce bien el ciclo oficial.
+Trimestres con Pr filtrada > 0,5 | p. ej. 2008T2--2009T2 | Recesiones detectadas en tiempo real (sin usar datos futuros); 2015--2016 es una falsa alarma (caída industrial sin recesión).
+Autocorrelación residual | 0,378 | Queda persistencia no explicada por el régimen.
+
+== cap17_ej04
+\texttt{k} | 2, 5, 6, 12 | Número de parámetros de cada modelo.
+log-verosimilitud | $-3428$ a $-3234$ | Aumenta con el número de regímenes.
+AIC | 6493 (3 regímenes) | El AIC prefiere el modelo de tres regímenes.
+BIC | 6552,7 (3) y 6554,5 (2) | El BIC casi empata entre dos y tres regímenes y rechaza claramente uno solo.
+LR medias iguales | 9,00; $p=0{,}003$ | Las medias de los dos regímenes son distintas: no solo cambia la volatilidad.
+Modelo de solo varianza | $\sigma$ 3,89 y 11,44 | Volatilidades de cada régimen cuando la media es común.
+3 regímenes: $\mu$, $\sigma$ | 1,22/2,72; 0,67/4,52; $-1{,}29$/11,92 | Calma, normal y crisis.
+Duraciones | 24,4; 27,6; 12,2 meses | Persistencia de cada régimen.
+Matriz de transición | ceros en (1,3) y (3,1) | No se pasa directamente de la calma a la crisis: siempre se pasa por el régimen intermedio.
+Probabilidades estacionarias | 0,32 / 0,58 / 0,10 | El régimen de crisis ocupa el 10\,\% del tiempo.
+Meses asignados | 347 / 664 / 98 | Clasificación por la mayor probabilidad suavizada.
+
+== cap17_ej05
+Pr filtrada / predicha del régimen volátil | 0,038 / 0,050 | En nov-2018 el mercado estaba casi con certeza en el régimen tranquilo.
+Media y desv. est. pronosticadas | 0,887\,\%; 4,363\,\% | Momentos de la mezcla para diciembre de 2018.
+VaR 95\,\% mezcla / normal | 5,78 / 8,10\,\% | Con régimen tranquilo, el VaR de la mezcla es mucho menor que el de la normal incondicional.
+VaR 99\,\% mezcla / normal | 10,80 / 11,73\,\% | Al 99\,\% la mezcla se acerca a la normal, porque la cola incluye la posibilidad de pasar al régimen volátil.
+\texttt{excepciones}, \texttt{esperadas} | p. ej. 11 frente a 11,1 al 99\,\% | Meses con pérdida mayor que el VaR frente a los esperados.
+\texttt{LR\_uc}, \texttt{p\_uc} | 0,00 ($p=0{,}98$) al 99\,\% | Kupiec: la mezcla tiene la cobertura correcta al 99\,\%; la normal no ($p=0{,}004$).
+\texttt{LR\_ind}, \texttt{p\_ind} | normal 27,32 al 95\,\% | Christoffersen: las excepciones de la normal se agrupan; las de la mezcla, no.
+VaR 99\,\% mín./máx./mediana | 8,37 / 25,36 / 9,35\,\% | El VaR de la mezcla varía con la probabilidad del régimen: se triplica en las crisis.

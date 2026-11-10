@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 284 / 190 / 474 & Meses de cada tramo. \\
+\texttt{media} & 5,72 / $-7{,}99$\,\% & Antes de 2011 el WTI costaba 5,7\,\% más que el Brent; después, 8\,\% menos: el diferencial cambió de signo. \\
+\texttt{desv.est.} & 4,22 / 5,44 / 8,23 & La dispersión en la muestra completa es mucho mayor porque mezcla dos niveles distintos. \\
+\texttt{ADF s (p)} & $-2{,}66$ / $-3{,}87$ / $-1{,}74$ & Dentro de cada tramo el diferencial es (casi) estacionario; en la muestra completa parece tener raíz unitaria por el quiebre. \\
+\texttt{traza r=0} & 46,53 / 22,88 & Johansen detecta cointegración en ambos tramos. \\
+\texttt{beta\_WTI} & $-1{,}048$ / $-1{,}114$ & Coeficiente de cointegración; en el primer tramo es cercano a $-1$. \\
+\texttt{LR beta=(1,-1)}, \texttt{valor p} & 25,28 / 6,12 & Se rechaza $(1,-1)$ en ambos tramos, aunque con menos fuerza después de 2011. \\
+Mínimo / máximo & $-27{,}72$\,\% (2011-09); 16,20\,\% & El mínimo coincide con el exceso de oferta en Cushing por el petróleo de esquisto. \\
+Promedios 2011--2013 / 2014--2026 & $-14{,}56$ / $-6{,}45$\,\% & El descuento del WTI se redujo después de 2014 (nuevos oleoductos y exportaciones desde 2015), pero no volvió a ser positivo. \\
+\end{xltabular}}

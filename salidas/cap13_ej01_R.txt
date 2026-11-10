@@ -1,0 +1,18 @@
+S&P 500 (1999-2018): T = 5030, media de r = 0.0142 %, desv. est. = 1.2038 %, curtosis = 11.17 -> nu = 4.734
+  nivel   modelo       VaR      ES   frecuencia de L > VaR
+    95 %   normal      1.966   2.469    4.632 %
+    95 %   t           1.852   2.690    5.209 %
+    95 %   histórico  1.882   2.910    5.010 %
+    99 %   normal      2.786   3.194    1.829 %
+    99 %   t           3.138   4.203    1.272 %
+    99 %   histórico  3.362   4.814    1.014 %
+
+Brent (1987-2026): T = 9121, media de r = 0.0192 %, desv. est. = 2.7041 %, curtosis = 55.97 -> nu = 4.113
+  nivel   modelo       VaR      ES   frecuencia de L > VaR
+    95 %   normal      4.429   5.559    3.256 %
+    95 %   t           4.080   6.099    4.188 %
+    95 %   histórico  3.799   6.133    4.999 %
+    99 %   normal      6.271   7.188    1.316 %
+    99 %   t           7.134   9.873    0.987 %
+    99 %   histórico  7.120  11.289    1.009 %
+

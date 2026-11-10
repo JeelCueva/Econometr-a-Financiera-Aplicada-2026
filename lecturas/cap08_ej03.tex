@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{nu} & 5,23 (ee 0,28) & Grados de libertad de la $t$: colas mucho más pesadas que la normal (que equivale a $\nu=\infty$). \\
+Demás coeficientes & \texttt{alpha} 0,083; \texttt{beta} 0,912 & Similares a los del modelo normal; \texttt{mu} ahora es significativa ($t=2{,}83$). \\
+log-ver normal / $t$ & $-20\,074$ / $-19\,753$ & La $t$ mejora la verosimilitud en 322 puntos con un solo parámetro adicional. \\
+AIC, BIC & 39\,515 y 39\,551 ($t$) & Menores en el modelo $t$: se prefiere con ambos criterios. \\
+Persistencia, vida media & 0,99554; 155 días & Algo menor que en el modelo normal. \\
+Curtosis de la $t$ estandarizada & 7,88 & $3+6/(\nu-4)$: curtosis implicada por las innovaciones del modelo. \\
+Rendimientos: asim., curt. & $-1{,}49$; 55,97 & Momentos de los rendimientos brutos. \\
+Residuos $z_t$: asim., curt. & $-0{,}20$; 5,48 & Tras dividir por la volatilidad estimada la curtosis cae de 56 a 5,5: la mayor parte de las colas pesadas se debe a la volatilidad cambiante. \\
+JB de los residuos & 2388 & Todavía se rechaza la normalidad de $z_t$: por eso conviene la $t$. \\
+$Q(10)$ de $z_t^2$ & 14,93 ($p=0{,}135$) & Ya no hay autocorrelación en los cuadrados: el GARCH capturó la dinámica de la varianza. \\
+$Q(10)$ de $z_t$ & 22,64 ($p=0{,}012$) & Queda una leve autocorrelación en la media, sin importancia práctica. \\
+Proporción $\lvert z\rvert>4$ & 0,00362 / 0,00006 / 0,00335 & La observada coincide con la que predice la $t$ estimada y es 60 veces la normal. \\
+\end{xltabular}}

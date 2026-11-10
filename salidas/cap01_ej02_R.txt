@@ -1,0 +1,39 @@
+BVL alrededor del dato atípico:
+      fecha   indice
+ 2024-06-19 29724.14
+ 2024-06-20 29857.57
+ 2024-06-21 22521.03
+ 2024-06-24 30058.66
+ 2024-06-25 29895.85
+Días con índice repetido (rendimiento cero): 54 
+
+BVL: T = 3011, r <= R en todas las fechas: TRUE
+   mayor diferencia R - r = 0.00584 el 2020-03-12 (R = -0.1042, r = -0.1101)
+   mensual : períodos = 143, máx |suma log - log prod| = 2.0e-15
+   anual   : períodos = 12, máx |suma log - log prod| = 1.7e-15
+SP500: T = 2980, r <= R en todas las fechas: TRUE
+   mayor diferencia R - r = 0.00781 el 2020-03-16 (R = -0.1198, r = -0.1277)
+   mensual : períodos = 143, máx |suma log - log prod| = 1.8e-15
+   anual   : períodos = 12, máx |suma log - log prod| = 2.3e-15
+
+Rendimientos simples anuales (%), 2026 hasta noviembre:
+        BVL  SP500
+2015 -33.43  -0.73
+2016  58.06   9.54
+2017  28.31  19.42
+2018  -3.12  -6.24
+2019   6.08  28.88
+2020   1.44  16.26
+2021   1.39  26.89
+2022   1.04 -19.44
+2023  21.70  24.23
+2024  11.92  23.31
+2025  49.60  16.39
+2026  26.47   7.76
+
+Rendimientos logarítmicos diarios:
+              BVL    SP500
+media     0.00044  0.00043
+desv_est  0.01131  0.01114
+minimo   -0.11009 -0.12765
+maximo    0.08262  0.09089

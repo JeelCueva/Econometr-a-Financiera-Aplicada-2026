@@ -1,0 +1,6 @@
+T = 819, media mensual = 0.0070 (anual 8.37 %), desv. est. anual = 13.49 %
+t clásico = 5.13; t Newey-West (L = 6) = 5.06
+razón de Sharpe anual = 0.620; asimetría = -1.378
+peor mes: 2009-04 (-34.58 %); caída máxima acumulada = -57.6 % (fondo en 2009-09)
+  1949-1999: media anual =  10.64 %, t =  7.01
+  2000-2017: media anual =   1.67 %, t =  0.36

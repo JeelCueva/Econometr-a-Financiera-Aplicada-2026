@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Breusch-Pagan & 6,19; gl 1; $p=0{,}013$ & Estadístico, grados de libertad y $p$-valor. Se rechaza la homocedasticidad al 5\,\%: la varianza del error depende linealmente del rendimiento del mercado. \\
+White & 36,56; gl 2; $p\approx0$ & Prueba que añade el cuadrado del regresor; rechaza con mucha más fuerza: la varianza del error crece en los meses de grandes movimientos del mercado. \\
+\texttt{clasico} & 0,00107 / 0,02497 & Errores estándar de alfa y beta suponiendo homocedasticidad: son incorrectos si hay heterocedasticidad. \\
+\texttt{HC0} & 0,00110 / 0,03312 & Errores estándar de White (matriz sándwich), válidos con heterocedasticidad. \\
+\texttt{HC1} & 0,00110 / 0,03316 & HC0 corregido por grados de libertad, $T/(T-k)$; con $T=819$ la corrección es mínima. \\
+\texttt{t(alfa = 0)} & 2,30 / 2,23 / 2,23 & La alfa sigue siendo significativa al 5\,\% con los tres errores estándar. \\
+\texttt{t(beta = 1)} & $-18{,}39$ / $-13{,}86$ / $-13{,}85$ & El estadístico baja en valor absoluto pero la conclusión no cambia: la beta es claramente menor que 1. \\
+Cociente HC1/clásico & 1,328 & El error estándar correcto de la beta es 33\,\% mayor que el clásico: ignorar la heterocedasticidad exagera la precisión. \\
+\end{xltabular}}

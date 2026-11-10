@@ -1,0 +1,20 @@
+S&P 500 (1999-2018), T = 5030
+  corr(r_{t-j}, r_t^2), j = 1..5:  -0.113  -0.087  -0.080  -0.102  -0.081 
+  corr(r_{t-j}^2, r_t), j = 1..5:   0.051  -0.007   0.040  -0.032   0.014 
+  Engle-Ng sobre z_t^2 del GARCH(1,1):
+    constante                0.9942 (t =  16.18)
+    sesgo de signo S-        0.1733 (t =   2.06)
+    tamaño negativo S- z    0.0353 (t =   0.66)
+    tamaño positivo S+ z   -0.1891 (t =  -2.82)
+    prueba conjunta: LM = (T-1) R2 = 34.09, p = 1.90e-07
+
+Brent (1987-2026), T = 9121
+  corr(r_{t-j}, r_t^2), j = 1..5:  -0.117  -0.036  -0.029  -0.029   0.026 
+  corr(r_{t-j}^2, r_t), j = 1..5:   0.123   0.049   0.032   0.008  -0.015 
+  Engle-Ng sobre z_t^2 del GARCH(1,1):
+    constante                0.9809 (t =  20.79)
+    sesgo de signo S-        0.0967 (t =   1.47)
+    tamaño negativo S- z   -0.0005 (t =  -0.01)
+    tamaño positivo S+ z   -0.0816 (t =  -1.67)
+    prueba conjunta: LM = (T-1) R2 = 15.36, p = 1.53e-03
+

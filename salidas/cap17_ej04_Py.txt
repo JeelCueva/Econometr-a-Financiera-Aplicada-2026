@@ -1,0 +1,21 @@
+T = 1109
+  k    log-verosim.       AIC        BIC   modelo
+  2     -3428.3338    6860.67    6870.69   1 régimen (normal)
+  5     -3260.7262    6531.45    6556.51   2 regímenes, solo varianza
+  6     -3256.2248    6524.45    6554.52   2 regímenes, media y varianza
+ 12     -3234.2608    6492.52    6552.66   3 regímenes, media y varianza
+
+LR de medias iguales entre regímenes (2 regímenes): 9.0029; valor p chi2(1) = 0.0027
+  modelo de solo varianza: mu = 0.6599; sigma = 3.8875 11.4426; p11 = 0.9899; p22 = 0.9219
+
+Modelo de 3 regímenes:
+  régimen 1: mu =   1.2175; sigma =   2.7155; p_jj = 0.9590; duración =   24.39 meses
+  régimen 2: mu =   0.6683; sigma =   4.5223; p_jj = 0.9637; duración =   27.57 meses
+  régimen 3: mu =  -1.2940; sigma =  11.9235; p_jj = 0.9183; duración =   12.24 meses
+  matriz de transición:
+     0.9590   0.0410   0.0000
+     0.0225   0.9637   0.0138
+     0.0000   0.0817   0.9183
+  probabilidades estacionarias: 0.3196 0.5823 0.0981
+  meses asignados (máxima Pr suavizada): 347 664 98
+  primeros y últimos meses del régimen 3: 1929-08 ... 2009-04; décadas: 1920 1930 1940 1970 1980 2000

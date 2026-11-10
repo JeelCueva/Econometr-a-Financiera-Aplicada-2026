@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$N$, $T$, $n$ & 10; 20; 200 & Empresas, años y observaciones del panel balanceado de Grunfeld. \\
+Medias & 145,96; 1081,68; 276,02 & Inversión, valor de mercado y stock de capital promedio (millones de dólares de 1947). \\
+MCO agrupado & valor 0,116; capital 0,231 & Ignora la heterogeneidad entre empresas. \\
+\textit{Between} & valor 0,135; capital 0,032 (ee 0,19) & Usa solo diferencias entre las medias de cada empresa (10 datos): el efecto del capital no se identifica. \\
+Efectos fijos & valor 0,110; capital 0,310 & Usa solo la variación dentro de cada empresa: 1 dólar más de valor de mercado eleva la inversión en 11 centavos; 1 dólar más de capital, en 31. \\
+Efectos aleatorios & 0,110; 0,308 & Casi idénticos a efectos fijos. \\
+Primeras diferencias & 0,089; 0,279 & Algo menores; elimina $\alpha_i$ restando el año anterior. \\
+$\sigma_u$, $\sigma_e$ & 84,2; 52,8 & Dispersión de los efectos de empresa y del error: las diferencias entre empresas dominan. \\
+$\theta$ & 0,861 & Fracción de la media de cada empresa que se resta en efectos aleatorios: cercana a 1, por eso se parece a efectos fijos. \\
+Efectos fijos por empresa & $-235{,}6$ a 101,9 & Inversión ``propia'' de cada empresa no explicada por valor y capital. \\
+$F$ de efectos individuales & 49,18; $p\approx10^{-45}$ & Las empresas difieren: el MCO agrupado no es adecuado. \\
+Hausman & 2,33; $p=0{,}31$ & No se rechaza que efectos fijos y aleatorios coincidan: el estimador aleatorio es consistente y más eficiente. \\
+$R^2$ \textit{within} / agrupado & 0,767 / 0,812 & Proporción de la varianza explicada dentro de las empresas y en el agrupado. \\
+\end{xltabular}}

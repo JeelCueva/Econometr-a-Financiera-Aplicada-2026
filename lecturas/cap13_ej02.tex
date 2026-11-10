@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$n$, excepciones esperadas & 4527; 45,3 & Días evaluados y número de días con pérdida mayor que el VaR esperado si el VaR al 99\,\% es correcto. \\
+\texttt{VaR medio} & 3,02 / 2,38 / 2,59 & Nivel medio del VaR de cada modelo (\%). \\
+\texttt{excepciones}, \texttt{tasa} & 73 / 96 / 65 & Días en que la pérdida superó al VaR; los tres modelos se exceden de lo esperado. \\
+\texttt{Kupiec LR (p)} & 14,47 / 43,44 / 7,65 & Prueba de cobertura incondicional: se rechaza en los tres; el GARCH-$t$ es el más cercano (1,44\,\%). \\
+\texttt{Christoffersen LR (p)} & 10,71 ($p=0{,}001$) en HS & Prueba de independencia: en la simulación histórica las excepciones vienen en rachas. \\
+Christoffersen EWMA y GARCH & $p=0{,}07$ y 0,08 & No se rechaza la independencia: los modelos condicionales se adaptan a la volatilidad. \\
+\texttt{cobertura condicional (p)} & 25,18 / 46,69 / 10,66 & Prueba conjunta: el GARCH-$t$ es el mejor, aunque también se rechaza al 1\,\%. \\
+Excepciones en 2008 & 21 / 9 / 7 & La simulación histórica reacciona tarde a la crisis: 21 excepciones frente a 2,5 esperadas. \\
+\end{xltabular}}

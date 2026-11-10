@@ -1,0 +1,20 @@
+Exceso de rendimiento mensual del mercado, 1926-07 a 2018-11, T = 1109
+EM: 53 iteraciones; log-verosimilitud = -3256.2248
+
+parámetro   estimación     ee
+  mu1         1.0088     0.143
+  mu2        -1.4301     0.880
+  sigma1      3.7408     0.133
+  sigma2     10.4558     0.864
+  p11         0.9842     0.007
+  p22         0.9058     0.037
+
+probabilidades estacionarias: 0.8566 0.1434
+duraciones esperadas (meses): 63.38 10.61
+autocorrelación del régimen, lambda = p11 + p22 - 1 = 0.8900
+momentos implícitos: media = 0.6589; desv. est. = 5.3289; curtosis = 7.5247
+momentos muestrales: media = 0.6599; desv. est. = 5.3251; curtosis = 10.8992
+
+log-verosimilitud de la normal = -3428.3338; diferencia = 172.1090
+razón de Sharpe mensual por régimen: 0.2697 -0.1368
+meses con Pr(régimen 2 | toda la muestra) > 0,5: 147 de 1109

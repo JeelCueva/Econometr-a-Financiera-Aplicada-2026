@@ -1,0 +1,15 @@
+Datos mensuales 1946-12 a 1991-02; meses en recesión: 95 de 531
+
+horizonte h   b0        b1 (pendiente)      ee(b1)    pseudo R2   AUC      n
+     3      -1.0456    -0.5755          0.1079      0.0625   0.6604   528
+     6      -0.8345    -0.9300          0.1271      0.1412   0.7523   525
+    12      -0.6951    -1.1740          0.1447      0.1991   0.8185   519
+    18      -0.9137    -0.7183          0.1140      0.0947   0.7145   513
+    24      -1.2396    -0.2369          0.1000      0.0114   0.5567   507
+
+h = 12: agregar el nivel de la tasa a 3 meses: b = (-0.5734, -1.2176, -0.0193); LR = 0.17; p = 0.6777; AUC = 0.8187
+Pendiente que da Pr(recesión en 12 meses) = 50 %: -0.5921 puntos; con pendiente 0: 0.3329; con pendiente 2: 0.0455
+  umbral 0.5000: verdaderos positivos = 23, falsos positivos = 13, falsos negativos = 72, verdaderos negativos = 411; sensibilidad = 0.2421; especificidad = 0.9693
+  umbral 0.1830: verdaderos positivos = 71, falsos positivos = 112, falsos negativos = 24, verdaderos negativos = 312; sensibilidad = 0.7474; especificidad = 0.7358
+
+Fuera de muestra (1965-01 a 1991-02, solo con recesiones ya observadas): AUC = 0.8351; Pr media en meses de recesión = 0.4611; en expansión = 0.1740

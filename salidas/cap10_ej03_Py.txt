@@ -1,0 +1,27 @@
+Factor de Cholesky P (orden r, dv):
+[[ 1.199   0.    ]
+ [-4.9945  4.5963]]
+
+Orden (r, dv). Respuestas ortogonalizadas:
+  h    r<-r    dv<-r    r<-dv   dv<-dv
+  0  1.1990  -4.9945   0.0000   4.5963
+  1 -0.0895   0.5328  -0.0253  -0.2856
+  2 -0.0558   0.3894  -0.0185  -0.1581
+  5 -0.0002   0.0058  -0.0006   0.0009
+ 10 -0.0000   0.0000   0.0000  -0.0000
+
+Orden (dv, r). Respuestas (variables en el orden r, dv):
+  h    r<-r    dv<-r    r<-dv   dv<-dv
+  0  0.8119   0.0000  -0.8823   6.7875
+  1 -0.0793   0.1506   0.0487  -0.5854
+  2 -0.0514   0.1474   0.0285  -0.3936
+  5 -0.0006   0.0046  -0.0003  -0.0037
+ 10 -0.0000  -0.0000   0.0000  -0.0000
+
+respuesta acumulada (10 días) del VIX a un choque de +1 desv. est. en r: -4.160 %
+Bandas bootstrap al 90 % (500 réplicas), orden (r, dv):
+  h = 0: dv<-r [-5.193, -4.813]; r<-dv [0.0000, 0.0000]
+  h = 1: dv<-r [0.369, 0.694]; r<-dv [-0.0513, -0.0005]
+  h = 2: dv<-r [0.237, 0.564]; r<-dv [-0.0448, 0.0069]
+
+comprobación con statsmodels: respuestas iguales = True

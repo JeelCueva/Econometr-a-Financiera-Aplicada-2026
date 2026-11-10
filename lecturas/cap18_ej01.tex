@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{n} & 5030 & Días con rendimiento de ambos índices, 1999--2018. \\
+Media, desv. est. & S\&P 0,014 y 1,20; Nasdaq 0,022 y 1,59 & El Nasdaq rinde algo más y es un tercio más volátil. \\
+Asimetría, curtosis & $-0{,}20$ y 11,17; $-0{,}02$ y 8,43 & Colas pesadas en ambos (curtosis muy superior a 3). \\
+Pearson & 0,887 & Correlación lineal: sensible a valores extremos y a las márgenes. \\
+$\tau$ de Kendall & 0,735 & Probabilidad de concordancia menos la de discordancia entre pares de días: el 87\,\% de los pares se mueven en la misma dirección. No depende de las márgenes. \\
+$\rho$ de Spearman & 0,892 & Correlación de los rangos; igual a la de Pearson de las pseudo-observaciones (comprobado). \\
+$\sin(\pi\tau/2)$ & 0,9145 & Correlación de la cópula gaussiana que reproduciría el $\tau$ observado. \\
+$\hat\lambda_L(q)$ inferior & 0,742 / 0,620 / 0,457 & Probabilidad de que el Nasdaq esté en su peor $q$\,\% dado que el S\&P lo está. \\
+$\hat\lambda_U(q)$ superior & 0,720 / 0,700 / 0,596 & Lo mismo para las ganancias extremas. \\
+Gaussiana & 0,712 / 0,664 / 0,574 & Lo que predice la cópula gaussiana; al 1\,\% subestima la cola superior y sobrestima la inferior. \\
+Peores 5 días & todos de 2008 & En los peores días del S\&P 500 el Nasdaq también estuvo entre sus peores (pseudo-observación menor que 0,007): la dependencia es fuerte en las caídas extremas. \\
+\end{xltabular}}

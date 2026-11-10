@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Calma / crisis & 637 / 146 días & Tamaños de los dos períodos comparados. \\
+Varianza del S\&P 500 & 1,03 / 12,38 & En la crisis la varianza diaria se multiplicó por 12. \\
+$\delta$ & 11,01 & Aumento relativo de la varianza, $\sigma^2_{\text{crisis}}/\sigma^2_{\text{calma}}-1$, usado en la corrección. \\
+\texttt{rho calma} / \texttt{rho crisis} & Nasdaq 0,933 / 0,977; Brent $-0{,}113$ / 0,224 & Correlaciones observadas en cada período. \\
+\texttt{rho crisis ajustada} & 0,798 / 0,066 & Correlación de Forbes-Rigobon: elimina el aumento mecánico causado por la mayor volatilidad. \\
+\texttt{z (sin ajuste)} & 5,90 / 3,68 & Prueba de igualdad de correlaciones (transformación de Fisher): parecería haber contagio con ambos mercados. \\
+\texttt{z (ajustada)} & $-6{,}36$ / 1,94 & Con la corrección, no hay contagio con el Nasdaq (la correlación ajustada es incluso menor) y con el Brent el aumento queda en el límite de la significancia. \\
+\end{xltabular}}

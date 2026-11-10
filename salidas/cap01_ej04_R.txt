@@ -1,0 +1,16 @@
+Meses: 143 (2015-01 a 2026-11)
+Error mínimo = 1.94e-05 (Prop. 1.14 exige >= 0): TRUE
+Error medio = 21.71 pb, máximo = 129.20 pb en 2020-11
+Media de disp/2 = 21.73 pb; correlación(error, disp/2) = 0.9996
+Regresión error = a + b*disp:  a = 8.02e-06, b = 0.4976  (teoría de segundo orden: 0,5)
+
+Suma de errores en 143 meses: 31.04 puntos log
+
+Valor final de 1 dólar (dic-2014 a 2026-11):
+   rebalanceo mensual: 6.4527   comprar y mantener: 5.3858
+   valor final por acción (comprar y mantener):
+   BAP   SCCO    BVN 
+3.4702 9.4636 3.2237 
+   pesos finales sin rebalanceo:
+   BAP   SCCO    BVN 
+0.2148 0.5857 0.1995 

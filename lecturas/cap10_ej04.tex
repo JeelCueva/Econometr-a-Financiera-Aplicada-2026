@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$, medias, desv. est. & 761; inf 0,31, dtasa 0,00, ret 0,80 & Inflación mensual media de 0,31\,\% y rendimiento accionario de 0,80\,\%. \\
+Orden elegido & AIC 12; BIC 1; HQ 2 & Se usa el VAR(2) que elige HQ. \\
+dtasa no causa a inf & $F$ 5,14 ($p=0{,}006$); Wald $p=0{,}011$ & Los cambios de tasa ayudan a predecir la inflación. \\
+ret no causa a inf & $F$ $p=0{,}007$; Wald $p=0{,}108$ & Significativa con la $F$ clásica, pero no con la robusta: evidencia débil. \\
+inf, ret no causan a dtasa & $p=0{,}002$ y 0,001 (Wald) & La inflación y la bolsa predicen los cambios de tasas. \\
+inf no causa a ret & $p=0{,}26$ & La inflación pasada no predice el rendimiento accionario. \\
+dtasa no causa a ret & $p=0{,}0015$ (Wald) & Los cambios de tasa pasados sí predicen el rendimiento. \\
+inf y dtasa juntas & Wald 15,66 ($p=0{,}004$) & Conjuntamente, las variables macro tienen poder predictivo sobre la bolsa. \\
+Respuesta de ret a dtasa & $-0{,}24$, $-0{,}52$ en $h=0,1$ & Una subida de tasas de una desviación estándar reduce el rendimiento accionario ese mes y el siguiente. \\
+Respuesta acumulada a 24 meses & inf $-0{,}56$; dtasa $-0{,}85$ & Efecto total en puntos porcentuales: ambos choques son malas noticias para las acciones. \\
+Descomposición de varianza de ret & 96,4\,\% propio & A 24 meses, el 96\,\% de la incertidumbre del rendimiento se debe a sus propios choques; inflación y tasas explican menos del 4\,\%. \\
+Descomposición de inf & 96,85\,\% propio & La inflación también se explica casi solo por sus propios choques. \\
+\end{xltabular}}

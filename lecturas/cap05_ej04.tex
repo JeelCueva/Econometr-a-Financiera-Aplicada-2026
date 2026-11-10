@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{T} & 621 meses & Datos mensuales de ene-1975 a set-2026. \\
+ADF \texttt{lo}, \texttt{ls} en niveles & $-0{,}86$; $-0{,}09$ & No se rechaza la raíz unitaria en los logaritmos del oro ni del S\&P 500. \\
+ADF en diferencias & $-7{,}39$; $-9{,}92$ & Se rechaza en las diferencias: ambas series son $I(1)$. \\
+Niveles: \texttt{b} & 0,5301 & Si el S\&P 500 sube 1\,\%, el oro ``sube'' 0,53\,\% en promedio, según la regresión en niveles. \\
+Niveles: \texttt{t} & 32,85 & Altísimo, pero no es válido: con series $I(1)$ no cointegradas el estadístico $t$ diverge. \\
+Niveles: \texttt{R2} & 0,6355 & Aparenta una relación fuerte, producto de que ambas series tienen tendencia. \\
+\texttt{DW} & 0,0096 & Durbin-Watson casi cero: residuos extremadamente autocorrelacionados. Si $R^2>DW$, sospeche regresión espuria (Granger-Newbold). \\
+ADF de los residuos & $-2{,}10$ & No alcanza el valor crítico de Engle-Granger (cerca de $-3{,}34$): los residuos tienen raíz unitaria y no hay cointegración. \\
+Diferencias: \texttt{b}, \texttt{t}, \texttt{R2} & 0,015; 0,30; 0,00015 & En rendimientos la relación desaparece: el oro y las acciones no se mueven juntos mes a mes. \\
+\end{xltabular}}

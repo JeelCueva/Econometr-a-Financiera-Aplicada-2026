@@ -1,0 +1,18 @@
+Producción industrial, variación trimestral (%), 1970T1 a 2019T2; T = 198; trimestres de recesión NBER: 29
+media = 0.5071; desv. est. = 1.5213; autocorrelación(1) = 0.5837
+AR(1) lineal: c = 0.2256; phi = 0.5788; sigma = 1.2233; log-verosimilitud = -319.2346
+
+(A) MSI-AR(1), varianza común: 18 iteraciones; log-verosimilitud = -299.3704 (condicionada en y_1)
+  c1 = -3.6710; c2 = 0.4399; phi = 0.4310; sigma = 0.9980
+  p11 = 0.4722; p22 = 0.9815; duraciones = 1.89 y 53.99 trimestres; ergódicas = 0.0339 0.9661
+  trimestres con Pr suavizada de recesión > 0,5: 6; coinciden con el NBER: 6; falsas alarmas: 0; no detectados: 22
+  concordancia = 0.8883; correlación con el indicador NBER = 0.4768
+  trimestres con Pr filtrada > 0,5: 1974T4 1975T1 1980T2 1981T4 2008T3 2008T4 2009T1
+
+(B) Media y varianza cambiantes: 31 iteraciones; log-verosimilitud = -319.4522
+  mu1 = -1.4520; mu2 = 0.9841; sigma1 = 1.9008; sigma2 = 0.9065
+  p11 = 0.7749; p22 = 0.9503; duraciones = 4.44 y 20.13 trimestres; ergódicas = 0.1808 0.8192
+  trimestres con Pr suavizada de recesión > 0,5: 36; coinciden con el NBER: 25; falsas alarmas: 11; no detectados: 4
+  concordancia = 0.9242; correlación con el indicador NBER = 0.8020
+  trimestres con Pr filtrada > 0,5: 1970T1 1970T2 1970T3 1970T4 1974T4 1975T1 1975T2 1980T2 1980T3 1980T4 1981T4 1982T1 1982T2 1982T3 1982T4 1990T4 1991T1 2001T1 2001T2 2001T3 2001T4 2008T2 2008T3 2008T4 2009T1 2009T2 2015T2 2015T4 2016T1 2016T2
+  autocorrelación(1) de y_t menos la media suavizada del régimen = 0.3775

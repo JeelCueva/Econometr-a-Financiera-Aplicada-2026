@@ -1,0 +1,10 @@
+Evaluación: 2014-12-31 a 2018-12-31 (1007 días); rebalanceo cada 21 días (48 veces); pesos constantes entre rebalanceos
+
+media anual (%)   vol. anual (%)   Sharpe anual   ee(Sharpe)   máx. caída (%)   rotación media   peso mínimo medio   estrategia
+         23.42            21.82          1.073        0.501           29.52           0.000              0.250   1/N
+         17.83            21.63          0.824        0.501           30.13           0.146              0.049   mínima varianza (muestral, 250 días)
+         18.41            22.86          0.805        0.501           36.04           0.990             -0.096   mínima varianza (EWMA)
+
+pesos medios de mínima varianza (muestral): AAPL = 0.406  AMZN = 0.056  FB = 0.140  GOOG = 0.398
+rebalanceos con alguna posición corta: 12 de 48
+diferencia de varianzas diarias (mínima varianza - 1/N) = -0.0339; correlación entre ambas estrategias = 0.9527

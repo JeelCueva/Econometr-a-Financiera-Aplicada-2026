@@ -1,0 +1,17 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$, media, desv. est. & S\&P 5030; 0,014\,\%; 1,20\,\% & Momentos de los rendimientos diarios. \\
+Curtosis y $\nu$ & 11,17 $\to$ 4,73 & Grados de libertad de la $t$ elegidos para reproducir la curtosis muestral, $\nu=4+6/(\kappa-3)$. \\
+\texttt{VaR} & p. ej. 3,36\,\% (99\,\% histórico) & Pérdida que solo se supera con probabilidad 1\,\% (o 5\,\%) en un día. \\
+\texttt{ES} & p. ej. 4,81\,\% & Pérdida promedio en los días en que se supera el VaR: mide qué tan grave es la cola. \\
+\texttt{frecuencia de L > VaR} & normal 1,83\,\% al 99\,\% & Proporción de días con pérdida mayor que el VaR; debería ser 1\,\%. La normal se excede casi el doble de lo debido. \\
+Al 95\,\% & normal 4,63\,\% & Al 95\,\% la normal funciona bien: las colas pesadas importan sobre todo en los niveles extremos. \\
+$t$ al 99\,\% & 1,27\,\% & Mejor que la normal, pero aún algo por encima. \\
+Histórico & 5,01\,\% y 1,01\,\% & Coincide por construcción dentro de la muestra (no es una prueba de calidad). \\
+Brent: curtosis, $\nu$ & 55,97 $\to$ 4,11 & Colas aún más pesadas que el S\&P 500. \\
+Brent: ES histórico 99\,\% & 11,29\,\% & En el 1\,\% de peores días el petróleo pierde en promedio 11\,\%, frente a 7,2\,\% según la normal. \\
+\end{xltabular}}

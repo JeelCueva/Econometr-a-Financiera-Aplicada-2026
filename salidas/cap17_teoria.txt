@@ -1,0 +1,1 @@
+pi1 = 0.8333; duraciones: 50.0 y 10.0 meses; media = 0.7500; desv. est. = 4.6030; curtosis = 5.6301

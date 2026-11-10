@@ -1,0 +1,9 @@
+autovalores reales 0,9 y 0,5 [0.5+0.j 0.9+0.j] módulos [0.5 0.9]
+complejos $0{,}8\,e^{\pm i\pi/6}$ [0.6928+0.4j 0.6928-0.4j] módulos [0.8 0.8]
+autovalor 1,02 (inestable) [0.5 +0.j 1.02+0.j] módulos [0.5  1.02]
+P orden (y1, y2):
+ [[1.  0. ]
+ [0.6 0.8]]
+P orden (y2, y1):
+ [[0.8 0.6]
+ [0.  1. ]]

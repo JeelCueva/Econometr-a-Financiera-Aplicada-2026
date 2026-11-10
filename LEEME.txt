@@ -1,0 +1,80 @@
+ECONOMETRÍA FINANCIERA APLICADA — MSc. Jeel Cueva
+
+Compilar en Overleaf: subir el zip completo y compilar main.tex con pdfLaTeX.
+
+Estructura
+  main.tex, preambulo.tex   documento principal y estilo (Libertinus; color solo en código, salidas y gráficas;
+                            el nombre del autor aparece al pie de cada página)
+  portada.tex               portada, anteportada y créditos (TikZ; la curva del pie es el índice de la BVL del BCRP)
+  capitulos/                un archivo .tex por capítulo
+  datos/peru/               series peruanas del BCRP y Yahoo Finance (Capítulo 1) y FUENTES.txt
+  datos/internacional/      series reales (Brent, S&P 500 Shiller y diario, VIX, oro, French) y FUENTES.txt
+  codigo/R, codigo/Python   scripts de cada ejercicio; no se imprimen en el libro: están en el repositorio de GitHub
+                            https://github.com/JeelCueva/Econometr-a-Financiera-Aplicada-2026 (R, Python, salidas y datos)
+  lecturas/                 tablas "Cómo leer la salida" (fuente en lecturas/fuente/*.txt; generar con
+                            python3 lecturas/generar.py)
+  salidas/                  salida real de cada script (el libro las inserta tal cual)
+  graficos/                 figuras generadas por los scripts de Python
+
+Reproducir los resultados (desde la carpeta raíz del proyecto)
+  Rscript codigo/R/cap02_ej01.R
+  PYTHONPATH=codigo/Python python codigo/Python/cap02_ej01.py
+  (requiere R base; en Python: numpy, pandas, scipy, statsmodels, matplotlib y, para comprobar, arch)
+
+Gráficas teóricas: codigo/Python/capNN_figuras_teoria.py (sin datos; simulaciones con semilla fija)
+
+Estado
+  Cap. 1: completo con datos reales peruanos (índice BVL y tipo de cambio del BCRP; BAP, SCCO, BVN, EPU, S&P 500 y
+          PEN=X de Yahoo, 2014-2026): dividendos recuperados del precio ajustado, agregación, rendimiento en soles,
+          portafolio y anualización.
+  Cap. 2: completo con datos reales (Brent, S&P 500 de Shiller, VIX).
+  Cap. 3: completo con datos reales (Kenneth French, 1949-2017).
+  Cap. 4: completo con datos reales (French, Brent, Shiller) y simulaciones de Monte Carlo.
+  Cap. 5: completo con datos reales (Brent, VIX, tasa a 10 años, oro, S&P 500); pruebas programadas a mano
+          y verificadas con el paquete arch de Python.
+  Cap. 6: completo con datos reales (tasa a 10 años, VIX, razón dividendo/precio); pronóstico fuera de muestra
+          y sesgo de Stambaugh.
+  Cap. 7: completo con datos reales (Brent, carteras y momentum de French, Shiller 1871-2023); razón de
+          varianzas de Lo-MacKinlay (z y z* robusto) programada a mano y verificada con arch; prueba de rachas.
+  Cap. 8: completo con datos reales (Brent diario 1987-2026, S&P 500 mensual); verosimilitud GARCH normal y t
+          programada a mano (R: nlminb; Python: scipy) y verificada con arch; pronóstico y evaluación fuera de muestra.
+  Cap. 9: completo con datos reales (S&P 500 diario de Yahoo 1999-2018, Brent, VIX, French 1926-2018);
+          GJR-GARCH, EGARCH y GARCH en media programados a mano y verificados con arch; pruebas de Engle-Ng.
+  Cap. 10: completo con datos reales (S&P 500 y VIX diarios, carteras de French, Shiller 1960-2023); VAR,
+          Granger (F y Wald robusto), impulso-respuesta con bootstrap, FEVD y pronóstico fuera de muestra.
+  Cap. 11: completo con datos reales (Brent y WTI de la EIA 1987-2026, Shiller 1871-2023); Engle-Granger,
+          Johansen y VECM programados a mano y verificados con statsmodels; quiebre de 2011 y pronóstico.
+  Cap. 12: completo con datos reales (S&P 500, Nasdaq y Brent diarios 1999-2018); EWMA, CCC y DCC en dos
+          etapas programados a mano; cartera de mínima varianza fuera de muestra y prueba de Forbes-Rigobon.
+  Cap. 13: completo con datos reales (S&P 500 1999-2018, Brent 1987-2026); VaR y ES normal, t, histórico,
+          GARCH-t y simulación filtrada; Kupiec, Christoffersen, semáforo de Basilea y teoría de valores extremos (GPD).
+  Cap. 14: completo con datos reales (30 carteras y factores de French, 1949-2017); CAPM, Fama-French y Carhart,
+          prueba GRS (y su identidad con razones de Sharpe), Fama-MacBeth con corrección de Shanken y componentes principales.
+  Cap. 15: completo con datos reales (curvas cupón cero de EE. UU. de McCulloch-Kwon, 1946-1991, 10 vencimientos);
+          tasas a plazo, hipótesis de las expectativas (Campbell-Shiller), Fama-Bliss, Nelson-Siegel dinámico
+          (Diebold-Li), Vasicek por discretización exacta y efecto nivel (CKLS).
+  Cap. 16: completo con datos reales (Apple, Amazon, Facebook y Alphabet 2014-2018, S&P 500, VIX y 40 anuncios
+          del FOMC); rendimientos anormales y su varianza exacta, equivalencia con ficticias, pruebas J1, Patell,
+          BMP, signo y Corrado, eventos simultáneos, varianza inducida y simulaciones de tamaño y potencia.
+  Cap. 17: completo con datos reales (mercado de EE. UU. 1926-2018, producción industrial 1970-2019 y
+          cronología del NBER); cadena de Markov, filtro de Hamilton, suavizador de Kim, EM, número de regímenes,
+          fechado del ciclo, pronóstico y VaR con regímenes.
+  Cap. 18: completo con datos reales (S&P 500 y Nasdaq diarios 1999-2018); teorema de Sklar, cotas de
+          Fréchet-Hoeffding, cópulas gaussiana, t, Clayton y Gumbel (tau de Kendall y dependencia en las colas),
+          máxima verosimilitud canónica, cópula de residuos EWMA, VaR/ES de cartera por simulación y crisis 2007-2009.
+  Cap. 19: completo con datos reales (inversión de Grunfeld 1935-1954; 30 carteras de French 1950-2017);
+          efectos fijos y aleatorios, Hausman, errores agrupados (empresa, tiempo, dos vías, Driscoll-Kraay),
+          factor de Moulton, sesgo de Nickell y Anderson-Hsiao, efectos fijos de tiempo frente a Fama-MacBeth.
+  Cap. 20: completo con datos reales (10 predictores mensuales de la prima de mercado 1927-2018, de Shiller y French;
+          curva de McCulloch-Kwon y NBER); sesgo y varianza, ridge, lasso y red elástica por descenso por coordenadas
+          con validación temporal, R2 fuera de muestra y Clark-West, combinación de pronósticos y valor económico,
+          logit de recesiones con AUC, árboles de regresión y sobreajuste.
+  Cap. 21: proyecto integrador con datos reales (Apple, Amazon, Facebook, Alphabet y S&P 500, 2014-2018): hechos
+          estilizados, CAPM con Newey-West, GARCH(1,1)-t fuera de muestra frente a EWMA (QLIKE y Diebold-Mariano), VaR y
+          ES de la cartera con Kupiec y Christoffersen, 1/N frente a mínima varianza, sesgo de selección y pruebas múltiples.
+
+Formato: cada ejercicio muestra enlaces a sus programas en el repositorio de GitHub, su salida real en R y la tabla
+"Cómo leer la salida", que interpreta cada indicador. El prefacio (capitulos/prefacio.tex) incluye el enlace y un código QR. Todas las demostraciones y cálculos se escriben con una operación por línea (entornos align*).
+  Apéndices: A (probabilidad y estadística: distribuciones, LGN, TCL, Slutsky, método delta con ejercicio de datos),
+          B (álgebra matricial: derivadas, MCO, proyecciones, Frisch-Waugh-Lovell, Kronecker y vec),
+          C (datos, programas de descarga del BCRP y Yahoo, inventario y problemas encontrados en los datos).

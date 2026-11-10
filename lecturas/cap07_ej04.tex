@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Días con rendimiento cero & 171 & Se excluyen porque no tienen signo. \\
+\texttt{n1(+)}, \texttt{n2(-)} & p. ej. 4617 / 4333 & Número de rendimientos positivos y negativos. \\
+\texttt{rachas} & 4395 / 343 / 383 & Secuencias consecutivas de igual signo observadas. \\
+\texttt{esperadas} & 4471,5 / 393,1 / 385,3 & Rachas esperadas si los signos fueran independientes, $1+2n_1n_2/n$. \\
+\texttt{z} Brent & $-1{,}62$ & Menos rachas de las esperadas, pero no significativo: no hay dependencia en los signos. \\
+\texttt{z} S1V3 & $-3{,}66$ & Muchas menos rachas: los signos de la cartera pequeña se repiten (persistencia), coherente con su $\rho_1$ y $VR>1$. \\
+\texttt{z} S5V3 & $-0{,}17$ & La cartera grande no muestra dependencia, igual que en la razón de varianzas. \\
+\end{xltabular}}

@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Períodos & 411 meses (1983--2017) & Pronósticos a un mes con ventana creciente desde 1949. \\
+ECM & 30,72 / 30,09 / 30,00 & Error cuadrático medio de la media histórica, el AR(1) y el VAR(1); menor es mejor. \\
+$R^2$ fuera de muestra & AR(1) 2,04\,\%; VAR(1) 2,35\,\% & Reducción porcentual del ECM respecto de la media: pequeña pero positiva. \\
+Clark-West media vs AR(1) & $t=2{,}73$ ($p=0{,}003$) & La mejora del AR(1) sobre la media es significativa (prueba unilateral para modelos anidados). \\
+Clark-West media vs VAR(1) & $t=2{,}79$ ($p=0{,}003$) & También significativa para el VAR(1). \\
+Clark-West AR(1) vs VAR(1) & $t=1{,}17$ ($p=0{,}12$) & Añadir la cartera grande no mejora significativamente al AR(1). \\
+$R^2$ 1983--1999 & 5,69 / 5,09\,\% & La predictibilidad estaba concentrada en la primera mitad. \\
+$R^2$ 2000--2017 & $-0{,}58$ / 0,38\,\% & En la segunda mitad desaparece: el efecto se ha debilitado con el tiempo. \\
+\end{xltabular}}

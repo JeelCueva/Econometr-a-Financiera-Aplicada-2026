@@ -1,0 +1,18 @@
+Panel: N = 30 carteras, T = 807 meses (1950-01 a 2017-03), n = 24210
+y = exceso de rendimiento del mes t (%); x = rendimiento acumulado de t-12 a t-2 (%): media = 11.8536; desv. est. = 19.4238
+
+Correlación media de los residuos entre carteras en el mismo mes = 0.7078; de x = 0.7002
+Autocorrelación media de orden 1 de los residuos de cada cartera = 0.1011; de x = 0.9208
+
+MCO agrupado: constante = 0.7267; pendiente = -0.00027
+   ee(pendiente)   t      cociente con el clásico   método
+   0.00180     -0.15        1.000                  clásicos
+   0.00272     -0.10        1.508                  White (HC1)
+   0.00117     -0.23        0.646                  agrupados por cartera
+   0.01038     -0.03        5.751                  agrupados por mes
+   0.01008     -0.03        5.588                  dos vías
+   0.00921     -0.03        5.104                  Driscoll-Kraay (L = 12)
+   0.00430      6.18        2.383                  Fama-MacBeth (pendiente media = 0.02656)
+   0.00410      6.48        2.273                  Fama-MacBeth con Newey-West (12 rezagos)
+
+autocorrelación de orden 1 de las pendientes mensuales de Fama-MacBeth = 0.0991

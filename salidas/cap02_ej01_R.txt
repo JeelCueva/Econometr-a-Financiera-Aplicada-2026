@@ -1,0 +1,28 @@
+Período: 1987-05-21 a 2026-11-03 
+
+T                  9121
+media        0.00019168
+desv_est       0.027039
+asimetria       -1.4937
+curtosis         55.966
+JB           1.0695e+06
+p_valor               0
+
+Los cinco rendimientos más grandes en valor absoluto:
+      fecha       r
+ 2020-04-21 -0.6437
+ 2020-04-22  0.4120
+ 1991-01-17 -0.3612
+ 2020-04-02  0.3016
+ 2020-03-31 -0.2564
+
+Sin el 21 y el 22 de abril de 2020:
+T                  9119
+media        0.00021713
+desv_est       0.025831
+asimetria      -0.46254
+curtosis          17.79
+JB                83438
+p_valor               0
+
+P(|z| > 4): observada = 0.005591 | normal = 6.334e-05 

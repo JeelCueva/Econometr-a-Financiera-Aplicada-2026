@@ -1,0 +1,19 @@
+GARCH(1,1)-t:
+        coef ee_rob  t_rob
+mu    0.0522 0.0184   2.83
+omega 0.0593 0.0118   5.03
+alpha 0.0832 0.0074  11.24
+beta  0.9123 0.0072 127.41
+nu    5.2295 0.2784  18.78
+
+             log-ver        AIC        BIC
+normal     -20074.21   40156.43   40184.90
+t          -19752.61   39515.21   39550.81
+
+persistencia = 0.99554; vida media = 155.0 días; curtosis de la t estandarizada = 7.88
+
+Diagnóstico:
+rendimientos r_t       asim.  -1.49  curt.   55.97  JB    1069541  Q(10) z  25.74 (p 0.004)  Q(10) z^2  1718.56 (p 0.000)
+residuos z_t (modelo t) asim.  -0.20  curt.    5.48  JB       2388  Q(10) z  22.64 (p 0.012)  Q(10) z^2    14.93 (p 0.135)
+
+proporción |z| > 4: observada 0.00362; normal 0.00006; t(nu) estandarizada 0.00335

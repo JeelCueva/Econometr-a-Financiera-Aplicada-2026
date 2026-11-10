@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{r\_usd} & $-40{,}23$ a 51,05 & Rendimiento logarítmico anual (\%) de la acción en dólares, con dividendos: lo que gana un inversionista en dólares. \\
+\texttt{dlnS\_bcrp} & $-11{,}32$ a 13,44 & Variación logarítmica anual (\%) del tipo de cambio del BCRP. Positiva: el sol se depreció y el inversionista en soles gana más. \\
+\texttt{r\_sol\_bcrp} & suma de las dos & Rendimiento anual en soles, igual a \texttt{r\_usd} $+$ \texttt{dlnS\_bcrp} (Prop.~\ref{prop:moneda}). \\
+\texttt{dlnS\_yahoo}, \texttt{r\_sol\_yahoo} & p. ej. 10,71 en 2015 & Lo mismo con \texttt{PEN=X} de Yahoo; permite ver si la fuente del tipo de cambio altera el resultado. \\
+Fila 2026* & 25,84 / 2,94 & Año incompleto: del 31-dic-2025 al 30-oct-2026. \\
+Máx $\lvert R_{sol}-(R_{usd}+R_S+R_{usd}R_S)\rvert$ & $2{,}2\times10^{-16}$ & La fórmula simple de la Prop.~\ref{prop:moneda} se cumple exactamente (diferencia de redondeo). \\
+Diferencia entre fuentes: media & 0,042 pp & En promedio, las dos fuentes dan casi la misma variación anual del tipo de cambio. \\
+Diferencia entre fuentes: máx. abs. & 2,731 pp & En un año (2015) las fuentes difieren en 2,7 puntos: para un año concreto la fuente sí importa. \\
+Suma en dólares & 229,70 & Rendimiento logarítmico acumulado dic-2014 a oct-2026 en dólares. \\
+Suma del tipo de cambio & 14,95 & Depreciación acumulada del sol en el período (en logaritmos). \\
+Suma en soles & 244,65 & Rendimiento logarítmico acumulado en soles: la suma de las dos anteriores. \\
+Rendimiento simple en soles & 1054,77\,\% & 1 sol invertido se convirtió en 11,55 soles; en dólares, 1 dólar se convirtió en 9,94 (894,45\,\%). \\
+\end{xltabular}}

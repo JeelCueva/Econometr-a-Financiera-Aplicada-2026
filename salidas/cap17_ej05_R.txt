@@ -1,0 +1,14 @@
+Pronóstico para el mes siguiente a 2018-11:
+  Pr filtrada del régimen volátil en 2018-11 = 0.0384; Pr predicha = 0.0499
+  media = 0.8870 %; desv. est. = 4.3627 %
+  VaR al 95 %: mezcla = 5.7775 %; normal incondicional = 8.0991 %
+  VaR al 99 %: mezcla = 10.7980 %; normal incondicional = 11.7281 %
+
+Prueba retrospectiva de 1108 meses (1926-08 a 2018-11); parámetros estimados con toda la muestra
+  nivel  modelo        excepciones  esperadas   frecuencia   LR_uc   p_uc    LR_ind   p_ind
+   0.05  dos regímenes        69        55.4      0.0623     3.27 0.0705     1.66 0.1980
+   0.05  normal              52        55.4      0.0469     0.22 0.6360    27.32 0.0000
+   0.01  dos regímenes        11        11.1      0.0099     0.00 0.9807     0.22 0.6384
+   0.01  normal              22        11.1      0.0199     8.45 0.0037     3.19 0.0741
+
+VaR al 99 % de la mezcla: mínimo = 8.3675 %; máximo = 25.3632 %; mediana = 9.3501 %

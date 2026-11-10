@@ -1,0 +1,18 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{u} & 2,68 / 3,80 / 4,98 (Brent) & Umbral a partir del cual se modelan las pérdidas con la distribución de Pareto generalizada (GPD). \\
+\texttt{excesos} & 912 / 456 / 228 & Número de pérdidas por encima del umbral. \\
+\texttt{xi (ee)} & 0,27 a 0,45 (Brent) & Índice de forma: positivo indica cola pesada; $1/\xi\approx2{,}2$--3,7 es el índice de cola del Capítulo~2. \\
+\texttt{beta (ee)} & 1,42 a 1,71 & Parámetro de escala de los excesos. \\
+Sensibilidad al umbral & $\xi$ sube con el umbral & La estimación depende del umbral: equilibrio entre sesgo (umbral bajo) y varianza (umbral alto). \\
+Brent: GPD 99,9\,\% & VaR 16,69; ES 26,61 & En el día 1 de cada 1000 más extremo se pierde más de 16,7\,\%, y en promedio 26,6\,\%. \\
+Brent: normal 99,9\,\% & VaR 8,34 & La normal subestima a la mitad el riesgo extremo. \\
+Brent: $t$ 99,9\,\% & VaR 13,50 & La $t$ mejora pero se queda corta en la cola extrema. \\
+Brent: histórico 99,9\,\% & 16,82 & Coincide con la GPD, pero se basa en solo 9 observaciones; la GPD permite extrapolar más allá de los datos. \\
+S\&P 500: \texttt{xi} & 0,16 a 0,24 & Cola pesada, pero menos que la del Brent. \\
+S\&P 500: GPD frente a normal (99,9\,\%) & 6,62 frente a 3,71 & La normal subestima el VaR extremo en 44\,\%. \\
+\end{xltabular}}

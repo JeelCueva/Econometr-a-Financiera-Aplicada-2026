@@ -1,0 +1,7 @@
+Estimación 1990-01-02 a 2015-12-31: mu = 2.9228  phi = 0.9860  theta = -0.0901
+Pronósticos desde 2015-12-31; 2728 orígenes
+
+   h   RMSE ARMA   RMSE paseo   RMSE media   ARMA/paseo   DM (paseo - ARMA)
+   1      0.0785       0.0792       0.3301        0.991             2.63
+   5      0.1537       0.1579       0.3302        0.973             5.01
+  22      0.2415       0.2630       0.3306        0.918             3.79

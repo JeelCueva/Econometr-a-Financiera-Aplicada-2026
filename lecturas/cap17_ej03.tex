@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$, media, desv., autocorr. & 198; 0,51; 1,52; 0,58 & Variación trimestral de la producción industrial (\%) y su persistencia. \\
+AR(1) lineal & $\phi=0{,}579$; log-ver $-319{,}23$ & Modelo de referencia sin regímenes. \\
+(A) \texttt{c1}, \texttt{c2} & $-3{,}67$; 0,44 & Constantes de cada régimen: caídas abruptas frente a crecimiento normal. \\
+(A) \texttt{p11}, \texttt{p22} & 0,472; 0,982 & El régimen de caída dura menos de 2 trimestres: solo capta los colapsos más agudos. \\
+(A) log-verosimilitud & $-299{,}37$ & Mejor que el AR(1) lineal. \\
+(A) Clasificación & 6 detectados, 22 no detectados & El modelo de varianza común identifica pocas recesiones: concordancia 0,888, correlación 0,477. \\
+(B) \texttt{mu1}, \texttt{sigma1} & $-1{,}45$; 1,90 & Régimen de recesión: caída media y mayor volatilidad. \\
+(B) \texttt{mu2}, \texttt{sigma2} & 0,98; 0,91 & Régimen de expansión. \\
+(B) Duraciones & 4,4 / 20,1 trimestres & Duraciones parecidas a las del NBER (recesiones de un año, expansiones de cinco). \\
+(B) Clasificación & 25 coinciden; 11 falsas alarmas; 4 no detectados & Concordancia 0,924 y correlación 0,802: el modelo B reproduce bien el ciclo oficial. \\
+Trimestres con Pr filtrada > 0,5 & p. ej. 2008T2--2009T2 & Recesiones detectadas en tiempo real (sin usar datos futuros); 2015--2016 es una falsa alarma (caída industrial sin recesión). \\
+Autocorrelación residual & 0,378 & Queda persistencia no explicada por el régimen. \\
+\end{xltabular}}

@@ -1,0 +1,3 @@
+ADF con tendencia: t = -2.915 con 21 rezagos (VC 5% = -3,41)
+Zivot-Andrews: t mínimo = -4.354 en 1990-11-01 (VC al 5%: -4,80)
+Comprobación con arch: -4.354 (p-valor 0.169; VC 5% -4.81)

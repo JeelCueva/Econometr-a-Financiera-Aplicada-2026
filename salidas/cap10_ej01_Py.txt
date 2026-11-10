@@ -1,0 +1,36 @@
+T = 5029 días (1999-01-05 a 2018-12-31); medias: r = 0.0142, dv = -0.0006; desv. est.: 1.2039 y 6.8247
+
+  p      AIC      BIC       HQ
+  0   3.4333   3.4359   3.4342
+  1   3.4220   3.4298   3.4248
+  2   3.4156   3.4286   3.4201
+  3   3.4104   3.4286   3.4168
+  4   3.4090   3.4324   3.4172
+  5   3.4081   3.4367   3.4181
+  6   3.4062   3.4400   3.4181
+  7   3.4003   3.4393   3.4140
+  8   3.3985   3.4427   3.4140
+  9   3.3984   3.4478   3.4157
+ 10   3.3977   3.4523   3.4168
+orden elegido: AIC = 10, BIC = 2, HQ = 7
+
+Ecuación de r:
+  constante     0.0159  (ee 0.0169, t =   0.94)
+  r(t-1)       -0.0976  (ee 0.0208, t =  -4.69)
+  dv(t-1)      -0.0055  (ee 0.0037, t =  -1.50)
+  r(t-2)       -0.0718  (ee 0.0208, t =  -3.45)
+  dv(t-2)      -0.0049  (ee 0.0037, t =  -1.33)
+Ecuación de dv:
+  constante    -0.0035  (ee 0.0958, t =  -0.04)
+  r(t-1)        0.1855  (ee 0.1177, t =   1.58)
+  dv(t-1)      -0.0621  (ee 0.0208, t =  -2.99)
+  r(t-2)        0.2112  (ee 0.1177, t =   1.79)
+  dv(t-2)      -0.0372  (ee 0.0208, t =  -1.79)
+
+Matriz de covarianzas de los residuos:
+[[ 1.4376 -5.9884]
+ [-5.9884 46.0708]]
+correlación de los residuos = -0.7358
+módulos de los autovalores de la matriz compañera: 0.2508 0.2508 0.2428 0.2428
+
+comprobación con statsmodels: coeficientes iguales = True; Sigma igual = True; orden BIC = 2

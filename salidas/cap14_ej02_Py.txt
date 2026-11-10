@@ -1,0 +1,10 @@
+Carteras                 Modelo     GRS       gl         valor p     |alfa| medio   SR2 factores
+tamaño y valor (9)       CAPM       7.753  ( 9, 809)    5.34e-11      0.256        0.0232
+tamaño y valor (9)       FF3        5.754  ( 9, 807)    9.02e-08      0.129        0.0516
+tamaño y valor (9)       Carhart    4.707  ( 9, 806)    4.12e-06      0.115        0.1089
+tamaño y momentum (9)    CAPM      13.651  ( 9, 809)    1.50e-20      0.413        0.0232
+tamaño y momentum (9)    FF3       12.706  ( 9, 807)    4.97e-19      0.425        0.0516
+tamaño y momentum (9)    Carhart    7.858  ( 9, 806)    3.62e-11      0.135        0.1089
+industrias (12)          CAPM       2.672  (12, 806)    1.58e-03      0.122        0.0232
+industrias (12)          FF3        5.183  (12, 804)    2.01e-08      0.167        0.0516
+industrias (12)          Carhart    5.082  (12, 803)    3.23e-08      0.141        0.1089

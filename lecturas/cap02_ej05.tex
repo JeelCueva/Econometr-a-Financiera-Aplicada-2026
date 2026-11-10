@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+\texttt{k} & 50 a 400 & Número de observaciones extremas de cada cola usadas en el estimador de Hill. \\
+\texttt{pct\_muestra} & 0,55 a 4,39 & Porcentaje de la muestra que representan esas $k$ observaciones. \\
+\texttt{alfa\_perdidas} & 2,52 a 2,76 & Índice de cola de las pérdidas: $\Pr(-r>x)\approx Cx^{-\alpha}$. Cuanto menor, más pesada la cola. \\
+\texttt{alfa\_ganancias} & 2,56 a 3,30 & Índice de cola de las ganancias: algo mayor (cola un poco más liviana) salvo con $k=400$. \\
+\texttt{ee\_perdidas}, \texttt{ee\_ganancias} & 0,13 a 0,42 & Errores estándar $\hat\alpha/\sqrt k$: con $k$ pequeño la estimación es imprecisa; con $k$ grande es más precisa pero puede tener sesgo. \\
+$\alpha>2$ & en todos los casos & Existe la varianza (el momento de orden $m$ existe si $m<\alpha$). \\
+$\alpha<4$ & en todos los casos & La curtosis (momento de orden 4) probablemente no existe: por eso la curtosis muestral es enorme e inestable. \\
+\end{xltabular}}

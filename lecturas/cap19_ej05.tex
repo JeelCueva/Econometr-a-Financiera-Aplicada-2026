@@ -1,0 +1,16 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Agrupado & $-0{,}00027$; $t=-0{,}03$ & Mezcla la relación dentro de cada mes y entre meses. \\
+Efectos de cartera & $-0{,}0025$ & Comparar cada cartera consigo misma en el tiempo tampoco da relación. \\
+Efectos de mes & 0,0163 ($t=2{,}43$) & Comparar carteras dentro del mismo mes da una pendiente positiva y significativa: momentum de corte transversal. \\
+Cartera y mes & 0,0105 ($t=1{,}57$) & Con ambos efectos la pendiente baja y deja de ser significativa. \\
+Varianza de $x$ que usa & 1,00 / 0,98 / 0,33 / 0,30 & Fracción de la variación de la señal que aprovecha cada estimador. \\
+Pendiente de series de tiempo & $-0{,}0083$ & Relación entre la señal promedio y el rendimiento promedio de las 30 carteras: negativa (reversión del mercado en conjunto). \\
+Descomposición de la varianza & 0,327 dentro; 0,673 entre & Dos tercios de la variación de $x$ son comunes a todas las carteras en el mes. \\
+Pendiente agrupada & $0{,}327\times0{,}0163+0{,}673\times(-0{,}0083)$ & El agrupado es un promedio ponderado de ambas relaciones, que se cancelan (Proposición~\ref{prop:mezclapanel}). \\
+Interpretación económica & 0,163 puntos & 10 puntos más de rendimiento pasado que las demás carteras del mes anticipan 0,16 puntos más de exceso mensual. \\
+\end{xltabular}}

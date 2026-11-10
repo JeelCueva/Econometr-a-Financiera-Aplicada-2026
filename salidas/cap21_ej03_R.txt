@@ -1,0 +1,16 @@
+Estimación: 2014-01-03 a 2015-12-31 (503 días); evaluación: 2016-01-04 a 2018-12-31 (754 días); parámetros fijos, varianza filtrada día a día
+
+serie    mu       omega     alfa     beta     nu     alfa+beta   vida media (días)
+AAPL     0.104    0.1769   0.0651   0.8622    4.76     0.9273          9.2
+AMZN     0.101    0.0347   0.0000   0.9909    3.33     0.9909         75.6
+FB       0.140    0.0420   0.0135   0.9711    6.30     0.9846         44.7
+GOOG     0.043    0.5540   0.1415   0.6185    4.87     0.7600          2.5
+SP500    0.072    0.0597   0.2130   0.7188    7.80     0.9319          9.8
+
+Pérdidas fuera de muestra (proxy: rendimiento al cuadrado), promedio diario
+serie    QLIKE GARCH-t   QLIKE EWMA   QLIKE constante    ECM GARCH-t   ECM EWMA   ECM constante   DM QLIKE (GARCH - EWMA)
+AAPL          1.6987       1.8073          1.8007          26.41      26.43          27.71        -1.29
+AMZN          2.2460       2.2049          2.2655         110.37     104.58         111.03         0.17
+FB            2.1437       2.1949          2.2228         288.08     294.13         288.98        -0.57
+GOOG          1.5599       1.5423          1.6836          16.02      15.85          17.40         0.34
+SP500         0.2491       0.3522          0.6047           2.83       2.85           3.18        -1.40

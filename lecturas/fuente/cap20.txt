@@ -1,0 +1,57 @@
+== cap20_ej01
+Objetivo, $n$ | 1095 meses | Exceso de rendimiento del mercado del mes siguiente (\%), 1927--2018.
+Período fuera de muestra | 743 meses | Pronósticos desde 1957 usando solo datos anteriores a cada mes.
+\texttt{pendiente} | p. ej. cape $-1{,}14$ | Coeficiente de la regresión en toda la muestra: signo esperado en la mayoría (CAPE alto anuncia rendimientos bajos).
+\texttt{t(White)} | $-2{,}21$ a 1,93 | Solo el CAPE es significativo al 5\,\% dentro de la muestra.
+\texttt{R2 dentro} | 0,00 a 0,73\,\% | Ningún predictor explica más del 1\,\% de la varianza mensual: la predictibilidad es muy pequeña.
+\texttt{R2 fuera} | $-2{,}50$ a 0,21\,\% | Reducción del ECM frente a la media histórica; negativo en 8 de 10: casi todos pronostican peor que la media.
+\texttt{R2 fuera CT} | $-1{,}39$ a 0,51\,\% | Con la restricción de Campbell-Thompson (pronóstico no negativo, pendiente con signo esperado) mejoran algunos.
+\texttt{CW}, \texttt{p(CW)} | p. ej. vol12 1,90 ($p=0{,}029$) | Prueba de Clark-West para modelos anidados; solo vol12 es significativa al 5\,\%, y dp, cape, lty y tbl al 10\,\%.
+Lectura conjunta | — | Lo que parece predictibilidad dentro de la muestra no sobrevive fuera de ella (Goyal y Welch, 2008).
+
+== cap20_ej02
+Predictores | 8 | Se omiten de y tms porque son combinaciones lineales exactas de otros.
+MCO (todos) | $R^2_{OS}=-6{,}04$\,\% | Usar todos los predictores sin restricción sobreajusta y empeora mucho el pronóstico.
+Ridge | $-1{,}12$\,\%; CT 0,17\,\% | Encoger los coeficientes reduce el daño; con la restricción CT queda apenas positivo.
+Red elástica, lasso | $-2{,}33$; $-1{,}95$\,\% | Peores que ridge: seleccionar predictores con tan poca señal es inestable.
+\texttt{CW}, \texttt{p(CW)} | $p\ge0{,}37$ | Ningún modelo mejora significativamente a la media histórica.
+\texttt{lambda mediano} | 3,32 / 0,85 / 0,50 | Penalización elegida por validación temporal en cada reestimación.
+Predictores del lasso | media 2,56; ninguno en 14 de 62 | El lasso suele quedarse con dos o tres predictores, y en el 23\,\% de los años con ninguno.
+Fracción de selección | cape 0,77; vol12 0,06 | El CAPE es el más seleccionado; vol12 casi nunca.
+Desv. est. de los pronósticos | 0,08 / 1,01 / 0,44 / 0,52 | El MCO genera pronósticos muy variables (ruido); la contracción los suaviza, pero no lo suficiente.
+
+== cap20_ej03
+Combinación (media) | $R^2_{OS}=0{,}61$\,\%; CW $p=0{,}017$ | Promediar los diez pronósticos supera a la media histórica de forma significativa.
+Combinación (mediana) | 0,50\,\%; $p=0{,}011$ | Resultado similar.
+Componentes principales | $-0{,}36$ a $-1{,}53$\,\% | Resumir los predictores en componentes no mejora el ECM, aunque CW es significativo (pronósticos correlacionados con el objetivo pero con varianza excesiva).
+Desv. est. de pronósticos | 0,110 / 0,082 | La combinación se mueve poco alrededor de la media: es su principal virtud.
+Correlación con el realizado | 0,073 | Baja, pero suficiente para mejorar el pronóstico.
+Equivalente cierto, media histórica | 6,62\,\% | Rendimiento seguro que valora igual el inversionista con aversión 3.
+Combinación | 7,57\,\%; ganancia 0,95 | Usar la combinación vale casi un punto por año: valor económico relevante aunque el $R^2$ sea pequeño.
+Componentes ($k=1$) | ganancia 0,39 | Valor económico positivo pero menor.
+Solo dp | ganancia $-0{,}88$ | Seguir solo a la razón dividendo/precio habría costado casi un punto anual.
+Peso medio en acciones | 1,17 / 0,94 / 0,52 / 0,37 | Exposición promedio de cada estrategia.
+
+== cap20_ej04
+Meses en recesión | 95 de 531 | Frecuencia base de 18\,\%.
+\texttt{b1} | $-0{,}58$ a $-1{,}17$ | Coeficiente de la pendiente: negativo, una curva más plana o invertida eleva la probabilidad de recesión.
+\texttt{ee(b1)} | 0,10 a 0,14 | Todos los coeficientes son significativos salvo, marginalmente, a 24 meses.
+\texttt{pseudo R2} | máximo 0,199 en $h=12$ | El poder predictivo es máximo a un año.
+\texttt{AUC} | 0,82 en $h=12$ | Probabilidad de que un mes de recesión reciba mayor probabilidad que uno de expansión; 0,5 es azar y 1 perfecto.
+Agregar la tasa a 3 meses | LR 0,17; $p=0{,}68$ | El nivel de las tasas no aporta: lo que importa es la pendiente.
+Pendiente con Pr 50\,\% | $-0{,}59$ puntos | Una curva invertida en 0,6 puntos implica probabilidad de recesión de 50\,\% en un año.
+Pr con pendiente 0 / 2 | 0,333 / 0,046 | Con curva plana, una de tres; con pendiente normal de 2 puntos, menos de 5\,\%.
+Umbral 0,5 | sensibilidad 0,24; especificidad 0,97 | Con umbral alto casi no hay falsas alarmas, pero se detectan pocas recesiones.
+Umbral 0,183 | sensibilidad 0,75; especificidad 0,74 | Umbral igual a la frecuencia base: equilibra ambos errores.
+AUC fuera de muestra | 0,835 | La capacidad predictiva se mantiene en tiempo real.
+Pr media en recesión / expansión | 0,461 / 0,174 | El modelo distingue claramente ambos estados.
+
+== cap20_ej05
+Muestras | 640 / 455 meses | Entrenamiento 1927--1980; prueba 1981--2018.
+MCO lineal | ECM 34,03 / 20,30; $R^2$ $-7{,}79$\,\% | Ajusta mejor en entrenamiento, pero pronostica peor que la media en la prueba.
+Profundidad 0 | ECM prueba 18,83 | Árbol sin divisiones: pronostica la media de entrenamiento. Es el mejor en la prueba.
+\texttt{hojas} | 1 a 10 | Grupos finales en que el árbol divide los meses.
+ECM entrenamiento | 35,56 $\to$ 31,05 | Baja siempre al aumentar la profundidad.
+ECM prueba | 18,83 $\to$ 23,11 | Sube con la profundidad: es la firma del sobreajuste.
+\texttt{R2 prueba} | 0 a $-22{,}7$\,\% | Cada nivel adicional empeora el pronóstico.
+Árbol de profundidad 2 | primera división en cape $\le2{,}18$ | Los 24 meses con CAPE muy bajo tuvieron rendimientos altos (6,95\,\%); la regla es una curiosidad de la muestra que no se repite después de 1980.

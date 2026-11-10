@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$, media, varianza & 1109; 0,660; 28,38 & Exceso de rendimiento mensual del mercado en \%: prima media de 0,66\,\% al mes. \\
+GARCH-M normal: \texttt{lambda} & 0,01167 ($t=1{,}33$) & Rendimiento adicional por unidad de varianza; positivo como predice la teoría, pero no significativo. \\
+\texttt{mu} & 0,599 & Parte constante del exceso de rendimiento esperado. \\
+log-ver & $-3254{,}31$ & Verosimilitud del modelo normal. \\
+Prima por volatilidad promedio & 0,339\,\% (4,07\,\% anual) & $\lambda$ por la varianza media: parte de la prima que el modelo atribuye al riesgo. \\
+GARCH-M $t$ & $\lambda=0{,}0087$ ($t=0{,}99$) & Con colas pesadas el efecto se reduce y sigue sin ser significativo. \\
+GJR-M $t$ & $\lambda=0{,}0041$ ($t=0{,}37$) & Al permitir asimetría el efecto casi desaparece: la relación riesgo-rendimiento en el tiempo no se detecta con estos datos. \\
+\end{xltabular}}

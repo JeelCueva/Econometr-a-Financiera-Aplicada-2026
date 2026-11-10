@@ -1,0 +1,54 @@
+== cap21_ej01
+\texttt{n} | 1257 días | Rendimientos simples diarios, 2014--2018.
+\texttt{media anual} | 7,16 a 31,41\,\% | Media diaria por 252; Amazon fue la de mayor rendimiento y el S\&P 500 la menor.
+\texttt{vol. anual} | 13,23 a 30,99\,\% | Volatilidad anualizada: cada acción es dos veces más volátil que el índice.
+\texttt{asimetría} | $-0{,}43$ a 0,96 | Positiva en Amazon y Alphabet (grandes subidas tras resultados), negativa en el índice.
+\texttt{curtosis} | 6,67 a 18,21 | Colas pesadas en todas; Facebook, por su caída de julio de 2018.
+\texttt{JB} | 707 a 12\,125 | Todas superan el valor crítico 9,21: se rechaza la normalidad.
+\texttt{LB(10) r}, \texttt{p} | solo GOOG $p=0{,}025$ | Los rendimientos casi no están autocorrelacionados (al 1\,\% ninguno).
+\texttt{LB(10) r2}, \texttt{p} | S\&P 386,0; FB $p=0{,}32$ | Agrupamiento de volatilidad fuerte en el índice y en Apple; débil en Facebook y Alphabet.
+\texttt{peor día} | $-18{,}96$\,\% (FB) | Mayor caída diaria de cada serie y su fecha.
+Correlaciones | 0,40 a 0,67 | Las acciones se correlacionan moderadamente entre sí y más con el índice: hay espacio para diversificar.
+
+== cap21_ej02
+\texttt{alfa anual} | 6,78 a 21,79\,\% | Rendimiento anual no explicado por el mercado.
+\texttt{t(alfa)} | 0,89 a 1,96 | Con Newey-West ninguna alfa individual es claramente significativa (Amazon en el límite): cinco años son pocos.
+\texttt{beta} | 1,13 a 1,34 | Las cuatro acciones amplifican los movimientos del mercado.
+\texttt{t(beta = 1)} | 2,88 a 4,79 | Todas las betas son significativamente mayores que 1.
+\texttt{R2} | 0,31 a 0,45 | El mercado explica entre un tercio y la mitad de la varianza diaria de cada acción.
+\texttt{vol. idiosincrática} | 17,4 a 25,4\,\% | Volatilidad anual propia de cada acción, diversificable.
+Cartera 1/N | alfa 13,38\,\% ($t=2{,}23$); beta 1,229 | Al diversificar, el riesgo propio baja y la alfa de la cartera se vuelve significativa.
+\texttt{R2} de la cartera | 0,566 | Mayor que el de cada acción: la diversificación elimina parte del riesgo idiosincrático.
+Promedio de las betas | 1,2286 | Igual a la beta de la cartera: la beta de una cartera es el promedio ponderado de las betas.
+Estabilidad | 1,185 / 1,261 | La beta subió ligeramente entre 2014--2015 y 2016--2018.
+
+== cap21_ej03
+\texttt{mu} | 0,04 a 0,14 | Rendimiento medio diario (\%) estimado.
+\texttt{omega}, \texttt{alfa}, \texttt{beta} | p. ej. S\&P 0,060; 0,213; 0,719 | Parámetros GARCH estimados con solo dos años: algunos son extremos (AMZN $\alpha=0$; GOOG $\beta=0{,}62$).
+\texttt{nu} | 3,33 a 7,80 | Grados de libertad de la $t$: colas pesadas en todas las series.
+\texttt{alfa+beta}, \texttt{vida media} | 0,76 a 0,99; 2,5 a 75,6 días | Persistencia muy distinta entre series: con 503 datos la estimación es imprecisa.
+\texttt{QLIKE} | p. ej. S\&P 0,249 / 0,352 / 0,605 | Pérdida promedio (menor es mejor): el GARCH-$t$ gana en AAPL, FB y S\&P; la EWMA en AMZN y GOOG.
+\texttt{ECM} | p. ej. FB 288,1 / 294,1 / 289,0 | Pérdida cuadrática: dominada por pocos días extremos, menos informativa.
+\texttt{DM QLIKE (GARCH - EWMA)} | $-1{,}40$ a 0,34 | Diferencia de pérdidas estandarizada: ninguna supera 1,96 en valor absoluto, así que GARCH y EWMA no se distinguen estadísticamente.
+Varianza constante | QLIKE más alto en todas | Ignorar la dinámica de la volatilidad es claramente peor.
+
+== cap21_ej04
+GARCH-$t$ de la cartera | $\alpha=0{,}113$; $\beta=0{,}728$; $\nu=6{,}12$ | Modelo estimado con 2014--2015 y sus reestimaciones anuales (la persistencia sube y $\nu$ baja con más datos).
+\texttt{excepciones}, \texttt{esperadas} | 13 a 21 frente a 7,5 (99\,\%) | Todos los métodos registran más excepciones de las esperadas al 99\,\%.
+\texttt{Kupiec LR}, \texttt{p} | EWMA 16,34 ($p=0{,}0001$) | La EWMA normal falla claramente al 99\,\%; el GARCH-$t$ reestimado es el único no rechazado ($p=0{,}07$).
+\texttt{Christoffersen LR}, \texttt{p} | HS 5,54 ($p=0{,}019$) al 97,5\,\% | La simulación histórica tiene excepciones agrupadas; los modelos condicionales no.
+\texttt{pérdida/ES en excepciones} | 0,93 a 1,19 | Promedio de pérdida sobre ES en los días de excepción; cerca de 1 indica ES bien calibrado. La EWMA normal lo subestima (1,17--1,19).
+Pronóstico para el 2-ene-2019 | vol. 2,87\,\%; VaR 7,42\,\%; ES 10,18\,\% | Riesgo esperado para el primer día de 2019, tras un diciembre muy volátil.
+
+== cap21_ej05
+Evaluación, rebalanceos | 1007 días; 48 | Período fuera de muestra y número de recomposiciones.
+\texttt{media anual} | 23,42 / 17,83 / 18,41\,\% | La cartera 1/N rindió más que las de mínima varianza.
+\texttt{vol. anual} | 21,82 / 21,63 / 22,86\,\% | La mínima varianza muestral apenas reduce la volatilidad; la EWMA incluso la aumenta.
+\texttt{Sharpe anual} | 1,07 / 0,82 / 0,81 | La 1/N tiene la mejor razón de Sharpe.
+\texttt{ee(Sharpe)} | 0,501 | Con 4 años el error estándar es de medio punto: las diferencias no son significativas.
+\texttt{máx. caída} | 29,5 / 30,1 / 36,0\,\% | Peor pérdida desde un máximo; mayor con EWMA.
+\texttt{rotación media} | 0 / 0,146 / 0,990 | La mínima varianza EWMA rota casi toda la cartera en cada rebalanceo: costos de transacción altos.
+\texttt{peso mínimo medio} | 0,25 / 0,05 / $-0{,}10$ | Las carteras optimizadas concentran o venden en corto algunas acciones.
+Pesos medios (muestral) | AAPL 0,41; GOOG 0,40 | La optimización se concentra en las dos acciones menos volátiles.
+Diferencia de varianzas | $-0{,}034$ | La mínima varianza reduce la varianza diaria muy poco.
+Correlación entre estrategias | 0,953 | Ambas carteras se mueven casi igual: con cuatro acciones tan correlacionadas, optimizar aporta poco (DeMiguel, Garlappi y Uppal, 2009).

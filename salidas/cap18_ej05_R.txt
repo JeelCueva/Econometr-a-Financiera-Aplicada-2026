@@ -1,0 +1,17 @@
+Crisis: 2007-07-02 a 2009-06-30 (504 días); resto: 4526 días
+
+muestra   Pearson   tau      lambda_inf(5 %)  lambda_sup(5 %)
+crisis   0.9525  0.7987       0.8333          0.7937
+resto    0.9173  0.7398       0.6849          0.6805
+
+muestra  cópula      parámetro(s)               log-verosim.  lambda_inf lambda_sup
+crisis   gaussiana   rho = 0.9509                  585.9764    0.0000    0.0000
+crisis   t           rho = 0.9504, nu = 4.332      596.1466    0.7268    0.7268
+crisis   clayton     theta = 5.3093                497.0671    0.8776    0.0000
+crisis   gumbel      theta = 4.7018                567.6508    0.0000    0.8412
+resto    gaussiana   rho = 0.9157                 4118.5280    0.0000    0.0000
+resto    t           rho = 0.9178, nu = 5.374     4237.4893    0.6188    0.6188
+resto    clayton     theta = 3.6429               3377.1740    0.8267    0.0000
+resto    gumbel      theta = 3.6083               4004.8444    0.0000    0.7882
+
+tau de Kendall móvil (ventanas de 250 días cada 21 días, 228 ventanas): mínimo = 0.5848 (termina 2000-08-29); máximo = 0.8315 (termina 2009-09-08); mediana = 0.7510

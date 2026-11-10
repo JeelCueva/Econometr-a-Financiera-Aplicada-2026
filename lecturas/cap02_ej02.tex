@@ -1,0 +1,15 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Banda de Bartlett & $\pm0{,}0205$ & $1{,}96/\sqrt T$: si una autocorrelación cae fuera de esta banda es significativa al 5\,\% (bajo independencia). \\
+Columna \texttt{r} & $-0{,}028$ a 0,021 & Autocorrelaciones de los rendimientos: todas muy pequeñas; el rendimiento de hoy casi no ayuda a predecir el de mañana. \\
+Columna \texttt{r2} & 0,33 en el rezago 1 & Autocorrelaciones de $r_t^2$: grandes y positivas; un día de mucho movimiento tiende a seguir a otro (agrupamiento de volatilidad). \\
+Columna \texttt{abs\_r} & 0,18 a 0,26 & Autocorrelaciones de $\lvert r_t\rvert$: altas y muy persistentes en los 10 rezagos; la volatilidad es predecible. \\
+Ljung-Box \texttt{r}, $m=10$ & $Q=25{,}74$; $p=0{,}004$ & Rechaza la ausencia de autocorrelación, pero los coeficientes son tan pequeños que no permiten una predicción útil. \\
+Ljung-Box \texttt{r}, $m=20$ & $Q=72{,}59$; $p\approx7\times10^{-8}$ & Mismo resultado; además, la prueba supone homocedasticidad, que aquí no se cumple, y por eso tiende a rechazar de más. \\
+Ljung-Box \texttt{r2} & $Q=1721$ y 2487; $p=0$ & Rechazo abrumador: los cuadrados están fuertemente autocorrelacionados. \\
+Ljung-Box \texttt{abs\_r} & $Q=4171$ y 6855; $p=0$ & Rechazo aún más fuerte: el valor absoluto es la medida más clara de la persistencia de la volatilidad. \\
+\end{xltabular}}

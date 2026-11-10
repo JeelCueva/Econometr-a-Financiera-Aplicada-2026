@@ -1,0 +1,19 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+Meses en recesión & 95 de 531 & Frecuencia base de 18\,\%. \\
+\texttt{b1} & $-0{,}58$ a $-1{,}17$ & Coeficiente de la pendiente: negativo, una curva más plana o invertida eleva la probabilidad de recesión. \\
+\texttt{ee(b1)} & 0,10 a 0,14 & Todos los coeficientes son significativos salvo, marginalmente, a 24 meses. \\
+\texttt{pseudo R2} & máximo 0,199 en $h=12$ & El poder predictivo es máximo a un año. \\
+\texttt{AUC} & 0,82 en $h=12$ & Probabilidad de que un mes de recesión reciba mayor probabilidad que uno de expansión; 0,5 es azar y 1 perfecto. \\
+Agregar la tasa a 3 meses & LR 0,17; $p=0{,}68$ & El nivel de las tasas no aporta: lo que importa es la pendiente. \\
+Pendiente con Pr 50\,\% & $-0{,}59$ puntos & Una curva invertida en 0,6 puntos implica probabilidad de recesión de 50\,\% en un año. \\
+Pr con pendiente 0 / 2 & 0,333 / 0,046 & Con curva plana, una de tres; con pendiente normal de 2 puntos, menos de 5\,\%. \\
+Umbral 0,5 & sensibilidad 0,24; especificidad 0,97 & Con umbral alto casi no hay falsas alarmas, pero se detectan pocas recesiones. \\
+Umbral 0,183 & sensibilidad 0,75; especificidad 0,74 & Umbral igual a la frecuencia base: equilibra ambos errores. \\
+AUC fuera de muestra & 0,835 & La capacidad predictiva se mantiene en tiempo real. \\
+Pr media en recesión / expansión & 0,461 / 0,174 & El modelo distingue claramente ambos estados. \\
+\end{xltabular}}

@@ -1,0 +1,26 @@
+Probabilidad binomial de k o menos excepciones en 250 días si la cobertura es correcta (p = 0,01):
+  P(X <= 4) = 0.8922
+  P(X <= 9) = 0.9997
+
+Año   días   HS-500        EWMA-normal   GARCH-t
+2001   248    4 verde       4 verde       2 verde    
+2002   252    5 amarilla    2 verde       2 verde    
+2003   252    1 verde       1 verde       0 verde    
+2004   252    0 verde       3 verde       0 verde    
+2005   252    2 verde       3 verde       0 verde    
+2006   251    4 verde       5 amarilla    3 verde    
+2007   251   11 roja       12 roja        8 amarilla 
+2008   253   21 roja        9 amarilla    7 amarilla 
+2009   252    0 verde       2 verde       1 verde    
+2010   252    0 verde       9 amarilla    6 amarilla 
+2011   252    5 amarilla    6 amarilla    6 amarilla 
+2012   250    0 verde       5 amarilla    4 verde    
+2013   252    0 verde       5 amarilla    3 verde    
+2014   252    2 verde      10 roja        6 amarilla 
+2015   252    6 amarilla    6 amarilla    4 verde    
+2016   252    3 verde       2 verde       2 verde    
+2017   251    0 verde       4 verde       3 verde    
+2018   251    9 amarilla    8 amarilla    8 amarilla 
+HS-500       años en verde 12, amarilla  4, roja  2; multiplicador medio 3.231
+EWMA-normal  años en verde  8, amarilla  8, roja  2; multiplicador medio 3.369
+GARCH-t      años en verde 12, amarilla  6, roja  0; multiplicador medio 3.203

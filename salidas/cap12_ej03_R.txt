@@ -1,0 +1,10 @@
+DCC(1,1) trivariado: a = 0.0225 (ee 0.0029), b = 0.9732 (ee 0.0040); a + b = 0.9957
+LR frente a CCC = 788.73 (2 g.l.)
+
+promedio de la correlación DCC   S&P-Nasdaq    S&P-Brent Nasdaq-Brent
+calma 2006-01 a 2008-08           0.933       -0.053       -0.066
+crisis 2008-09 a 2009-03          0.961        0.161        0.141
+2017-2018                         0.910        0.103        0.035
+
+volatilidad anual promedio (GARCH) en la crisis: S&P 50.0 %, Nasdaq 49.9 %, Brent 71.2 %
+menor autovalor de R_t en toda la muestra: 0.0295 (todas las R_t son definidas positivas)

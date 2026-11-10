@@ -1,0 +1,6 @@
+rho = 0.1: con delta = 3 la correlación medida es 0.1971
+rho = 0.3: con delta = 3 la correlación medida es 0.5324
+rho = 0.5: con delta = 3 la correlación medida es 0.7559
+DCC: choques (2, 2): correlación de mañana = 0.4217
+DCC: choques (2, -2): correlación de mañana = 0.0739
+DCC: choques (0, 0): correlación de mañana = 0.3000

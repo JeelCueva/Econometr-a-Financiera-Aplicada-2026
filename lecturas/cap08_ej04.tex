@@ -1,0 +1,14 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$r_T$, $\sigma^2_T$ & $-0{,}336$\,\%; 24,78 & Último rendimiento y varianza condicional del 3-nov-2026: la volatilidad estaba muy alta. \\
+$\sigma^2_{T+1}$ & 22,678 & Varianza pronosticada para mañana con $\omega+\alpha\varepsilon_T^2+\beta\sigma_T^2$; se muestra la cuenta completa. \\
+Varianza incondicional & 13,286 (57,9\,\% anual) & Nivel al que tiende el pronóstico a largo plazo. \\
+$E[\sigma^2]$ a $h$ días & 22,68 a 16,34 & Pronóstico de la varianza diaria para cada horizonte; desciende hacia la incondicional. \\
+Vol. diaria / anualizada & 4,76\,\% / 75,6\,\% ($h=1$) & Raíz del pronóstico, y la misma multiplicada por $\sqrt{252}$. \\
+Varianza acumulada a 21 días & 468; vol. 21,63\,\% & Suma de los pronósticos diarios: volatilidad del rendimiento de un mes. La regla de la raíz (21,82\,\%) casi coincide. \\
+Varianza acumulada a 252 días & 4771; vol. 69,07\,\% & Volatilidad del rendimiento a un año; la regla de la raíz (75,60\,\%) la sobrestima porque ignora que la varianza volverá a su nivel normal. \\
+\end{xltabular}}

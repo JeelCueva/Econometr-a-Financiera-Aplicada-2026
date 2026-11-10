@@ -1,0 +1,17 @@
+(a) Medias de los rendimientos simples anuales, 2015-2025:
+          T    A_%    G_%  A-s2/2_%   A-G_pb  s2/2_pb
+BVN    11.0  28.89  10.88      2.72  1800.75  2616.48
+EPU    11.0  15.71  11.02     10.00   469.76   571.66
+SP500  11.0  12.59  11.54     11.52   105.06   107.37
+
+(b) Volatilidad anualizada (rendimientos logarítmicos):
+       sd_diaria_%  x raiz(252)_%  x raiz(dias)_%  sd_anual_obs_%
+BVN           3.03          48.14           48.09           57.30
+EPU           1.45          22.95           22.93           30.17
+SP500         1.13          17.95           17.93           14.74
+
+(c) Días con dato por año:
+fecha         2015  2016  2017  2018  2019  2020  2021  2022  2023  2024  2025
+NYSE (Yahoo)   252   252   251   251   252   253   252   251   250   252   250
+BVL (BCRP)     256   261   260   261   260   260   250   251   250   245   248
+Promedio: {'NYSE (Yahoo)': 251.5, 'BVL (BCRP)': 254.7}

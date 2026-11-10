@@ -1,0 +1,20 @@
+\par\medskip\noindent\textbf{Cómo leer la salida.}
+{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedleft\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Indicador & Valor & Interpretación \\ \midrule \endfirsthead
+\toprule Indicador & Valor & Interpretación \\ \midrule \endhead
+\bottomrule \endlastfoot
+$T$ & 5030 & Rendimientos diarios del S\&P 500 de 1999 a 2018. \\
+\texttt{alpha} & 0,0000 & Reacción de la varianza a choques positivos: nula. \\
+\texttt{gamma} & 0,1815 ($t=8{,}10$) & Reacción adicional a choques negativos: toda la respuesta de la varianza viene de las malas noticias. \\
+\texttt{beta} & 0,8987 & Persistencia de la varianza de ayer. \\
+\texttt{nu} & 7,50 & Grados de libertad de la $t$: colas pesadas, algo menos que en el Brent. \\
+log-ver GARCH / GJR & $-6834{,}48$ / $-6748{,}27$ & El GJR mejora la verosimilitud en 86 puntos. \\
+LR ($\gamma=0$) & 172,42; $p\approx10^{-39}$ & Razón de verosimilitudes $\sim\chi^2_1$: se rechaza la simetría sin duda. \\
+Persistencia & 0,98944 & $\alpha+\gamma/2+\beta$ (el término $\gamma/2$ porque la mitad de los choques son negativos). \\
+Vida media & 65,3 días & Tiempo para que se disipe la mitad de un choque de volatilidad. \\
+Varianza incondicional / anual & 1,2456; 17,7\,\% & Nivel de largo plazo de la varianza diaria y su volatilidad anual. \\
+Coeficientes de $e^2_{t-1}$ & 0,1815 si $e<0$; 0 si $e>0$ & Resume la asimetría: un choque negativo eleva la varianza; uno positivo no. \\
+Correlación con el VIX & 0,900 & La volatilidad del GJR sigue de cerca al índice de volatilidad implícita. \\
+VIX frente a GJR & 19,94 / 16,89; 3,04 puntos & El VIX es en promedio 3 puntos mayor: es la prima por riesgo de volatilidad que pagan los compradores de opciones. \\
+\end{xltabular}}

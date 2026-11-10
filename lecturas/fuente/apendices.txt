@@ -1,0 +1,19 @@
+== apA_ej01
+$T$ | 132 meses | Rendimientos simples mensuales de 2015 a 2025.
+\texttt{media} | 0,0113 / 0,0101 | Rendimiento medio mensual: 1,13\,\% (\texttt{EPU}) y 1,01\,\% (S\&P 500).
+\texttt{desv} | 0,0712 / 0,0430 | Volatilidad mensual; \texttt{EPU} es mucho más riesgoso.
+\texttt{asimetría}, \texttt{curtosis} | $-0{,}20$ y 3,92; $-0{,}40$ y 3,52 | Desviaciones moderadas de la normalidad (asimetría 0 y curtosis 3).
+\texttt{theta mensual} | 0,159 / 0,234 | Razón media/desviación mensual estimada, $\hat\theta=\hat\mu/\hat\sigma$.
+Anualizada $\times\sqrt{12}$ | 0,550 / 0,811 | Escala anual habitual de la razón de Sharpe (con tasa libre de riesgo nula).
+EE (normal) | 0,0876 / 0,0882 | Error estándar con $v=1+\theta^2/2$: muy cercano a $1/\sqrt T$.
+IC 95\,\% (normal) | $[-0{,}013;\ 0{,}330]$ / $[0{,}061;\ 0{,}407]$ | Para \texttt{EPU} incluye el cero: no se puede afirmar que su media fue positiva. Para el S\&P 500, sí.
+EE (general) | 0,0892 / 0,0924 | Error con asimetría y curtosis: algo mayor porque la asimetría es negativa y la curtosis supera 3.
+IC 95\,\% (general) | $[-0{,}016;\ 0{,}334]$ / $[0{,}053;\ 0{,}415]$ | Las conclusiones no cambian.
+
+== apC_inventario
+Nombre del archivo | p. ej. \texttt{bap\_yahoo.csv} | Cada fila corresponde a un archivo de \texttt{datos/peru/}.
+Número de filas | 9 a 3013 | Observaciones de cada archivo (sin contar el encabezado).
+Primera fecha y valor | p. ej. 2014-12-31; 160.18 | Inicio de la serie y su primer valor (en la primera columna de datos).
+Última fecha y valor | p. ej. 2026-11-06; 347.93 | Fin de la serie y su último valor: deben coincidir con la Tabla~\ref{tab:fuentes1}.
+Archivos de dividendos | 13 a 47 filas | Un registro por dividendo en la fecha ex-dividendo de Yahoo.
+\texttt{scco\_splits.csv} | 9 filas | Numerador y denominador de cada ``desdoblamiento'' (dividendos en acciones) de Southern Copper.
